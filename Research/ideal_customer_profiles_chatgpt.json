@@ -1,0 +1,605 @@
+{
+    "title": "AI Native 프로세스·규제 준수 플랫폼의 이상적 고객, 현실 문제, 검색 키워드 리서치",
+    "meta": {
+      "generated_date_local": "2026-04-04",
+      "timezone": "Asia/Seoul",
+      "requested_output_format": "JSON",
+      "context_summary": "국제표준/국제규제 기반 프로세스 구축·인증 컨설팅(1인 기업)에서, AI Agent 기반의 컨설팅·교육·코칭·커스텀 도구개발 플랫폼 생태계로 전환을 기획 중. 초기 타깃은 IT기업(필요 시 타 산업 확장).",
+      "standards_and_regulations_in_user_scope": {
+        "process_quality": [
+          "CMMI",
+          "대한민국 전자정부사업관리 위탁(PMO) 제도 및 가이드"
+        ],
+        "automotive_product_development": [
+          "Automotive SPICE (ASPICE)",
+          "ISO 26262"
+        ],
+        "medical_device_samd_product_development": [
+          "IEC 62304"
+        ],
+        "automotive_cybersecurity": [
+          "ISO/SAE 21434",
+          "Automotive SPICE for Cybersecurity (ASPICE for Cybersecurity)"
+        ],
+        "medical_device_cybersecurity": [
+          "IEC 81001-5-1",
+          "IEC 62443-4-2",
+          "대한민국 디지털의료기기 전자적 침해행위 관련 보호조치(법/고시/가이드)",
+          "대한민국 식약처 의료기기 사이버보안 허가·심사 가이드라인"
+        ]
+      }
+    },
+    "sections": [
+      {
+        "title": "구매 압력의 원천",
+        "summary": {
+          "why_this_matters": "표준/규제 준수 서비스의 ‘가장 이상적인 고객’은 (1) 외부에서 일정·형식·레벨이 강제되고, (2) 준수 실패 비용이 크며, (3) 반복적으로 증거(artifact)를 생산·유지해야 하고, (4) 디지털 산출물이 도구 체인에 남아 AI로 자동화하기 좋은 조직이다.",
+          "evidence_snapshots": [
+            {
+              "claim": "Automotive SPICE는 ISO/IEC 330xx 계열 표준을 기반으로 PRM/PAM을 정의해 프로세스를 평가(assessment)하는 프레임워크로, 공급망(고객-협력사) 단위의 공통 언어로 쓰인다. citeturn0search8turn0search12",
+              "implication_for_customer_pain": "‘평가를 통과하기 위한 증거/일관성/추적성’이 반복 비용이 되어 자동화 가치가 커진다."
+            },
+            {
+              "claim": "Automotive SPICE for Cybersecurity 문서 자체가 UNECE R155가 공급망에서 사이버보안 리스크를 식별·관리하도록 요구한다는 맥락을 전제로, 기존 Automotive SPICE에 사이버보안 프로세스를 확장하려는 목적을 명시한다. citeturn2search2turn2search20",
+              "implication_for_customer_pain": "자동차 분야에서는 ‘품질(ASPICE) + 안전(ISO 26262) + 보안(ISO 21434/R155)’이 결합된 ‘복합 준수’가 현실이 되어, 단일 컨설턴트 투입만으로는 지속 운영이 어려워지고 플랫폼형 도구가 유리해진다."
+            },
+            {
+              "claim": "ISO 26262는 도로차량 E/E 안전 관련 시스템의 오동작으로 인한 위험을 다루는 기능안전 표준이다. citeturn3search0turn3search4",
+              "implication_for_customer_pain": "안전 분석·계획·검증 및 방대한 산출물/추적성 요구로 문서·증거 관리 부담이 커진다(자동화 니즈 증대)."
+            },
+            {
+              "claim": "ISO/SAE 21434는 도로차량에서 사이버보안 리스크 관리를 위한 엔지니어링 요구사항을 전 생애주기 관점에서 정의한다. citeturn0search1turn0search5",
+              "implication_for_customer_pain": "요구사항→설계→구현→시험→운영까지의 ‘사이버보안 엔지니어링 트레이스’가 필요해져, 개발 도구 체인과의 결합(자동 증거 수집, 자동 점검)이 핵심이 된다."
+            },
+            {
+              "claim": "UN Regulation No.155는 ‘차량 사이버보안 및 CSMS(사이버보안 관리체계)’ 승인 요건을 규정하며 2021-01-22에 발효된 것으로 UN 조약 데이터베이스에 기재돼 있다. citeturn3search13turn3search2",
+              "implication_for_customer_pain": "고객(OEM/완성차)이 규제 대응을 공급망으로 전가하는 구조가 만들어져, 국내 협력사도 ‘CSMS 관점의 증거/프로세스’ 요구를 받는다."
+            },
+            {
+              "claim": "식약처는 ‘의료기기의 사이버보안 허가·심사 가이드라인(민원인 안내서)’을 개정·게시하며 적용시기 명확화 등을 공지하고 있다(예: 2024-11-27 게시, 2025-01-10 게시 이력). citeturn0search7turn0search3",
+              "implication_for_customer_pain": "SaMD/디지털의료기기 기업은 ‘허가/심사 제출자료’가 비즈니스 일정(출시/매출)과 직결되어, 단기간에 체계화·증빙 자동화 수요가 강하다."
+            },
+            {
+              "claim": "‘디지털의료제품법’은 2025-01-24 시행으로 안내되고, 식약처는 디지털의료기기 전자적 침해행위 관련 지침/가이드 문서를 별도로 제공한다. citeturn1search5turn1search2turn1search19",
+              "implication_for_customer_pain": "국내 규정(법/고시/가이드) 준수까지 포함되면, 스타트업·중소기업은 내부 인력만으로 ‘보안·품질체계’ 운영이 어려워 외부 솔루션 의존도가 커진다."
+            },
+            {
+              "claim": "IEC 62304는 의료기기 소프트웨어 생애주기 프로세스 요구사항을 정의한다. citeturn1search9turn1search20",
+              "implication_for_customer_pain": "개발 산출물 체계(계획, 요구사항, 설계, 검증/검증, 유지보수)가 표준화되어야 하므로, 문서/워크플로우 템플릿 및 도구 연계 니즈가 상시 발생한다."
+            },
+            {
+              "claim": "IEC 81001-5-1은 헬스 소프트웨어의 보안 생애주기 요구사항을 정의하며, IEC 62443-4-1 적합을 지원하는 형태로 설계되었음을 ISO/IEC 측 설명에서 확인할 수 있다. citeturn1search6turn1search0",
+              "implication_for_customer_pain": "‘Secure SDLC’를 의료 분야에 맞춰 운영해야 하므로, 보안 활동(위협 모델링, 검증, 취약점 대응 등) 증거 자동 수집/리포팅 니즈가 커진다."
+            },
+            {
+              "claim": "ISA/IEC 62443 시리즈는 산업제어시스템(IACS) 보안의 요구사항·프로세스를 정의하고, IEC 62443-4-2는 구성요소(컴포넌트) 기술 보안 요구사항을 제공한다. citeturn1search4turn1search7",
+              "implication_for_customer_pain": "제품/컴포넌트 보안 요구사항을 ‘체크리스트’로만 처리하면 누락이 생기기 쉬워, 요구사항-테스트-증거의 자동 매핑 도구 수요가 늘어난다."
+            },
+            {
+              "claim": "CMMI 모델은 ISACA가 소유·개선하며 파트너를 통해 교육/평가를 운영한다고 CMMI Institute(현 ISACA 산하)에서 명시한다. citeturn2search0turn2search3",
+              "implication_for_customer_pain": "IT/서비스 기업은 ‘조직 성과·프로세스 성숙도’ 요구가 생기면 평가 준비(증거 수집/정합성)가 핵심 병목이 된다."
+            },
+            {
+              "claim": "대한민국 행정안전부는 전자정부법 시행령 조항을 근거로 ‘전자정부사업관리위탁(PMO)’ 추진계획을 공지하며(예: 2025-01-15 공지), 공공 프로젝트에서 PMO 제도가 실 운영되고 있다. citeturn2search12turn2search30",
+              "implication_for_customer_pain": "공공 SI/수행사는 ‘제도/가이드 기반의 산출물·운영체계’ 요구를 받기 때문에, 표준화된 PMO 운영·점검 자동화 도구의 여지가 있다."
+            }
+          ]
+        }
+      },
+      {
+        "title": "이상적 고객 선정",
+        "selection_framework": {
+          "criteria": {
+            "external_enforcement_strength": "외부(고객/OEM/규제기관)에서 일정·요구수준이 강제되는 정도",
+            "noncompliance_cost": "미준수 시 매출 지연/리콜/계약 해지/인증 실패 등 비용 규모",
+            "repeatability": "프로젝트마다 반복되는 증거 생산/유지 작업의 빈도",
+            "digital_traceability_readiness": "Jira/Git/ALM 등 디지털 산출물 기반으로 ‘자동 수집·평가’가 가능한 정도",
+            "budget_authority": "품질/안전/보안/인허가 예산을 집행할 권한과 실제 예산 존재",
+            "speed_of_purchase": "짧은 기간 내 구매결정이 내려지는 트리거(심사 일정, 납품 평가 등) 존재"
+          },
+          "scoring_scale": "1(낮음)~5(높음)"
+        },
+        "ranked_segments": [
+          {
+            "segment_name": "자동차 소프트웨어/전자 공급망(Tier-1/2)에서 ASPICE+기능안전+사이버보안 ‘복합 준수’가 필요한 조직",
+            "scorecard": {
+              "external_enforcement_strength": 5,
+              "noncompliance_cost": 5,
+              "repeatability": 5,
+              "digital_traceability_readiness": 4,
+              "budget_authority": 4,
+              "speed_of_purchase": 4
+            },
+            "why_it_ranks_highest": "자동차 영역은 프로세스 평가(Automotive SPICE)의 공급망 표준화 성격과, 기능안전(ISO 26262), 사이버보안 엔지니어링(ISO/SAE 21434), 그리고 형식승인 규제(UN R155/R156) 맥락이 결합되어 ‘조직 프로세스+증거’ 요구가 강하고 반복적이다. citeturn0search8turn0search12turn0search1turn3search13turn3search3",
+            "ideal_if_you_are_a_1_person_company_because": "전통 ‘사람 컨설팅’은 스케일이 제한되지만, 이 сег먼트는 반복 산출물/점검 항목이 많아 ‘AI Agent 기반 자동화(증거 수집·정합성 점검·교육/평가)’를 제품화하기 쉽다(가설).",
+            "evidence_notes": "ASPICE for Cybersecurity가 R155 공급망 요구를 전제로 설계되었다는 점은 ‘고객이 요구를 전가하는 구조’의 직접 근거로 쓸 수 있다. citeturn2search2turn2search20"
+          },
+          {
+            "segment_name": "SaMD/디지털의료기기 개발사(국내 허가/심사 + 국제표준(IEC 62304 등) + 사이버보안 요구)",
+            "scorecard": {
+              "external_enforcement_strength": 5,
+              "noncompliance_cost": 5,
+              "repeatability": 4,
+              "digital_traceability_readiness": 3,
+              "budget_authority": 3,
+              "speed_of_purchase": 5
+            },
+            "why_it_ranks_high": "식약처 허가·심사 일정이 출시와 직결되고(가이드라인 존재), 디지털의료제품법 시행으로 전자적 침해행위 관련 보호조치/지침/가이드 체계가 추가되면서 ‘규정 변화 대응’ 수요가 커졌다. citeturn0search7turn1search5turn1search2turn1search19",
+            "main_tradeoff_vs_automotive": "조직 규모가 작을수록 예산은 제한될 수 있으나, 구매 트리거(허가 일정)가 강해 ‘빠른 패키지형 AI 서비스’에 적합(가설)."
+          },
+          {
+            "segment_name": "공공정보화사업 수행(SI/개발) 조직 중 PMO/사업관리·감리 대응이 상시인 조직",
+            "scorecard": {
+              "external_enforcement_strength": 4,
+              "noncompliance_cost": 4,
+              "repeatability": 4,
+              "digital_traceability_readiness": 3,
+              "budget_authority": 3,
+              "speed_of_purchase": 3
+            },
+            "why_it_is_secondary": "PMO 제도는 운영되지만, 자동차/의료처럼 ‘국제표준+국제규제+제품 리스크’가 결합된 복합 준수보다는 프로젝트 관리·산출물 중심이어서 AI 자동화 가치가 분명하되 차별화가 더 필요(가설). citeturn2search12turn2search30"
+          },
+          {
+            "segment_name": "CMMI 성숙도/조직 역량 강화를 추진하는 IT/서비스 기업",
+            "scorecard": {
+              "external_enforcement_strength": 3,
+              "noncompliance_cost": 3,
+              "repeatability": 4,
+              "digital_traceability_readiness": 4,
+              "budget_authority": 3,
+              "speed_of_purchase": 2
+            },
+            "why_it_is_secondary": "CMMI는 평가(appraisal) 중심 생태계이며 ISACA가 모델을 운영한다. 다만 ‘지금 당장’ 구매 트리거는 자동차/의료보다 약할 수 있어 리드타임이 길어질 가능성이 있다(가설). citeturn2search0turn4search3turn4search20"
+          }
+        ],
+        "answer_primary_ideal_customer": {
+          "who": "‘자동차 소프트웨어/전자 공급망’에서 OEM/고객 요구로 Automotive SPICE 평가와 기능안전(ISO 26262), 사이버보안(ISO/SAE 21434) 및 규제(UN R155/R156 맥락) 대응을 동시에 해야 하는 한국의 Tier-1/2(또는 그에 준하는) 개발 조직",
+          "why_this_is_the_single_best_fit_for_ai_native_platform": "반복되는 준수 활동(문서·증거·교육·점검·감사 대응)이 가장 많고, 공급망 구조상 요구수준이 하향 전파되며, 표준/규제 요구가 생애주기 전체(개발~운영)로 확장되어 ‘항상 켜져 있는(Always-on) AI Agent’ 형태의 가치가 크기 때문(가설, 표준/규제 결합 맥락 근거는 아래). citeturn2search2turn0search1turn3search13turn0search12"
+        }
+      },
+      {
+        "title": "1순위 고객 페르소나와 현실 문제",
+        "primary_persona": {
+          "persona_name": "자동차 소프트웨어/전자 공급사 ‘프로세스·안전·보안 책임자’",
+          "common_roles": [
+            "품질/프로세스 책임자(quality/process owner)",
+            "기능안전 책임자(Functional Safety Manager)",
+            "사이버보안 책임자(Cybersecurity Manager/CSMS 책임 역할)",
+            "프로그램/프로젝트 매니저",
+            "개발팀 리더(시스템/소프트웨어/시험)",
+            "협력사 관리(구매/SCM + 개발품질)"
+          ],
+          "why_these_roles_feel_pain": "ISO 26262(기능안전)과 ISO/SAE 21434(사이버보안 엔지니어링)는 생애주기 전반의 관리·증빙을 요구하고, UN R155는 CSMS 체계를 형식승인 관점에서 요구한다. 따라서 ‘개발만 잘하는 것’이 아니라 ‘증거가 남는 방식으로 개발을 운영하는 것’이 본업이 된다. citeturn3search0turn0search1turn3search28turn3search13",
+          "context_constraints": {
+            "assessment_pressure": "고객(OEM) 또는 상위 협력사의 Automotive SPICE 기반 평가 일정이 고정으로 내려오며, 프로젝트마다 ‘레벨/범위’가 달라진다(가설).",
+            "talent_scarcity_signal": "Automotive SPICE 평가 자체가 공인/자격을 요구하는 방향으로 운영되어 ‘평가자 자격’이 병목이 되는 경우가 있다. citeturn0search28turn2search20"
+          }
+        },
+        "problem_tree": [
+          {
+            "problem_cluster": "평가/감사 대응이 ‘프로젝트 막판 이벤트’가 되어 폭발",
+            "what_it_looks_like": "평가 4~8주 전부터 문서/증거를 급조하고, 실제 운영과 문서가 어긋나 ‘정합성’ 지적이 반복되며, 다음 프로젝트에서 또 같은 일이 재발(가설).",
+            "why_ai_native_is_relevant": "AI Agent가 평시(Always-on)로 산출물 생성·링크·정합성 점검을 수행하면, ‘막판 폭발’을 ‘상시 누적’으로 바꿀 수 있다(가설).",
+            "typical_search_intent": "즉시 실행 가능한 체크리스트/템플릿/갭분석 자료 탐색",
+            "likely_search_keywords": [
+              {
+                "query": "ASPICE 심사 준비 체크리스트",
+                "language": "ko",
+                "intent": "evaluation_preparation"
+              },
+              {
+                "query": "Automotive SPICE 4.0 work products list",
+                "language": "en",
+                "intent": "evaluation_preparation",
+                "note": "VDA QMC에서 Automotive SPICE 4.0을 공식 배포하고 버전 정보를 제공한다. citeturn2search5"
+              },
+              {
+                "query": "intacs certified Automotive SPICE assessor training",
+                "language": "en",
+                "intent": "expert_training",
+                "note": "Automotive SPICE for Cybersecurity 관련 교육이 ‘intacs 인증 평가자’를 전제로 설계된 사례가 있다. citeturn2search20"
+              }
+            ]
+          },
+          {
+            "problem_cluster": "기능안전(ISO 26262) 산출물·추적성 운영이 수작업 중심",
+            "what_it_looks_like": "HARA/ASIL 결정, 안전계획, 요구사항-테스트 추적성 등 활동이 도구 체인과 분리되어 엑셀/문서로 남고, 변경 시 영향분석이 늦어져 일정 리스크가 커짐(가설).",
+            "regulatory_or_standard_anchor": "ISO 26262는 E/E 시스템 오동작으로 인한 위험을 다루며, 파트 구조(개념~개발~운영 등)를 갖는다. citeturn3search0turn3search1",
+            "typical_search_intent": "샘플/템플릿, 교육, 툴/ALM 연계 방법 탐색",
+            "likely_search_keywords": [
+              {
+                "query": "ISO 26262 safety plan template",
+                "language": "en",
+                "intent": "templates"
+              },
+              {
+                "query": "ISO 26262 HARA ASIL 산정 예시",
+                "language": "ko",
+                "intent": "how_to"
+              },
+              {
+                "query": "ISO 26262 tool qualification CI/CD",
+                "language": "en",
+                "intent": "tooling_and_automation"
+              }
+            ]
+          },
+          {
+            "problem_cluster": "사이버보안(ISO/SAE 21434) + 규제(UN R155/R156) 대응이 공급망까지 확장",
+            "what_it_looks_like": "TARA, 보안요구사항, PEN 테스트/취약점 관리, 소프트웨어 업데이트 관리까지 요구되며, 협력사에도 동일한 증빙을 요구해야 하는데 조직·도구·계약이 준비되어 있지 않음(가설).",
+            "regulatory_or_standard_anchor": [
+              "ISO/SAE 21434는 차량 사이버보안 리스크 관리를 위한 엔지니어링 요구를 생애주기 관점에서 정의한다. citeturn0search1",
+              "UN R155는 CSMS 관점의 승인 요구를 포함하며(예: CSMS 적합 인증서 요구 조항이 문서에 포함), 발효 및 문서 체계가 공개되어 있다. citeturn3search13turn3search28",
+              "UN R156은 소프트웨어 업데이트 및 SUMS(Software Update Management System) 승인 요구를 다룬다. citeturn3search3turn3search10"
+            ],
+            "typical_search_intent": "규제 요약, 요구사항 해석, 인증/컨설팅 벤더 탐색",
+            "likely_search_keywords": [
+              {
+                "query": "ISO 21434 TARA template",
+                "language": "en",
+                "intent": "templates"
+              },
+              {
+                "query": "UNECE R155 CSMS 요구사항 정리",
+                "language": "ko",
+                "intent": "regulatory_summary"
+              },
+              {
+                "query": "UNECE R156 SUMS 구축",
+                "language": "ko",
+                "intent": "implementation"
+              },
+              {
+                "query": "Automotive SPICE for Cybersecurity 2.0 processes",
+                "language": "en",
+                "intent": "model_understanding",
+                "note": "VDA QMC가 Automotive SPICE for Cybersecurity 문서를 배포하고, R155 맥락을 언급한다. citeturn2search2turn2search9"
+              }
+            ]
+          },
+          {
+            "problem_cluster": "교육/역량 내재화가 어렵고, 인력 이동 시 ‘프로세스 기억’이 사라짐",
+            "what_it_looks_like": "신규 인력 온보딩 때마다 동일 교육을 반복하고, 프로젝트마다 테일러링이 달라 ‘표준 운영’이 무너짐(가설).",
+            "why_ai_native_is_relevant": "개인/역할 기반 코칭 에이전트가 내부 프로세스·정책·템플릿을 기준으로 상시 Q&A/리뷰/퀴즈를 제공하면 교육 비용을 제품화할 수 있음(가설).",
+            "likely_search_keywords": [
+              {
+                "query": "ASPICE 교육 과정 추천",
+                "language": "ko",
+                "intent": "training_vendor_search"
+              },
+              {
+                "query": "ISO 26262 기능안전 교육 ASIL",
+                "language": "ko",
+                "intent": "training_vendor_search"
+              },
+              {
+                "query": "ISO 21434 cybersecurity engineering training",
+                "language": "en",
+                "intent": "training_vendor_search"
+              }
+            ]
+          }
+        ],
+        "key_buying_triggers": [
+          {
+            "trigger": "고객(OEM/상위협력사)로부터 Automotive SPICE 평가 일정/범위 통보",
+            "why_it_forces_budget": "일정 미준수 시 수주/납품 리스크로 직결(가설).",
+            "search_behavior": "단기간에 ‘갭분석/템플릿/평가 리허설(모의평가)’을 찾는 검색 증가(가설)."
+          },
+          {
+            "trigger": "차량 사이버보안 규제/형식승인 대응 프로젝트 착수(CSMS/SUMS)",
+            "why_it_forces_budget": "UN R155/R156 체계 준비가 늦으면 형식승인·출시 일정에 영향이 가능(규제 문서 체계 존재). citeturn3search2turn3search3turn3search13",
+            "search_behavior": "‘CSMS란’, ‘SUMS 구축’, ‘R155 체크리스트’ 같은 규제 요약/구축형 검색 증가(가설)."
+          }
+        ]
+      },
+      {
+        "title": "검색 키워드 설계",
+        "search_model": {
+          "core_principle": "표준/규제 준수 문제의 검색은 대체로 ‘표준명 + (산출물/템플릿/체크리스트/교육/컨설팅/도구/인증)’ 조합으로 발생한다(가설).",
+          "keyword_clusters": [
+            {
+              "cluster_name": "표준·규제 이해(요약/해석)",
+              "intent": "informational",
+              "examples": [
+                "ISO 26262란",
+                "ISO/SAE 21434 요구사항 요약",
+                "UNECE R155 CSMS 설명",
+                "UN R156 SUMS 요건",
+                "Automotive SPICE 4.0 변경점"
+              ],
+              "why_this_cluster_is_pivotal": "내부 의사결정자(CTO/품질/안전/보안)가 ‘해야 하는 이유’를 빠르게 정리할 때 발생하며, 이후 컨설팅/도구 구매로 이어질 수 있음(가설)."
+            },
+            {
+              "cluster_name": "즉시 사용 가능한 산출물(템플릿/양식/체크리스트)",
+              "intent": "templates_and_accelerators",
+              "examples": [
+                "ASPICE 템플릿",
+                "ASPICE work product list",
+                "ISO 26262 safety plan template",
+                "ISO 21434 TARA template",
+                "CSMS checklist",
+                "SUMS process template"
+              ],
+              "why_this_cluster_is_pivotal": "AI Agent 기반 플랫폼의 ‘최단 가치 실현(use-first)’ 지점이 템플릿 자동 생성·맞춤화이기 때문(가설)."
+            },
+            {
+              "cluster_name": "심사/평가 준비(모의평가, 갭분석, 레이팅)",
+              "intent": "evaluation_preparation",
+              "examples": [
+                "ASPICE 심사 준비",
+                "ASPICE 레벨2 레벨3 차이",
+                "CMMI appraisal 준비",
+                "갭분석 컨설팅",
+                "evidence 수집 방법"
+              ],
+              "evidence_hook": "CMMI는 ‘인증’이 아니라 appraisal(평가)로 운영된다는 점은 ISACA 문서에서 반복적으로 안내된다. citeturn4search20turn4search25"
+            },
+            {
+              "cluster_name": "교육/자격/전문가 확보",
+              "intent": "training_and_certification",
+              "examples": [
+                "intacs assessor 교육",
+                "ASPICE 교육",
+                "ISO 26262 기능안전 교육",
+                "ISO 21434 교육",
+                "CMMI V3.0 교육"
+              ],
+              "evidence_hook": "Automotive SPICE for Cybersecurity 교육이 intacs 인증 평가자를 대상으로 설계되는 등(교육-시험 체계) ‘자격 기반’ 시장이 존재한다. citeturn2search20"
+            },
+            {
+              "cluster_name": "도구/플랫폼(요구사항·추적성·증거 자동화)",
+              "intent": "tooling_and_automation",
+              "examples": [
+                "Requirements traceability tool",
+                "ALM traceability",
+                "Jira 요구사항 추적",
+                "자동 증빙 수집",
+                "audit evidence automation"
+              ],
+              "why_this_cluster_is_pivotal": "AI Native 전환의 핵심이 ‘문서 작성 대행’을 넘어 ‘도구 체인에 붙어 계속 점검/교육/평가’하는 운영 자동화이기 때문(가설)."
+            },
+            {
+              "cluster_name": "AI 적용(자동 문서화/리뷰/평가/교육)",
+              "intent": "ai_transformation",
+              "examples": [
+                "AI로 ASPICE 문서 자동화",
+                "LLM 요구사항 분석",
+                "AI agent compliance",
+                "AI 기반 내부감사",
+                "AI 교육 코치"
+              ],
+              "risk_awareness_keywords": [
+                "프롬프트 인젝션",
+                "LLM 데이터 유출",
+                "생성형 AI 보안 가이드",
+                "NIST AI RMF",
+                "OWASP LLM Top 10"
+              ],
+              "evidence_hook": "LLM 보안 리스크(예: Prompt Injection)는 OWASP Top 10 for LLM Applications에 명시적으로 포함된다. citeturn5search0turn5search12"
+            }
+          ],
+          "problem_to_keywords_mapping": [
+            {
+              "problem_statement": "Automotive SPICE 평가에서 반복적으로 지적(예: 산출물 누락/불일치/추적성 부족)이 발생한다(가설).",
+              "best_keyword_patterns": [
+                "ASPICE + (체크리스트|템플릿|work product|evidence|traceability)",
+                "Automotive SPICE 4.0 + (PRM|PAM|guideline)",
+                "ASPICE + (gap analysis|mock assessment)"
+              ],
+              "high_intent_keywords": [
+                "ASPICE 갭분석 컨설팅",
+                "ASPICE 모의평가",
+                "Automotive SPICE assessment support"
+              ]
+            },
+            {
+              "problem_statement": "ISO 26262 안전 활동(예: 안전계획/분석/검증)의 산출물 연결이 어렵다(가설).",
+              "best_keyword_patterns": [
+                "ISO 26262 + (safety plan|HARA|ASIL|safety case|template)",
+                "functional safety + (process|lifecycle|training)"
+              ],
+              "high_intent_keywords": [
+                "ISO 26262 컨설팅",
+                "기능안전 프로세스 구축",
+                "ASIL 교육"
+              ],
+              "anchor_evidence": "ISO 26262는 기능안전 위험을 다루며 파트 구조로 개념~운영까지 다룬다. citeturn3search0turn3search1"
+            },
+            {
+              "problem_statement": "ISO/SAE 21434 + UN R155/R156 대응에서 ‘조직 프로세스(관리체계)’와 ‘제품 엔지니어링 산출물’이 연결되지 않는다(가설).",
+              "best_keyword_patterns": [
+                "ISO 21434 + (TARA|threat modeling|requirements|template)",
+                "UNECE R155 + (CSMS|certificate|requirements|audit)",
+                "UNECE R156 + (SUMS|software update management system|process)"
+              ],
+              "high_intent_keywords": [
+                "CSMS 구축 컨설팅",
+                "SUMS 구축 컨설팅",
+                "ISO 21434 컨설팅"
+              ],
+              "anchor_evidence": [
+                "ISO/SAE 21434는 차량 사이버보안 엔지니어링 요구를 정의한다. citeturn0search1",
+                "UN R155/R156 문서는 UNECE에서 공개 배포된다. citeturn3search2turn3search3"
+              ]
+            }
+          ],
+          "query_templates": [
+            {
+              "template": "{표준명} {산출물명} template",
+              "examples": [
+                "ISO 26262 safety plan template",
+                "ISO 21434 TARA template"
+              ]
+            },
+            {
+              "template": "{표준명} (교육|training) (온라인|오프라인|자격)",
+              "examples": [
+                "ASPICE 교육",
+                "ISO 21434 training"
+              ]
+            },
+            {
+              "template": "{표준명} (심사|평가|assessment) 준비 체크리스트",
+              "examples": [
+                "ASPICE 심사 준비 체크리스트",
+                "CMMI appraisal 준비"
+              ]
+            },
+            {
+              "template": "({규제명} | {약어}) (요건|요구사항|해석|체크리스트)",
+              "examples": [
+                "UNECE R155 CSMS 요구사항",
+                "UN R156 SUMS 체크리스트"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "title": "대안 고객군",
+        "secondary_personas": [
+          {
+            "segment_name": "SaMD/디지털의료기기 개발사",
+            "why_it_is_close_to_ideal": "국내 허가·심사 요건과 국제표준(IEC 62304) 및 보안 표준(IEC 81001-5-1 등)이 결합되고, 법 시행/고시/가이드 개정으로 ‘변화 대응’과 ‘제출자료 품질’이 성패를 좌우한다. citeturn1search9turn0search7turn1search5turn1search19",
+            "real_world_problems": [
+              {
+                "problem": "IEC 62304 기반 SDLC 체계가 허가용 기술문서/품질체계 문서와 분리되어 정합성 문제가 생김(가설).",
+                "standard_anchor": "IEC 62304는 의료기기 소프트웨어 생애주기 요구사항을 정의한다. citeturn1search9turn1search20"
+              },
+              {
+                "problem": "사이버보안 제출자료(요구사항, 위협/취약점 관리, 업데이트/사후관리 등) 준비 범위가 커지고, 가이드라인 개정에 따라 적용시기/요건 해석이 어려움(가설).",
+                "regulatory_anchor": "식약처는 의료기기 사이버보안 허가·심사 가이드라인을 개정·게시한다. citeturn0search7turn0search3"
+              },
+              {
+                "problem": "디지털의료제품법 시행 이후 ‘전자적 침해행위’ 관련 보호조치/지침 준수체계(서식, 운영 프로세스, 증빙) 구축이 필요(가설).",
+                "regulatory_anchor": [
+                  "디지털의료제품법은 2025-01-24 시행으로 안내된다. citeturn1search5",
+                  "법령(개정문/조문)에서 전자적 침해행위 보호 조치 조항을 확인할 수 있다. citeturn1search19",
+                  "식약처는 ‘디지털의료기기 전자적 침해행위 보안지침’ 고시를 게시했다. citeturn1search2"
+                ]
+              }
+            ],
+            "likely_search_keywords": [
+              {
+                "query": "IEC 62304 템플릿",
+                "language": "ko",
+                "intent": "templates"
+              },
+              {
+                "query": "SaMD IEC 62304 프로세스 구축",
+                "language": "ko",
+                "intent": "implementation"
+              },
+              {
+                "query": "의료기기 사이버보안 허가·심사 가이드라인",
+                "language": "ko",
+                "intent": "regulatory_primary_source",
+                "evidence": "식약처에서 해당 가이드라인 게시(개정 이력 포함). citeturn0search7turn0search3"
+              },
+              {
+                "query": "디지털의료기기 전자적 침해행위 보안지침",
+                "language": "ko",
+                "intent": "regulatory_primary_source",
+                "evidence": "식약처 고시 및 가이드 문서 게시. citeturn1search2turn1search5"
+              },
+              {
+                "query": "IEC 81001-5-1 secure software lifecycle",
+                "language": "en",
+                "intent": "standard_understanding",
+                "evidence": "IEC 81001-5-1은 헬스 소프트웨어 보안 생애주기 요구를 정의하며 IEC 62443-4-1 적합을 지원한다. citeturn1search6turn1search0"
+              },
+              {
+                "query": "의료기기 SBOM 가이드라인",
+                "language": "ko",
+                "intent": "compliance_artifacts",
+                "evidence": "식약처는 의료기기 사이버보안 가이드라인(3종) 게시 시 SBOM 관련 원칙/실무 문서를 포함한다. citeturn0search15"
+              }
+            ]
+          },
+          {
+            "segment_name": "공공정보화사업 수행 조직(SI/개발) + PMO 제도 대응",
+            "why_it_can_work": "PMO 추진계획 공지와 운영 가이드가 존재해, 표준 산출물·점검 자동화(대시보드/리스크 관리/산출물 일괄 점검) 형태의 제품화 여지가 있다. citeturn2search12turn2search4",
+            "likely_search_keywords": [
+              {
+                "query": "전자정부사업관리위탁 PMO 추진계획",
+                "language": "ko",
+                "intent": "regulatory_primary_source",
+                "evidence": "행정안전부가 PMO 추진계획을 공지한다. citeturn2search12"
+              },
+              {
+                "query": "PMO 도입 운영가이드",
+                "language": "ko",
+                "intent": "templates_and_guides",
+                "evidence": "PMO 도입·운영 가이드가 공개적으로 유통된다. citeturn2search4"
+              }
+            ]
+          },
+          {
+            "segment_name": "CMMI 기반 조직역량/프로세스 성숙도 추진 IT/서비스 기업",
+            "why_it_can_work": "CMMI는 ISACA가 운영하는 평가(appraisal) 중심 생태계이며, 버전 업데이트(예: V3.0 공개 및 관련 교육/평가 방법 안내)가 지속된다. citeturn2search0turn4search3turn4search20",
+            "likely_search_keywords": [
+              {
+                "query": "CMMI V3.0 appraisal method",
+                "language": "en",
+                "intent": "standard_understanding",
+                "evidence": "ISACA/CMMI Institute가 appraisal method를 공식 정의한다고 안내한다. citeturn4search20"
+              },
+              {
+                "query": "CMMI V3.0 출시 2023 4월 6일",
+                "language": "ko",
+                "intent": "timeline_verification",
+                "evidence": "CMMI 콘텐츠 릴리스 타임라인에 V3.0 모델 콘텐츠 릴리스 일자가 제시된다. citeturn4search3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "AI Native 전환을 ‘구매 가능’하게 만드는 추가 현실 문제",
+        "note": "이 섹션은 ‘고객이 AI Agent 기반 플랫폼을 채택할 때 실제로 부딪히는 장애물’을 정리한 것으로, 표준/규제 자체 요구라기보다 도입 리스크 관리 관점이다(가설).",
+        "adoption_barriers_and_search_keywords": [
+          {
+            "barrier": "기밀/고객정보/소스코드가 외부 LLM으로 유출될 수 있다는 우려",
+            "why_it_matters": "자동차/의료 분야는 공급망 NDA 및 규제 리스크로 인해 ‘AI를 쓰고 싶어도 못 쓰는’ 상황이 발생할 수 있음(가설).",
+            "search_keywords": [
+              {
+                "query": "생성형 AI 보안 안내서",
+                "language": "ko",
+                "intent": "risk_management",
+                "evidence": "KISA/정부 측 ‘인공지능(AI) 보안 안내서’ 배포 및 수정 공지가 존재한다. citeturn5search27turn5search8"
+              },
+              {
+                "query": "OWASP LLM Top 10 prompt injection",
+                "language": "en",
+                "intent": "risk_management",
+                "evidence": "OWASP Top 10 for LLM Applications에 Prompt Injection이 포함된다. citeturn5search0turn5search12"
+              }
+            ]
+          },
+          {
+            "barrier": "LLM 기반 자동화의 신뢰성(환각/오류)과 책임소재",
+            "search_keywords": [
+              {
+                "query": "NIST AI RMF 1.0 generative AI profile",
+                "language": "en",
+                "intent": "governance",
+                "evidence": "NIST는 생성형 AI 리스크 관리 프로파일(NIST AI 600-1)을 공개했다. citeturn5search4turn5search1"
+              }
+            ]
+          },
+          {
+            "barrier": "개인정보/민감정보 처리와 AI 도입의 법적·관리적 통제",
+            "search_keywords": [
+              {
+                "query": "생성형 인공지능 개발·활용 개인정보 처리 안내서 KISA",
+                "language": "ko",
+                "intent": "privacy_compliance",
+                "evidence": "KISA에서 생성형 AI 개발·활용을 위한 개인정보 처리 안내서를 게시한다. citeturn5search11"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

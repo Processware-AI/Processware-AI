@@ -1,0 +1,52 @@
+{
+    "ideal_customers": {
+      "primary_target": "한국 내 중소·중견 IT/소프트웨어 기업 (특히 자동차 전장·소프트웨어 공급사 Tier 1/2, 의료기기 SaMD 개발사)",
+      "secondary_target": "국내 PMO 운영 기업, 사이버보안 솔루션 제공사, 글로벌 OEM 인증을 준비 중인 제조·IT 기업 (50~500명 규모)",
+      "detailed_profile": "국제 표준(ASPICE, ISO 26262, IEC 62304 등) 인증이 사업 수주·글로벌 진출의 필수 조건이지만, 대형 컨설팅사 비용(수억 원대)이 부담스럽고 내부 전문 인력이 부족한 기업. AI Native 전환을 적극 추진 중이며, 인간 컨설턴트 대신 AI Agent로 프로세스 구축·교육·평가를 자동화해 비용 50~70% 절감과 속도 향상을 원하는 의사결정자(CTO, 품질/인증 담당 임원, 프로세스 개선 PM)"
+    },
+    "realistic_problems": [
+      "인증 컨설팅 비용과 기간이 과도하게 길어 사업 기회를 놓침 (인간 컨설턴트 1인 운영 한계로 대규모 프로젝트 대응 불가)",
+      "ASPICE, ISO 26262, IEC 62304, ISO/SAE 21434 등 복잡한 국제 표준과 국내 규제(식약처 가이드라인, 전자적 침해행위 보호조치)를 동시에 준수해야 하는데 내부 전문 지식과 문서화 역량 부족",
+      "팀원 교육·코칭이 지속적으로 필요하지만 강의·워크숍 비용과 시간 부담이 크며, 규제 개정 시마다 다시 교육해야 함",
+      "프로세스 템플릿·체크리스트·감사 도구를 기업 맞춤형으로 개발해야 하는데 개발 인력과 예산 부족으로 수작업에 의존",
+      "AI Agent(Claude Code, Cowork 등)를 활용해 컨설팅·교육·도구개발을 자동화하고 싶지만, '어떻게 시작하고 어떤 플랫폼을 써야 할지' 구체적인 방법과 사례를 찾기 어려움",
+      "인증 심사 전 내부 프로세스 평가·갭 분석·개선 계획 수립이 반복적으로 필요하나 인력 한계로 지연 발생"
+    ],
+    "search_keywords": {
+      "naver_google_primary": [
+        "ASPICE AI 컨설팅",
+        "ISO 26262 AI 도구",
+        "IEC 62304 AI 교육",
+        "의료기기 SaMD 사이버보안 AI",
+        "ISO/SAE 21434 자동화",
+        "CMMI AI Native 프로세스",
+        "ASPICE for Cybersecurity AI Agent",
+        "IEC 81001-5-1 AI 준수 플랫폼"
+      ],
+      "naver_google_secondary": [
+        "AI Agent 규제 준수 컨설팅",
+        "자동차 소프트웨어 인증 AI 플랫폼",
+        "의료기기 사이버보안 AI 코칭",
+        "프로세스 인증 AI 도구 개발",
+        "Claude AI CMMI 교육",
+        "AI Native 컨설팅 서비스",
+        "식약처 의료기기 사이버보안 AI 가이드",
+        "PMO 규제 AI 자동화"
+      ],
+      "english_global": [
+        "AI-powered ASPICE compliance",
+        "ISO 26262 AI consulting automation",
+        "IEC 62304 AI agent training",
+        "ISO/SAE 21434 cybersecurity AI tool",
+        "AI native regulatory compliance platform",
+        "SaMD cybersecurity AI consulting"
+      ],
+      "customer_search_behavior": "Naver에서 위 키워드로 검색 → 'AI 컨설팅 플랫폼', 'AI Agent 인증 자동화', '비용 절감 사례' 관련 블로그·데모·가격 정보를 주로 확인. 글로벌 기업은 Google에서 영문 키워드 + 'Korea' 조합으로 검색"
+    },
+    "additional_insights": {
+      "customer_pain_points_priority": "비용 > 시간 > 전문성 부족 > AI 전환 방법론 순",
+      "willingness_to_pay": "기존 인간 컨설팅 대비 40~60% 비용으로 AI 플랫폼 + 커스텀 Agent 제공 시 즉시 도입 고려",
+      "decision_makers": "CTO, 품질경영책임자(QMR), 인증담당 PM, 디지털전환(DX) 담당자",
+      "entry_point": "무료 갭 분석 AI Agent 데모 → 유료 맞춤 Agent 구축·교육 패키지 → 지속 구독형 플랫폼 생태계"
+    }
+  }

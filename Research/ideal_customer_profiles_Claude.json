@@ -1,0 +1,446 @@
+{
+  "meta": {
+    "title": "AI Native 프로세스 컨설팅 서비스 - 이상적 고객 프로파일(ICP)",
+    "version": "1.0",
+    "created": "2026-04-04",
+    "description": "국제표준/규제 기반 AI Native 컨설팅·교육·도구개발 서비스의 타겟 고객, 현실적 페인포인트, 검색 키워드 분석"
+  },
+
+  "service_domains": [
+    {
+      "domain_id": "AUTO_PROCESS",
+      "domain_name": "자동차 소프트웨어 개발 프로세스",
+      "standards": ["ASPICE (Automotive SPICE)", "ISO 26262"],
+      "ideal_customers": [
+        {
+          "customer_type": "자동차 Tier-1/Tier-2 소프트웨어 공급업체",
+          "company_size": "50~500명 규모",
+          "description": "현대·기아, BMW, VW 등 글로벌 OEM에 ECU·미들웨어·임베디드 소프트웨어를 납품하는 한국 중견 부품사",
+          "industry_examples": ["차량용 인포테인먼트 SW 업체", "ADAS/자율주행 SW 업체", "EV BMS/모터제어 SW 업체", "차량용 미들웨어 업체(AUTOSAR 기반)", "SDV(Software Defined Vehicle) 플랫폼 업체"],
+          "decision_makers": ["품질보증(QA) 팀장/이사", "개발 프로세스 담당 PM", "SEPG(Software Engineering Process Group) 리더", "CTO / VP Engineering"],
+          "pain_points": [
+            {
+              "problem": "OEM의 ASPICE Level 2/3 인증 요구에 대한 촉박한 일정 압박",
+              "detail": "글로벌 OEM이 납품 조건으로 ASPICE CL2~CL3를 요구하지만, 내부에 프로세스 전문가가 없어 외부 컨설팅에 의존. 컨설팅 비용이 높고, 컨설턴트 일정 확보가 어려움."
+            },
+            {
+              "problem": "V-모델 기반 산출물 작성의 과도한 문서 부담",
+              "detail": "요구사항 명세서, 아키텍처 설계서, 테스트 케이스, 추적성 매트릭스 등 수십 종의 산출물을 수작업으로 작성. 개발자가 코딩보다 문서 작성에 더 많은 시간을 소비."
+            },
+            {
+              "problem": "ASPICE와 ISO 26262 동시 적용 시 프로세스 중복·혼란",
+              "detail": "두 표준의 요구사항이 겹치는 부분과 고유한 부분을 구별하지 못해 이중 작업 발생. 통합 프로세스 설계 역량 부족."
+            },
+            {
+              "problem": "심사 대응 역량의 속인성(속인적 의존)",
+              "detail": "소수의 프로세스 담당자에게 지식이 집중되어 있어 퇴사 시 조직 역량이 급격히 저하됨. 신규 인력의 학습 곡선이 길고, 교육 자료가 체계화되어 있지 않음."
+            },
+            {
+              "problem": "ALM 도구(Codebeamer, Jama, Polarion 등) 도입·운영의 높은 진입장벽",
+              "detail": "도구 라이선스 비용이 높고, 도구 커스터마이징과 프로세스 매핑에 전문 인력이 필요하지만 내부에 없음."
+            }
+          ],
+          "search_keywords": {
+            "korean": [
+              "ASPICE 인증 컨설팅",
+              "ASPICE 레벨2 레벨3 획득",
+              "자동차 소프트웨어 프로세스 구축",
+              "ASPICE 산출물 템플릿",
+              "ASPICE 교육",
+              "ASPICE ISO 26262 통합",
+              "자동차 SW 품질 인증",
+              "ASPICE 심사 준비",
+              "Automotive SPICE 컨설팅 비용",
+              "ASPICE 문서 자동화",
+              "ASPICE AI 도구",
+              "차량용 소프트웨어 개발 표준",
+              "ASPICE 4.0 변경사항",
+              "V모델 산출물 작성"
+            ],
+            "english": [
+              "ASPICE consulting Korea",
+              "ASPICE Level 2 certification",
+              "automotive software process improvement",
+              "ASPICE work products template",
+              "ASPICE ISO 26262 alignment",
+              "automotive SPICE assessment preparation",
+              "ALM tool ASPICE integration"
+            ]
+          }
+        },
+        {
+          "customer_type": "자동차 OEM 소프트웨어 내재화 조직",
+          "company_size": "대기업 내 100~1000명 SW 조직",
+          "description": "현대모비스, 현대오토에버 등 OEM 계열 SW 조직이 내부 개발 역량 강화를 위해 ASPICE 프로세스를 자체 구축하는 경우",
+          "industry_examples": ["현대자동차그룹 계열 SW 법인", "OEM 직속 SDV 센터", "완성차 R&D센터 SW팀"],
+          "decision_makers": ["SW 품질혁신 담당 임원", "프로세스혁신팀장", "SDV전략 담당"],
+          "pain_points": [
+            {
+              "problem": "대규모 조직 대상 프로세스 전파 및 내재화의 어려움",
+              "detail": "수백 명의 개발자에게 프로세스를 교육하고 정착시키는 데 시간과 비용이 막대함. 일회성 교육으로는 행동 변화가 일어나지 않음."
+            },
+            {
+              "problem": "글로벌 거점 간 프로세스 일관성 유지",
+              "detail": "한국, 미국, 독일, 인도 등 다수 거점의 개발팀이 동일한 프로세스 수준을 유지하기 어려움."
+            }
+          ],
+          "search_keywords": {
+            "korean": [
+              "ASPICE 내재화",
+              "자동차 SW 프로세스 혁신",
+              "ASPICE 조직 역량 강화",
+              "SW 개발 프로세스 표준화",
+              "ASPICE 교육 프로그램",
+              "프로세스 성숙도 향상"
+            ],
+            "english": [
+              "ASPICE process institutionalization",
+              "automotive software process maturity",
+              "ASPICE training program enterprise"
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "domain_id": "AUTO_CYBERSEC",
+      "domain_name": "자동차 사이버보안",
+      "standards": ["ISO/SAE 21434", "ASPICE for Cybersecurity", "UN R155 (CSMS)", "UN R156 (SUMS)"],
+      "ideal_customers": [
+        {
+          "customer_type": "커넥티드카·SDV 관련 Tier-1/Tier-2 공급업체",
+          "company_size": "30~300명 규모",
+          "description": "V2X, OTA, 텔레매틱스, 게이트웨이, IVI 등 외부 통신이 있는 E/E 컴포넌트를 개발·납품하는 업체",
+          "industry_examples": ["텔레매틱스/커넥티비티 솔루션 업체", "자동차 보안 솔루션 업체(IDS/IPS, SecOC)", "V2X 통신 모듈 업체", "OTA 솔루션 업체", "차량용 게이트웨이/방화벽 업체"],
+          "decision_makers": ["보안 아키텍트 / 보안팀장", "품질보증 담당", "프로젝트 매니저", "사업개발(BD) 담당"],
+          "pain_points": [
+            {
+              "problem": "ISO/SAE 21434 CSMS 구축 방법론 부재",
+              "detail": "표준 문서가 추상적이어서 실제 조직에 어떻게 적용해야 하는지 모르겠음. TARA(위협 분석 및 리스크 평가) 수행 경험이 없음."
+            },
+            {
+              "problem": "OEM으로부터 CSMS 인증 요구를 받았으나 대응 역량 부족",
+              "detail": "UN R155에 따라 OEM이 공급업체에 사이버보안 요구사항을 하달하고 있으나, 소규모 업체는 보안 전문 인력이 없음."
+            },
+            {
+              "problem": "ASPICE for Cybersecurity 평가 대비 프로세스 미구축",
+              "detail": "기존 ASPICE 프로세스에 사이버보안 프로세스를 어떻게 통합해야 하는지 가이드가 없음."
+            },
+            {
+              "problem": "보안 테스트(침투테스트, 퍼징) 역량 및 도구 부족",
+              "detail": "사이버보안 검증 활동을 수행할 도구와 인력이 없고, 외부 위탁 비용이 높음."
+            }
+          ],
+          "search_keywords": {
+            "korean": [
+              "ISO 21434 컨설팅",
+              "자동차 사이버보안 인증",
+              "CSMS 구축",
+              "자동차 사이버보안 TARA",
+              "UN R155 대응",
+              "ASPICE for Cybersecurity",
+              "자동차 보안 프로세스",
+              "자동차 사이버보안 교육",
+              "ISO 21434 인증 비용",
+              "차량 사이버보안 위협분석",
+              "SDV 사이버보안",
+              "자동차 보안 컨설팅 업체"
+            ],
+            "english": [
+              "ISO 21434 consulting",
+              "automotive cybersecurity management system",
+              "CSMS certification",
+              "TARA automotive cybersecurity",
+              "UN R155 compliance",
+              "ASPICE cybersecurity assessment"
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "domain_id": "MEDDEV_SW",
+      "domain_name": "의료기기(SaMD) 소프트웨어 개발",
+      "standards": ["IEC 62304"],
+      "ideal_customers": [
+        {
+          "customer_type": "디지털 헬스케어 / SaMD 스타트업 및 중소기업",
+          "company_size": "10~100명 규모",
+          "description": "AI 기반 진단 소프트웨어, 디지털 치료기기(DTx), 원격 모니터링 앱 등을 개발하여 식약처/FDA/CE 인허가를 받으려는 기업",
+          "industry_examples": ["AI 의료영상 진단 SW 업체", "디지털 치료기기(DTx) 개발사", "원격환자모니터링(RPM) 솔루션", "웨어러블 의료기기 SW 개발사", "SaMD 기반 동반진단(CDx) 업체"],
+          "decision_makers": ["RA(Regulatory Affairs) 담당자/팀장", "QA/QMS 담당자", "CTO / 개발 리더", "대표이사(소규모 기업의 경우)"],
+          "pain_points": [
+            {
+              "problem": "IEC 62304 소프트웨어 수명주기 프로세스 이해 및 구축 어려움",
+              "detail": "소프트웨어 스타트업 출신 개발자들이 V-모델 기반의 체계적인 개발 프로세스를 처음 경험. Agile 개발 방식과 IEC 62304 요구사항 간의 조화가 어려움."
+            },
+            {
+              "problem": "방대한 인허가 산출물 작성 부담",
+              "detail": "소프트웨어 요구사항 명세서, 아키텍처 설계서, 위험분석서, 검증/확인 보고서 등 수십 종의 문서를 소규모 팀이 작성해야 함. 문서 품질이 인허가 성패를 좌우함."
+            },
+            {
+              "problem": "소프트웨어 안전 등급(Safety Class) 분류 및 위험관리 연계 미숙",
+              "detail": "IEC 62304의 Safety Class A/B/C 분류에 따라 요구되는 활동 수준이 다른데, 이를 ISO 14971 위험관리와 연계하는 방법을 모름."
+            },
+            {
+              "problem": "AI/ML 기반 SaMD의 IEC 62304 적용 방법 불명확",
+              "detail": "인공지능 의료기기 소프트웨어에 대한 국제표준이 아직 논의 단계여서, IEC 62304를 어떻게 적용해야 하는지 가이드라인이 부족함."
+            },
+            {
+              "problem": "인허가 경험 부족으로 반복적인 보완 요청",
+              "detail": "식약처 또는 FDA 제출 후 보완 요청을 반복적으로 받아 인허가 일정이 지연되고 비용이 증가함."
+            }
+          ],
+          "search_keywords": {
+            "korean": [
+              "IEC 62304 컨설팅",
+              "의료기기 소프트웨어 개발 프로세스",
+              "SaMD 인허가",
+              "의료기기 SW 수명주기",
+              "IEC 62304 산출물",
+              "디지털 치료기기 인허가",
+              "AI 의료기기 인증",
+              "의료기기 소프트웨어 밸리데이션",
+              "식약처 소프트웨어 의료기기",
+              "SaMD IEC 62304 교육",
+              "의료기기 SW 위험분석",
+              "IEC 62304 Agile 적용",
+              "의료기기 소프트웨어 템플릿"
+            ],
+            "english": [
+              "IEC 62304 consulting",
+              "SaMD regulatory consulting Korea",
+              "medical device software lifecycle",
+              "IEC 62304 compliance",
+              "digital therapeutics regulatory",
+              "AI medical device IEC 62304"
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "domain_id": "MEDDEV_CYBERSEC",
+      "domain_name": "의료기기 사이버보안",
+      "standards": ["IEC 81001-5-1", "IEC 62443-4-2", "식약처 의료기기 사이버보안 허가심사 가이드라인", "디지털의료제품 전자적 침해행위 보호조치"],
+      "ideal_customers": [
+        {
+          "customer_type": "네트워크 연결형 의료기기 제조업체",
+          "company_size": "30~300명 규모",
+          "description": "유무선 통신 기능을 갖춘 의료기기(CT, MRI, 환자모니터, 수술로봇, 인슐린펌프 등) 또는 SaMD를 개발·제조하여 국내외 인허가를 받는 기업",
+          "industry_examples": ["영상의학 장비(CT/MRI/X-ray) 제조사", "환자 모니터링 시스템 제조사", "수술로봇/수술내비게이션 업체", "체외진단기기(IVD) SW 업체", "의료정보시스템(PACS, EMR연동) 업체", "웨어러블 의료기기 업체"],
+          "decision_makers": ["RA(인허가) 담당자", "정보보안 담당자", "QA/QMS 매니저", "제품개발 총괄"],
+          "pain_points": [
+            {
+              "problem": "2025년 개정된 식약처 사이버보안 가이드라인 대응 부담",
+              "detail": "IEC 62443-4-2, IEC/TR 60601-4-5 등 국제 규격이 반영된 개정 가이드라인에 맞춰 기존 제출 자료를 전면 재작성해야 함."
+            },
+            {
+              "problem": "IEC 81001-5-1 신규 대응",
+              "detail": "의료기기 소프트웨어의 보안 수명주기 관리에 대한 새로운 국제표준으로, 기존 IEC 62304 프로세스에 보안 활동을 통합해야 하는데 방법을 모름."
+            },
+            {
+              "problem": "SBOM(Software Bill of Materials) 작성 및 관리 역량 부족",
+              "detail": "오픈소스 컴포넌트의 취약점 관리, SBOM 자동 생성 및 갱신 프로세스가 없음."
+            },
+            {
+              "problem": "사이버보안 시험성적서 확보의 어려움",
+              "detail": "KTC 등 공인시험기관에서 사이버보안 시험을 받아야 하는데, 시험 항목과 준비사항을 이해하지 못해 시험 불합격 및 재시험 비용 발생."
+            },
+            {
+              "problem": "해외(EU MDR, FDA) 사이버보안 요구사항과 국내 규정의 이중 대응",
+              "detail": "EU MDR의 Annex I 사이버보안 요구사항, FDA premarket guidance와 식약처 가이드라인을 동시에 만족시켜야 함."
+            }
+          ],
+          "search_keywords": {
+            "korean": [
+              "의료기기 사이버보안 컨설팅",
+              "의료기기 사이버보안 허가심사",
+              "IEC 81001-5-1",
+              "의료기기 사이버보안 가이드라인",
+              "식약처 사이버보안 자료 제출",
+              "의료기기 SBOM",
+              "의료기기 사이버보안 시험",
+              "IEC 62443 의료기기",
+              "의료기기 보안 인증",
+              "디지털의료제품 사이버보안",
+              "의료기기 취약점 분석",
+              "의료기기 침투테스트",
+              "의료기기 사이버보안 교육",
+              "전자적 침해행위 보호조치"
+            ],
+            "english": [
+              "medical device cybersecurity consulting",
+              "IEC 81001-5-1 compliance",
+              "IEC 62443-4-2 medical device",
+              "medical device SBOM management",
+              "FDA cybersecurity premarket guidance",
+              "EU MDR cybersecurity requirements"
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "domain_id": "IT_PROCESS",
+      "domain_name": "IT 프로세스 품질 (범용)",
+      "standards": ["CMMI", "대한민국 PMO 규제 및 가이드"],
+      "ideal_customers": [
+        {
+          "customer_type": "공공 SI/IT서비스 기업",
+          "company_size": "100~1000명 규모",
+          "description": "정부·공공기관 IT 프로젝트를 수행하며, PMO 의무 적용 대상 사업에 참여하는 SI/IT서비스 기업",
+          "industry_examples": ["중견 SI 업체", "공공 클라우드/데이터센터 사업자", "전자정부 솔루션 업체", "공공 AI/빅데이터 사업 수행사"],
+          "decision_makers": ["PMO 담당 임원/팀장", "품질보증(QA) 팀장", "프로젝트관리 총괄(PM)", "사업부장"],
+          "pain_points": [
+            {
+              "problem": "PMO 규제 강화에 따른 프로세스 문서화 부담 증가",
+              "detail": "공공 IT 사업의 PMO 의무 적용 범위가 확대되면서, 프로젝트 계획서·위험관리대장·품질관리계획서 등 산출물 작성 부담이 가중됨."
+            },
+            {
+              "problem": "CMMI 인증 유지 비용 대비 실질적 프로세스 개선 효과 미흡",
+              "detail": "인증 심사를 위한 형식적 문서화에 치중하여 실제 개발 프로세스 개선으로 이어지지 않음. 개발자들의 프로세스 피로감 증가."
+            },
+            {
+              "problem": "프로젝트 관리 도구의 분산과 데이터 사일로",
+              "detail": "Redmine, Jira, MS Project, Excel 등 도구가 혼재되어 프로젝트 현황 파악이 어렵고, 경영진 보고를 위한 수작업 집계에 시간이 소요됨."
+            },
+            {
+              "problem": "소규모 프로젝트에 과도한 프로세스 적용의 비효율",
+              "detail": "대규모 사업 기준의 프로세스를 소규모 프로젝트에도 동일하게 적용하여 오버헤드가 발생함. 테일러링 기준이 없음."
+            }
+          ],
+          "search_keywords": {
+            "korean": [
+              "CMMI 인증 컨설팅",
+              "CMMI 레벨3 획득",
+              "소프트웨어 프로세스 개선",
+              "PMO 컨설팅",
+              "공공 PMO 가이드",
+              "IT 프로젝트 관리 컨설팅",
+              "CMMI 교육",
+              "CMMI 산출물 자동화",
+              "프로젝트 품질관리",
+              "CMMI AI 도구",
+              "소프트웨어 품질 인증",
+              "IT 프로세스 혁신"
+            ],
+            "english": [
+              "CMMI consulting Korea",
+              "CMMI Level 3 certification",
+              "software process improvement consulting",
+              "PMO consulting services",
+              "CMMI appraisal preparation"
+            ]
+          }
+        },
+        {
+          "customer_type": "방산·우주·항공 SW 개발업체",
+          "company_size": "50~500명 규모",
+          "description": "방위사업청·ADD·KARI 등 발주기관의 CMMI 레벨 요구를 받는 방산·우주·항공 분야 SW 개발업체",
+          "industry_examples": ["방산 임베디드 SW 개발사", "위성·항공전자 SW 업체", "무기체계 SW 전문업체", "드론/UAV SW 업체"],
+          "decision_makers": ["품질보증(QA) 팀장", "사업관리(PM) 총괄", "SW공학 프로세스 담당"],
+          "pain_points": [
+            {
+              "problem": "발주기관의 CMMI 레벨 3 이상 요구",
+              "detail": "방위사업 입찰 시 CMMI 레벨 요구가 기본 자격 조건. 인증 획득 후에도 3년 주기 재인증 부담."
+            },
+            {
+              "problem": "보안 등급에 따른 외부 컨설턴트 접근 제한",
+              "detail": "보안 이슈로 외부 컨설턴트의 사내 접근이 제한되어, 원격·비대면 컨설팅 방식 선호."
+            }
+          ],
+          "search_keywords": {
+            "korean": [
+              "방산 CMMI 인증",
+              "국방 소프트웨어 품질",
+              "방위사업 CMMI 요구",
+              "항공우주 SW 프로세스",
+              "CMMI 원격 컨설팅"
+            ],
+            "english": [
+              "defense CMMI certification",
+              "aerospace software CMMI",
+              "CMMI remote consulting"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+
+  "cross_domain_high_value_customer": {
+    "description": "복수 도메인에 걸쳐 있어 최고 가치를 지닌 '크로스 도메인' 고객",
+    "profiles": [
+      {
+        "profile_name": "자동차 + 사이버보안 복합 대응 기업",
+        "description": "ASPICE + ISO 26262 + ISO/SAE 21434를 동시에 요구받는 Tier-1. SDV 전환으로 소프트웨어 비중이 급증하며, 프로세스·안전·보안을 통합 관리해야 하는 기업.",
+        "why_highest_value": "3개 이상의 표준을 통합 대응해야 하므로 단일 파트너에게 통합 컨설팅을 받고 싶은 니즈가 강함. AI 자동화를 통한 산출물 통합 생성의 가치가 가장 큼.",
+        "examples": ["현대모비스 협력사 중 커넥티드카 SW 업체", "자율주행 스택 개발 스타트업", "EV 충전·V2G 통신 모듈 업체"]
+      },
+      {
+        "profile_name": "의료기기 SW + 사이버보안 복합 대응 기업",
+        "description": "IEC 62304 + IEC 81001-5-1 + 식약처 사이버보안 가이드라인을 동시에 충족해야 하는 SaMD/디지털 헬스 기업.",
+        "why_highest_value": "소규모 팀이 다수의 규제를 동시에 만족시켜야 하므로 AI 기반 문서 자동 생성, 갭 분석, 교육의 ROI가 극대화됨.",
+        "examples": ["AI 의료영상 진단 스타트업", "원격 환자 모니터링 플랫폼 업체", "디지털 치료기기(DTx) 개발사"]
+      }
+    ]
+  },
+
+  "ai_native_service_value_proposition": {
+    "description": "AI Native 서비스가 기존 컨설팅 대비 제공하는 차별적 가치",
+    "value_points": [
+      {
+        "value": "24/7 상시 컨설팅 접근성",
+        "detail": "AI Agent가 표준 해석, 산출물 리뷰, 갭 분석을 상시 제공. 컨설턴트 일정 조율 불필요."
+      },
+      {
+        "value": "산출물 자동 생성 및 추적성 확보",
+        "detail": "요구사항→설계→테스트 간 추적성 매트릭스를 AI가 자동 생성하고 일관성을 검증."
+      },
+      {
+        "value": "맞춤형 교육 및 코칭",
+        "detail": "각 팀원의 역할과 역량 수준에 맞춘 AI 튜터가 표준 요구사항을 실무 맥락으로 설명."
+      },
+      {
+        "value": "심사 시뮬레이션",
+        "detail": "AI가 심사원 역할을 수행하여 모의 심사(Mock Assessment)를 진행하고 약점을 사전 식별."
+      },
+      {
+        "value": "비용 효율성",
+        "detail": "기존 대면 컨설팅 대비 50~70% 비용 절감 가능성. 중소기업·스타트업의 진입 장벽 대폭 낮춤."
+      },
+      {
+        "value": "지식 자산화 및 조직 학습",
+        "detail": "컨설팅 과정에서 축적된 노하우가 AI 시스템에 누적되어, 담당자 퇴사 후에도 조직 역량이 유지됨."
+      }
+    ]
+  },
+
+  "market_sizing_signals": {
+    "automotive_sw": {
+      "signal": "한국 자동차 Tier-1/Tier-2 중 ASPICE 인증 대상 추정 200~400개사",
+      "trend": "SDV 전환 가속화로 SW 비중 급증, ASPICE 4.0 전환 수요 발생"
+    },
+    "automotive_cybersec": {
+      "signal": "UN R155 의무화로 모든 차량 E/E 공급업체에 CSMS 요구 확산",
+      "trend": "2024년 7월부터 기존 차량에도 적용. 사이버보안 컨설팅 수요 급증 중"
+    },
+    "meddev_sw": {
+      "signal": "한국 디지털 헬스케어 기업 300개사 이상 추정(SaMD 인허가 건수 연 100건+ 증가 추세)",
+      "trend": "AI 의료기기 허가 건수 급증, IEC 62304 적용 수요 지속 확대"
+    },
+    "meddev_cybersec": {
+      "signal": "2025년 식약처 가이드라인 개정으로 기존 허가 제품도 변경 시 사이버보안 자료 필수",
+      "trend": "전수 대응 필요. 기존 제조업체의 레거시 제품 대응 수요 폭증 예상"
+    },
+    "it_process": {
+      "signal": "공공 IT 사업 PMO 의무 적용 확대, 방산 CMMI 요구 지속",
+      "trend": "AI 기반 프로젝트 관리 도구 수요 증가, 기존 CMMI 형식적 운영에서 실질적 활용으로 전환 요구"
+    }
+  }
+}
