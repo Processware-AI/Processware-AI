@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - The Digital Jurist</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "secondary-container": "#d5e0f7",
+          "secondary-fixed": "#d8e3fa",
+          "primary-container": "#003366",
+          "on-primary": "#ffffff",
+          "surface-variant": "#e2e2e7",
+          "outline-variant": "#c3c6d1",
+          "surface-dim": "#dad9de",
+          "surface": "#f9f9fe",
+          "surface-container-low": "#f4f3f8",
+          "error": "#ba1a1a",
+          "on-primary-container": "#799dd6",
+          "primary-fixed-dim": "#a7c8ff",
+          "surface-container-lowest": "#ffffff",
+          "surface-container": "#eeedf2",
+          "surface-tint": "#3a5f94",
+          "on-background": "#1a1c1f",
+          "on-surface-variant": "#43474f",
+          "inverse-primary": "#a7c8ff",
+          "on-surface": "#1a1c1f",
+          "surface-container-high": "#e8e8ed",
+          "outline": "#737780",
+          "error-container": "#ffdad6",
+          "primary-fixed": "#d5e3ff",
+          "primary": "#001e40",
+          "surface-container-highest": "#e2e2e7",
+          "on-error": "#ffffff",
+          "background": "#f9f9fe"
+        },
+        fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+      }
+    }
+  }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  </style>
+</head>
+<body class="bg-background text-on-background">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+      <a href="index.html" class="flex items-center h-10">
+        <img alt="The Digital Jurist Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <div class="relative group">
+          <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+          <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="automotive.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all rounded-t-xl">Automotive SW</a>
+            <a href="medical.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all">Medical SaMD</a>
+            <a href="general.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all rounded-b-xl">General SW</a>
+          </div>
+        </div>
+        <a href="academy.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Academy</a>
+        <a href="services.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Services</a>
+        <a href="projects.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Projects</a>
+        <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+        <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+        <button id="mobile-menu-btn" class="md:hidden text-on-surface"><span class="material-symbols-outlined text-2xl">menu</span></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+      <a href="automotive.html" class="block py-2 text-sm font-medium">Automotive SW</a>
+      <a href="medical.html" class="block py-2 text-sm font-medium">Medical SaMD</a>
+      <a href="general.html" class="block py-2 text-sm font-medium">General SW</a>
+      <a href="academy.html" class="block py-2 text-sm font-medium">Academy</a>
+      <a href="services.html" class="block py-2 text-sm font-medium">Services</a>
+      <a href="projects.html" class="block py-2 text-sm font-medium">Projects</a>
+      <a href="about.html" class="block py-2 text-sm font-medium">About</a>
+      <a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-gradient-to-br from-primary via-primary-container to-primary">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-on-primary-container text-sm font-semibold tracking-wider uppercase mb-4">Contact Us</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-on-primary leading-tight mb-6">무료 갭 분석을 신청하세요</h1>
+      <p class="text-lg text-primary-fixed-dim font-medium max-w-2xl mx-auto">전문 컨설턴트가 귀사의 규제 컴플라이언스 현황을 무료로 진단해 드립니다</p>
+    </div>
+  </section>
+
+  <!-- Contact Form + Sidebar -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+        <!-- Form -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-outline-variant/10">
+            <h2 class="text-2xl font-bold text-primary mb-2">문의 및 무료 갭 분석 신청</h2>
+            <p class="text-on-surface-variant text-sm mb-8">아래 양식을 작성해 주시면 24시간 내에 담당 컨설턴트가 연락드리겠습니다.</p>
+
+            <form onsubmit="event.preventDefault(); alert('신청이 완료되었습니다. 24시간 내에 담당 컨설턴트가 연락드리겠습니다.');" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="company" class="block text-sm font-semibold text-on-surface mb-2">회사명 <span class="text-error">*</span></label>
+                  <input type="text" id="company" name="company" required placeholder="회사명을 입력하세요" class="w-full px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface-container-lowest text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"/>
+                </div>
+                <div>
+                  <label for="name" class="block text-sm font-semibold text-on-surface mb-2">담당자명 <span class="text-error">*</span></label>
+                  <input type="text" id="name" name="name" required placeholder="성함을 입력하세요" class="w-full px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface-container-lowest text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"/>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-on-surface mb-2">이메일 <span class="text-error">*</span></label>
+                  <input type="email" id="email" name="email" required placeholder="email@company.com" class="w-full px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface-container-lowest text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"/>
+                </div>
+                <div>
+                  <label for="phone" class="block text-sm font-semibold text-on-surface mb-2">전화번호</label>
+                  <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" class="w-full px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface-container-lowest text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"/>
+                </div>
+              </div>
+              <div>
+                <label for="domain" class="block text-sm font-semibold text-on-surface mb-2">도메인 선택 <span class="text-error">*</span></label>
+                <select id="domain" name="domain" required class="w-full px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface-container-lowest text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all">
+                  <option value="" disabled selected>도메인을 선택하세요</option>
+                  <option value="automotive">Automotive SW</option>
+                  <option value="medical">Medical SaMD</option>
+                  <option value="general">General SW</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-semibold text-on-surface mb-2">문의 내용 <span class="text-error">*</span></label>
+                <textarea id="message" name="message" required rows="5" placeholder="문의 내용을 자세히 입력해 주세요" class="w-full px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface-container-lowest text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3.5 rounded-xl font-bold text-base shadow-lg hover:shadow-xl active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">send</span>
+                신청하기
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+          <!-- Contact Info -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-outline-variant/10">
+            <h3 class="text-lg font-bold text-primary mb-6">연락처 정보</h3>
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-secondary-container/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-primary-container text-xl">mail</span>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">이메일</p>
+                  <p class="text-sm text-on-surface font-medium">info@digitaljurist.co.kr</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-secondary-container/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-primary-container text-xl">call</span>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">전화</p>
+                  <p class="text-sm text-on-surface font-medium">02-1234-5678</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-secondary-container/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-primary-container text-xl">location_on</span>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">주소</p>
+                  <p class="text-sm text-on-surface font-medium leading-relaxed">서울특별시 강남구 테헤란로 123<br/>디지털쥬리스트 빌딩 5층</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-secondary-container/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-primary-container text-xl">schedule</span>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">업무 시간</p>
+                  <p class="text-sm text-on-surface font-medium">월-금 09:00-18:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-outline-variant/10">
+            <div class="bg-surface-container-high h-56 flex flex-col items-center justify-center">
+              <span class="material-symbols-outlined text-outline text-5xl mb-3">map</span>
+              <p class="text-sm font-semibold text-on-surface-variant">서울특별시 강남구 테헤란로 123</p>
+              <p class="text-xs text-outline mt-1">디지털쥬리스트 빌딩 5층</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="col-span-1 md:col-span-2">
+        <a href="index.html" class="flex items-center h-8 mb-4"><img alt="The Digital Jurist Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+        <p class="text-[#43474f] text-sm leading-relaxed max-w-sm">&copy; 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.<br/>AI를 통해 세상의 모든 복잡한 규제를 투명하고 명확하게 만듭니다.</p>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5>
+        <ul class="space-y-2 text-sm text-[#43474f]">
+          <li><a href="automotive.html" class="hover:text-[#003366]">Automotive</a></li>
+          <li><a href="medical.html" class="hover:text-[#003366]">Medical SaMD</a></li>
+          <li><a href="general.html" class="hover:text-[#003366]">General SW</a></li>
+          <li><a href="academy.html" class="hover:text-[#003366]">Academy</a></li>
+          <li><a href="services.html" class="hover:text-[#003366]">Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 text-[#001e40]">Company</h5>
+        <ul class="space-y-2 text-sm text-[#43474f]">
+          <li><a href="about.html" class="hover:text-[#003366]">About</a></li>
+          <li><a href="contact.html" class="hover:text-[#003366]">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-[#003366]">Privacy Policy</a></li>
+          <li><a href="projects.html" class="hover:text-[#003366]">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+  </script>
+
+</body>
+</html>

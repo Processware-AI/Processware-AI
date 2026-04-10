@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>프로젝트 Aegis - Tier 1 감사</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#545f72",
+                        "surface-container-low": "#f4f3f8",
+                        "surface": "#f9f9fe",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "outline": "#737780",
+                        "on-primary-fixed": "#001b3c",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9fe",
+                        "surface-bright": "#f9f9fe",
+                        "primary-fixed": "#d5e3ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#381300",
+                        "on-secondary-container": "#586377",
+                        "on-tertiary-fixed": "#341100",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "outline-variant": "#c3c6d1",
+                        "surface-tint": "#3a5f94",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d5e0f7",
+                        "inverse-primary": "#a7c8ff",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#592300",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#d8885c",
+                        "surface-container-high": "#e8e8ed",
+                        "on-tertiary-fixed-variant": "#723610",
+                        "primary": "#001e40",
+                        "inverse-on-surface": "#f1f0f5",
+                        "surface-dim": "#dad9de",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "inverse-surface": "#2f3034",
+                        "on-primary-container": "#799dd6",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1f",
+                        "surface-container": "#eeedf2",
+                        "on-secondary-fixed": "#111c2c",
+                        "primary-container": "#003366",
+                        "on-background": "#1a1c1f",
+                        "surface-variant": "#e2e2e7",
+                        "secondary-fixed": "#d8e3fa",
+                        "on-surface-variant": "#43474f",
+                        "surface-container-highest": "#e2e2e7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+        }
+        .pulse-indicator {
+            box-shadow: 0 0 0 0 rgba(58, 95, 148, 0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(58, 95, 148, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(58, 95, 148, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(58, 95, 148, 0); }
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- TopAppBar -->
+<header class="bg-[#f9f9fe] flex justify-between items-center w-full px-6 py-4 max-w-full fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<a class="p-2 hover:bg-slate-100 transition-colors rounded-lg flex items-center justify-center" href="#">
+<span class="material-symbols-outlined text-[#001e40]">arrow_back</span>
+</a>
+<div class="flex items-center">
+<img alt="Processware Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-slate-500 hover:bg-slate-100 transition-colors px-2 py-1" href="#">아카데미</a>
+<a class="text-slate-500 hover:bg-slate-100 transition-colors px-2 py-1" href="#">서비스</a>
+<a class="text-[#001e40] border-b-2 border-[#001e40] font-semibold px-2 py-1" href="#">대시보드</a>
+<a class="text-slate-500 hover:bg-slate-100 transition-colors px-2 py-1" href="#">파운데이션</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end mr-2 hidden sm:flex">
+<span class="text-xs font-bold text-primary">AI 기반 시스템</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">규제 모니터링 활성</span>
+</div>
+<img alt="사용자 프로필" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-fixed shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqVd7bs8-ADAx7R0Aea1NgNwvhcy8NxAVvZd6ilyHCCWEPkeeoaW4lKZEgSQYUWn-msaJmJ6Rwkwd9g_ruLoy9rV35hsg8aCOgA2De1A08P6w1USJUxg0sMAa_TBmTk_XWbda-aS69MduLccAtimjlYv7uNF0YLCbV2in6rn7fjN8HtnoGfpRic6XzEO85zVj2xC_eSzzYBfEonn2tXG4Gn_aBEH-Zdk9qWWAfGT7xMd1PzooHHq2luttaG_eQnsMRsvcnfEBqyGzR"/>
+</div>
+</header>
+<main class="pt-24 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero & Title Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-[10px] font-bold tracking-widest uppercase">Tier 1 감사</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-surface-tint pulse-indicator"></div>
+<span class="text-xs font-medium text-surface-tint">실시간 모니터링</span>
+</div>
+</div>
+<h2 class="text-4xl md:text-5xl font-black text-primary tracking-tighter leading-none">프로젝트: Aegis 감사 상세 내역</h2>
+<p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed pt-2">디지털 자산 워크플로우에 대한 종합적인 규제 평가로, 관할권 준수 및 리스크 완화 프레임워크에 중점을 둡니다.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-highest text-on-secondary-fixed-variant px-6 py-3 rounded-lg font-bold text-sm transition-all hover:bg-surface-variant">
+                        보고서 내보내기
+                    </button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all transform active:scale-95">
+                        최종 감사 제출
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Content Area (Column 1-8) -->
+<div class="md:col-span-8 space-y-6">
+<!-- Task List Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_12px_32px_rgba(0,30,64,0.04)] border-b-2 border-outline-variant/10">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-bold text-primary tracking-tight">감사 마일스톤 과업</h3>
+<span class="text-xs font-semibold text-on-surface-variant">78% 완료됨</span>
+</div>
+<div class="space-y-1">
+<!-- Task Item -->
+<div class="group flex items-center justify-between p-4 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="text-sm font-bold text-primary">초기 프로토콜 탐색</p>
+<p class="text-xs text-on-surface-variant">2023년 10월 12일 완료</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors cursor-pointer">more_vert</span>
+</div>
+<!-- Task Item -->
+<div class="group flex items-center justify-between p-4 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="text-sm font-bold text-primary">스마트 컨트랙트 보안 스캔</p>
+<p class="text-xs text-on-surface-variant">2023년 10월 14일 완료</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors cursor-pointer">more_vert</span>
+</div>
+<!-- Task Item (Active) -->
+<div class="group flex items-center justify-between p-4 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+<div>
+<p class="text-sm font-bold text-primary">규제 편차 문서화</p>
+<p class="text-xs text-on-surface-variant">진행 중 • 내일 마감</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold">긴급</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+<!-- Task Item -->
+<div class="group flex items-center justify-between p-4 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+<div>
+<p class="text-sm font-bold text-primary">최종 컴플라이언스 증명</p>
+<p class="text-xs text-on-surface-variant">10월 20일 예정</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors cursor-pointer">more_vert</span>
+</div>
+</div>
+</div>
+<!-- Document Status & Image Section -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_12px_32px_rgba(0,30,64,0.04)]">
+<div class="p-6">
+<h3 class="text-lg font-bold text-primary mb-4">핵심 문서</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="text-xs font-semibold">감사_프레임워크_v2.pdf</span>
+</div>
+<span class="text-[10px] font-bold text-on-primary-fixed-variant bg-primary-fixed px-2 py-0.5 rounded">최종본</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg border-2 border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">article</span>
+<span class="text-xs font-semibold">리스크_완화_초안.docx</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant bg-surface-variant px-2 py-0.5 rounded">초안</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg border-2 border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">gavel</span>
+<span class="text-xs font-semibold">관할권_분석.pdf</span>
+</div>
+<span class="text-[10px] font-bold text-tertiary-container bg-tertiary-fixed px-2 py-0.5 rounded">검토중</span>
+</div>
+</div>
+</div>
+</div>
+<!-- High-end Decorative Visual -->
+<div class="relative rounded-xl overflow-hidden min-h-[200px]">
+<img alt="디지털 보안 시각화" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTYjl6elK-RWnCxPRx1iPLuoQOln3wTW7ybZcl3Q-YYWY81_JuiKfU-Av4HjJiKxvn5rzfNj16hDN1c_ikZC8oxyTpYQw6OaQSogzpyglyy2GBo3fUXHhTcxwrfPBzbDm0B4IMFbFd4ObletcnwwEUwcR46PL2Q_2tsTe5bzN132fgR7k99EOhPOXvwiEyDe4h1T9FyUY-uzJALtUMUvMaIoPiBIegPpaimT23bV1L3KcpEXKn_RDtLzEOMXHlAZrUV3DdQR4GyEnE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6">
+<p class="text-white text-sm font-bold">보안 인프라 노드</p>
+<p class="text-white/70 text-[10px] uppercase tracking-widest">활성 스캔 수행 중</p>
+</div>
+</div>
+</div>
+<!-- Communication Thread -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_12px_32px_rgba(0,30,64,0.04)]">
+<h3 class="text-xl font-bold text-primary mb-6">감사 협의</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<img alt="팀원" class="w-10 h-10 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv4gPwQtoW-0D1S8RmJI0ukIcOTWoWhImFPEQAL_4Ledek5KZekMXYVoQXw239gKKOd5wbOnGUKfrMq3VqJVkzWCMLwvxaX0A3CbZeDhAS0WzbKuQD0wnmpZFfrHLq3Yd-TTYWNkeyElCvuEzb_p9pFXuRAgLOgKpojNs5fNi29d-ctWI_KRlIriQJn-k6ckZz7axCvWMX6y3kuLqBShPLaYw5Uan7bzTJKn6FYkyllhqwb6g46uv9TZ03cmwBbZDGu3m5lS2kv5Cp"/>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-sm font-bold text-primary">Marcus Vane</span>
+<span class="text-[10px] text-on-surface-variant">2시간 전</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-r-xl rounded-bl-xl text-sm leading-relaxed">
+                                    EU 관할권에 대한 편차 문서를 검토했습니다. 모든 것이 MiCA 가이드라인과 일치하는 것 같지만, 유동성 임계값에 대한 최종 확인이 필요합니다.
+                                </div>
+</div>
+</div>
+<div class="flex gap-4 flex-row-reverse">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xs">AJ</div>
+<div class="flex-1 text-right">
+<div class="flex items-center gap-2 mb-1 justify-end">
+<span class="text-[10px] text-on-surface-variant">45분 전</span>
+<span class="text-sm font-bold text-primary">Aegis AI 에이전트</span>
+</div>
+<div class="bg-primary text-white p-4 rounded-l-xl rounded-br-xl text-sm leading-relaxed inline-block text-left">
+                                    과거 변동성 데이터를 기반으로 EU 유동성 임계값을 분석 중입니다. 스캔 완료. 데이터 분석 결과 Tier 1 인증을 위해 1.2%의 버퍼 증가가 필요한 것으로 나타났습니다.
+                                </div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/15">
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none border-b-2 border-outline-variant focus:border-surface-tint focus:ring-0 text-sm py-3 px-4 transition-all" placeholder="의견을 추가하거나 규제 쿼리를 입력하세요..." type="text"/>
+<button class="absolute right-2 top-1.5 p-2 text-surface-tint">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar / Insights (Column 9-12) -->
+<div class="md:col-span-4 space-y-6">
+<!-- Project Progress Card -->
+<div class="bg-primary text-white rounded-xl p-8 shadow-xl">
+<h3 class="text-lg font-bold mb-6 tracking-tight">감사 타임라인</h3>
+<div class="space-y-6 relative before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-white/20">
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 w-6 h-6 bg-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-white/60">1단계</p>
+<p class="text-sm font-bold">데이터 수집</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 w-6 h-6 bg-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-white/60">2단계</p>
+<p class="text-sm font-bold">내부 검토</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 w-6 h-6 bg-surface-tint border-2 border-white rounded-full pulse-indicator"></div>
+<p class="text-xs font-bold uppercase tracking-widest text-white/60">3단계</p>
+<p class="text-sm font-bold">외부 검증</p>
+</div>
+<div class="relative pl-8 opacity-40">
+<div class="absolute left-0 top-1 w-6 h-6 border-2 border-white rounded-full"></div>
+<p class="text-xs font-bold uppercase tracking-widest text-white/60">4단계</p>
+<p class="text-sm font-bold">인증서 발행</p>
+</div>
+</div>
+</div>
+<!-- Team Members Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_12px_32px_rgba(0,30,64,0.04)]">
+<h3 class="text-lg font-bold text-primary mb-6">검토 팀</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Sarah Chen" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW-c3g2LQeBXusha53nMe5NdRqLMjR6Au8sMongJ6VBuoyOZz80bs-WyscFCFpImf2-QD86STHOvHN34B8ef8nVyZeweCoD7gbvYFmxAlRS32sFlNpoHZb_9B0FMeJ-N2w_zT6SAJAb5QrGBfVxh1U74fvF4mwq58KIEVfd8h2yWFg_I5mHyLUNLf2VbgFaDwIPQyTRdOikZ8mwaP1OecqsXcddwW-fqNAL1JI96w9gmlMaF-BJ8dBMzIGXZPq0JhmCa7eia4tOl3e"/>
+<div>
+<p class="text-xs font-bold text-primary">Sarah Chen</p>
+<p class="text-[10px] text-on-surface-variant">수석 감사인</p>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Marcus Vane" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-DZRM8DyOd2wISll4x2JEgXIKGk_ybFubAlINd5euroVxtcZR4v6P4uVbZSLPaujLZFpVamgsE0FaiNCXo2TKIXTw67m0afLss3EZTnj24aXuaPgIGCFMjNGna0pJqjjmg4Nvz9A9Npz2s5yIj_hoSNkrOmkWZz9SB5u4qFgqFbGogwO6uMm03NzXY6DKj6G2x2uenOYRejXKTL2ENghYFUa1-qIGhfuPMTZpSwNSDkmWh51T3qrbZCoOPOUFF5xwZldqLHnpbai"/>
+<div>
+<p class="text-xs font-bold text-primary">Marcus Vane</p>
+<p class="text-[10px] text-on-surface-variant">법률 고문</p>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-[10px] font-bold text-on-secondary-container">DR</div>
+<div>
+<p class="text-xs font-bold text-primary">David Russo</p>
+<p class="text-[10px] text-on-surface-variant">리스크 분석가</p>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border-2 border-outline-variant/30 rounded-lg text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:bg-surface-container-low transition-colors">
+                        기여자 추가
+                    </button>
+</div>
+<!-- AI Insight Card -->
+<div class="bg-gradient-to-br from-surface-container-lowest to-surface-container-low rounded-xl p-6 shadow-sm border border-surface-tint/10 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5">
+<span class="material-symbols-outlined text-[120px]">smart_toy</span>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-surface-tint text-sm">auto_awesome</span>
+<h4 class="text-xs font-bold uppercase tracking-widest text-surface-tint">AI 예측 리스크</h4>
+</div>
+<p class="text-sm font-medium text-primary leading-tight mb-4">"싱가포르의 규제 변화(10월 24일)가 현재 Tier 1 자격에 영향을 미칠 수 있습니다. 조기 전략 조정을 권장합니다."</p>
+<a class="text-[10px] font-bold text-surface-tint underline decoration-2 underline-offset-4" href="#">전체 분석 읽기</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-y-0 left-0 w-64 bg-[#f4f3f8] shadow-[0px_12px_32px_rgba(0,30,64,0.06)] transform -translate-x-full lg:translate-x-0 lg:hidden transition-transform ease-in-out duration-200 z-40 flex flex-col">
+<div class="p-6 mb-4">
+<img alt="Processware Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-[#e8e8ed] transition-all rounded-lg font-medium text-sm" href="#">
+<span class="material-symbols-outlined">school</span> 아카데미
+            </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-[#e8e8ed] transition-all rounded-lg font-medium text-sm" href="#">
+<span class="material-symbols-outlined">handshake</span> 서비스
+            </a>
+<a class="flex items-center gap-3 p-3 bg-white text-[#001e40] font-semibold rounded-lg shadow-sm" href="#">
+<span class="material-symbols-outlined">dashboard</span> 대시보드
+            </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-[#e8e8ed] transition-all rounded-lg font-medium text-sm" href="#">
+<span class="material-symbols-outlined">info</span> 파운데이션
+            </a>
+</nav>
+<div class="p-6 border-t border-outline-variant/20">
+<p class="text-[10px] text-slate-400">v2.4.0</p>
+</div>
+</div>
+<!-- BottomNavBar (Mobile) -->
+<div class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 md:hidden bg-white/80 backdrop-blur-xl shadow-lg border-t border-[#c3c6d1]/15">
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-['Inter'] text-[8px] uppercase tracking-widest font-bold mt-1">아카데미</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined">business_center</span>
+<span class="font-['Inter'] text-[8px] uppercase tracking-widest font-bold mt-1">서비스</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#001e40] text-white rounded-xl px-4 py-2" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Inter'] text-[8px] uppercase tracking-widest font-bold mt-1">대시보드</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined">policy</span>
+<span class="font-['Inter'] text-[8px] uppercase tracking-widest font-bold mt-1">문서</span>
+</a>
+</div>
+</body></html>

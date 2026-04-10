@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>기술문서 대행 - The Digital Jurist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://js.tosspayments.com/v2/standard"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      "secondary-container": "#d5e0f7", "primary-container": "#003366", "on-primary": "#ffffff",
+      "surface-variant": "#e2e2e7", "outline-variant": "#c3c6d1", "surface": "#f9f9fe",
+      "surface-container-low": "#f4f3f8", "error": "#ba1a1a", "on-primary-container": "#799dd6",
+      "primary-fixed-dim": "#a7c8ff", "surface-container-lowest": "#ffffff",
+      "surface-container": "#eeedf2", "surface-tint": "#3a5f94", "on-background": "#1a1c1f",
+      "on-surface-variant": "#43474f", "on-surface": "#1a1c1f",
+      "surface-container-high": "#e8e8ed", "outline": "#737780", "primary-fixed": "#d5e3ff",
+      "primary": "#001e40", "surface-container-highest": "#e2e2e7", "background": "#f9f9fe"
+    },
+    fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+  }}
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-surface">
+
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+    <a href="index.html" class="flex items-center h-10"><img alt="The Digital Jurist" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+    <nav class="hidden md:flex items-center gap-8">
+      <div class="relative group">
+        <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <a href="automotive.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-t-xl">Automotive SW</a>
+          <a href="medical.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary">Medical SaMD</a>
+          <a href="general.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-b-xl">General SW</a>
+        </div>
+      </div>
+      <a href="academy.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Academy</a>
+      <a href="services.html" class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5">Services</a>
+      <a href="projects.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Projects</a>
+      <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+      <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+      <button id="mobile-menu-btn" class="md:hidden"><span class="material-symbols-outlined text-2xl">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+    <a href="automotive.html" class="block py-2 text-sm font-medium">Automotive SW</a><a href="medical.html" class="block py-2 text-sm font-medium">Medical SaMD</a><a href="general.html" class="block py-2 text-sm font-medium">General SW</a>
+    <a href="academy.html" class="block py-2 text-sm font-medium">Academy</a><a href="services.html" class="block py-2 text-sm font-medium text-primary font-bold">Services</a><a href="projects.html" class="block py-2 text-sm font-medium">Projects</a>
+    <a href="about.html" class="block py-2 text-sm font-medium">About</a><a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+  </div>
+</header>
+
+<main class="pt-20">
+  <!-- Breadcrumb -->
+  <div class="bg-surface-container-low border-b border-outline-variant/20">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <nav class="flex items-center gap-2 text-sm text-on-surface-variant">
+        <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+        <span class="material-symbols-outlined text-base">chevron_right</span>
+        <span class="text-primary font-medium">기술문서 대행</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative py-20 bg-gradient-to-br from-primary via-primary-container to-primary overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary-fixed-dim rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-4xl">edit_note</span>
+        </div>
+        <div>
+          <span class="text-on-primary/60 text-sm font-medium">Technical Documentation</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-on-primary">기술문서 대행</h1>
+        </div>
+      </div>
+      <p class="text-xl text-on-primary/80 max-w-3xl">인증 필수 기술 문서 작성 및 관리 대행. 규격에 부합하는 고품질 산출물을 전문가가 직접 작성합니다.</p>
+    </div>
+  </section>
+
+  <!-- Service Scope -->
+  <section class="py-20 bg-background">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">서비스 범위</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-6 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">checklist</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-sm">요구사항 정의서</h3>
+          <p class="text-xs text-on-surface-variant">시스템/소프트웨어 요구사항 명세서 작성</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-6 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">architecture</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-sm">설계 문서 (SDD/SAD)</h3>
+          <p class="text-xs text-on-surface-variant">소프트웨어 상세/아키텍처 설계 문서</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-6 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">science</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-sm">시험 계획서/보고서</h3>
+          <p class="text-xs text-on-surface-variant">테스트 계획, 케이스, 결과 보고서</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-6 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">link</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-sm">추적성 매트릭스</h3>
+          <p class="text-xs text-on-surface-variant">요구사항-설계-시험 간 양방향 추적성</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-6 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">history</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2 text-sm">변경 관리 문서</h3>
+          <p class="text-xs text-on-surface-variant">변경 요청서, 영향 분석, 이력 관리</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">진행 프로세스</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">1</div>
+          <h3 class="font-bold text-primary mb-2">요구사항 분석</h3>
+          <p class="text-sm text-on-surface-variant">대상 규격 및 프로젝트 요구사항을 분석하여 문서 범위를 확정합니다.</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">2</div>
+          <h3 class="font-bold text-primary mb-2">템플릿 설계</h3>
+          <p class="text-sm text-on-surface-variant">규격 요구사항에 부합하는 문서 템플릿을 설계하고 승인을 받습니다.</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">3</div>
+          <h3 class="font-bold text-primary mb-2">문서 작성</h3>
+          <p class="text-sm text-on-surface-variant">전문가가 프로젝트 데이터를 기반으로 고품질 문서를 작성합니다.</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">4</div>
+          <h3 class="font-bold text-primary mb-2">검토/승인</h3>
+          <p class="text-sm text-on-surface-variant">내부 검토 및 고객 피드백을 반영하여 최종 승인을 완료합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deliverables -->
+  <section class="py-20 bg-background">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">포함 산출물</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">시스템/SW 요구사항 명세서</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">소프트웨어 아키텍처 설계서 (SAD)</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">소프트웨어 상세 설계서 (SDD)</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">시험 계획서 및 시험 보고서</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">양방향 추적성 매트릭스</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">변경 관리 및 이력 문서</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-surface-container-low">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-4 text-center">서비스 요금</h2>
+      <p class="text-on-surface-variant text-center mb-12">프로젝트에 맞는 요금제를 선택하세요</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl border border-outline-variant/20 shadow-lg p-8 flex flex-col">
+          <h3 class="text-lg font-bold text-primary mb-2">일회성 구매</h3>
+          <p class="text-sm text-on-surface-variant mb-6">프로젝트 단위 기술 문서 작성 대행</p>
+          <div class="mb-8">
+            <span class="text-4xl font-extrabold text-primary">&#8361;8,000,000</span>
+            <span class="text-sm text-outline ml-1">/ 프로젝트</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>요구사항 정의서 작성</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>설계 문서 (SDD/SAD)</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>시험 계획서/보고서</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>추적성 매트릭스</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>1회 수정 포함</li>
+          </ul>
+          <button onclick="requestPayment('onetime')" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl active:scale-[0.98] transition-all">구매하기</button>
+        </div>
+        <div class="bg-white rounded-2xl border-2 border-primary shadow-xl p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-on-primary text-xs font-bold rounded-full">추천</div>
+          <h3 class="text-lg font-bold text-primary mb-2">월간 구독</h3>
+          <p class="text-sm text-on-surface-variant mb-6">지속적인 문서 관리 및 업데이트</p>
+          <div class="mb-8">
+            <span class="text-4xl font-extrabold text-primary">&#8361;1,500,000</span>
+            <span class="text-sm text-outline ml-1">/ 월</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>상시 문서 작성/업데이트</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>변경 관리 대행</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>추적성 상시 유지</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>무제한 수정</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>우선 지원</li>
+          </ul>
+          <button onclick="requestPayment('subscription')" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl active:scale-[0.98] transition-all">구독하기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-background">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">자주 묻는 질문</h2>
+      <div class="space-y-4">
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">어떤 문서를 작성해 주나요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">요구사항 명세서, 아키텍처/상세 설계서, 시험 계획서/보고서, 추적성 매트릭스, 변경 관리 문서 등 인증에 필요한 모든 기술 문서를 작성합니다. 프로젝트 특성에 따라 추가 산출물도 가능합니다.</div>
+        </details>
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">기존 문서를 수정/보완하는 것도 가능한가요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">네, 기존에 작성된 문서의 규격 적합성 검토, 보완, 재작성 모두 가능합니다. 현재 문서 수준을 분석한 후 최적의 개선 방안을 제안드립니다.</div>
+        </details>
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">작성 기간은 얼마나 걸리나요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">문서 종류와 복잡도에 따라 다르지만, 일반적으로 단일 문서 기준 2~4주, 전체 문서 세트 기준 2~3개월이 소요됩니다.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-br from-primary via-primary-container to-primary">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-on-primary mb-6">문서 작성에 대해 상담받으세요</h2>
+      <p class="text-on-primary/80 text-lg mb-10">전문 테크니컬 라이터가 귀사의 인증 문서를 완벽하게 준비합니다.</p>
+      <a href="contact.html" class="inline-block bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl active:scale-[0.98] transition-all">무료 상담 신청</a>
+    </div>
+  </section>
+</main>
+
+<footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="col-span-1 md:col-span-2">
+      <a href="index.html" class="flex items-center h-8 mb-4"><img alt="Logo" class="h-full w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+      <p class="text-[#43474f] text-sm">&copy; 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.</p>
+    </div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="automotive.html" class="hover:text-[#003366]">Automotive</a></li><li><a href="medical.html" class="hover:text-[#003366]">Medical SaMD</a></li><li><a href="general.html" class="hover:text-[#003366]">General SW</a></li><li><a href="academy.html" class="hover:text-[#003366]">Academy</a></li><li><a href="services.html" class="hover:text-[#003366]">Services</a></li></ul></div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Company</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="about.html" class="hover:text-[#003366]">About</a></li><li><a href="contact.html" class="hover:text-[#003366]">Contact</a></li><li><a href="privacy.html" class="hover:text-[#003366]">Privacy Policy</a></li><li><a href="projects.html" class="hover:text-[#003366]">Projects</a></li></ul></div>
+  </div>
+</footer>
+<script>document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});</script>
+
+<script>
+async function requestPayment(type) {
+  const tossPayments = TossPayments('test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq');
+  const payment = tossPayments.payment({customerKey: 'ANONYMOUS'});
+  const amount = type === 'onetime' ? 8000000 : 1500000;
+  const orderName = type === 'onetime' ? '기술문서 대행 (일회성)' : '기술문서 대행 (월간 구독)';
+  await payment.requestPayment({
+    method: 'CARD',
+    amount: { currency: 'KRW', value: amount },
+    orderId: 'svc-techdoc-' + type + '-' + Date.now(),
+    orderName: orderName,
+    successUrl: window.location.origin + '/site/service-payment-success.html',
+    failUrl: window.location.origin + '/site/service-payment-fail.html',
+  });
+}
+</script>
+</body></html>

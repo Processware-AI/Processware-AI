@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aegis Protocol - 서비스 마켓플레이스</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#1f477b",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#545f72",
+                    "surface-container-low": "#f4f3f8",
+                    "surface": "#f9f9fe",
+                    "secondary-fixed-dim": "#bcc7dd",
+                    "outline": "#737780",
+                    "on-primary-fixed": "#001b3c",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9fe",
+                    "surface-bright": "#f9f9fe",
+                    "primary-fixed": "#d5e3ff",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#381300",
+                    "on-secondary-container": "#586377",
+                    "on-tertiary-fixed": "#341100",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "outline-variant": "#c3c6d1",
+                    "surface-tint": "#3a5f94",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#d5e0f7",
+                    "inverse-primary": "#a7c8ff",
+                    "tertiary-fixed": "#ffdbca",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#592300",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#d8885c",
+                    "surface-container-high": "#e8e8ed",
+                    "on-tertiary-fixed-variant": "#723610",
+                    "primary": "#001e40",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-dim": "#dad9de",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "inverse-surface": "#2f3034",
+                    "on-primary-container": "#799dd6",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1a1c1f",
+                    "surface-container": "#eeedf2",
+                    "on-secondary-fixed": "#111c2c",
+                    "primary-container": "#003366",
+                    "on-background": "#1a1c1f",
+                    "surface-variant": "#e2e2e7",
+                    "secondary-fixed": "#d8e3fa",
+                    "on-surface-variant": "#43474f",
+                    "surface-container-highest": "#e2e2e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9fe; color: #1a1c1f; margin: 0; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.8); }
+        .pulse-ai { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(58, 95, 148, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(58, 95, 148, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(58, 95, 148, 0); }
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface">
+<!-- TopAppBar -->
+<header class="bg-[#f9f9fe] dark:bg-slate-950 flex justify-between items-center w-full px-6 py-4 max-w-full sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<img alt="Processware Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Inter'] font-medium text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-2 rounded-lg" href="#">아카데미</a>
+<a class="font-['Inter'] font-medium text-sm text-[#001e40] border-b-2 border-[#001e40] dark:text-blue-400 dark:border-blue-400 px-1 py-1" href="#">서비스</a>
+<a class="font-['Inter'] font-medium text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-2 rounded-lg" href="#">대시보드</a>
+<a class="font-['Inter'] font-medium text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-2 rounded-lg" href="#">파운데이션</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfqywErinxiFCiFwmcdFjZMUtfgItYlZtOehIU_KSfTg9W9HFQq9lRsSKqWPLvU3KBS8OF0I5-X524XABtHAbgTZudu12-DmGcb4VRjzXPlRekUF6oxMzCeIhlMMDca7GNwi_rwQa9PK0032rKKhZCjQc-iBNPdLCXi618ye7NusfNaLPYaueC45aNX5QZoyjJDByMUc5Cdi5D_wadH0DKyAIkE4w1eC8O9n7FC4qN2dp68hQLZ_vdwbX6vpsmexrgVvXAS52vOg2d"/>
+</div>
+</div>
+</header>
+<main class="max-w-[1400px] mx-auto px-6 py-12 flex flex-col gap-12">
+<!-- Hero Section Asymmetry -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="flex items-center gap-2 text-primary text-sm font-bold tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-surface-tint pulse-ai"></span>
+                규제 모니터링 활성화됨
+            </div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-background tracking-tight leading-[1.1]">
+                대규모 기관급 <span class="text-on-primary-container">무결성</span>.
+            </h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                모듈형 마켓플레이스를 통해 세계 최고 수준의 규제 전문 지식을 배포하십시오. 자동화된 AI 에이전트부터 고위 디지털 법무관까지, Aegis Protocol이 귀하의 운영 규정 준수를 보장합니다.
+            </p>
+<div class="flex items-center gap-4 pt-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-lg shadow-[0px_4px_12px_rgba(0,30,64,0.15)] hover:scale-95 duration-150 transition-transform">
+                    파운데이션 탐색하기
+                </button>
+<button class="bg-surface-container-highest text-on-secondary-fixed-variant px-8 py-4 rounded-lg font-bold text-lg hover:bg-surface-variant transition-colors">
+                    문서 보기
+                </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+<img alt="미래 지향적인 서버룸과 블루 앰비언트 라이팅" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApiH7oDQWBWvd00molPjGZxQdFSbRTBeV1DjIcY1Hjl7j9sOKz1NuKOjQMs1bdMNufm6XnI5zYXFK8E81Lfy_4TTjZbTmPrtpUSPfy09wxZTK_3TpJBQQ1vKFWcZKiTHEmyztghn6gCNQxef1AcOCAvjMQ9Px78Bm2VAC83mMWBlydhkxPnxVc95XOhWkl_1C5irhSh2z33x1R2Br_hNIh6Skuu5okzz41Eu2z-gWNIJKvSk8yFQ2qjHWwtEGf8r1UPaIhY16Z3rdw"/>
+</div>
+<div class="absolute -bottom-6 -left-6 glass-panel p-6 rounded-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)] border border-outline-variant/15 max-w-[240px]">
+<p class="text-xs font-bold text-primary mb-2 uppercase">시스템 상태</p>
+<div class="space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">활성 노드</span>
+<span class="font-mono text-primary font-bold">1,240</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5">
+<div class="bg-primary-container h-1.5 rounded-full w-[88%]"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant leading-tight">컴플라이언스 스캐닝 빈도: 15ms 지연 시간 확인됨.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Bento Grid -->
+<section class="mt-12">
+<div class="flex flex-col gap-2 mb-10">
+<h2 class="text-3xl font-bold text-on-background tracking-tight">서비스 프로토콜 모듈</h2>
+<div class="h-1 w-20 bg-primary-container rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+<!-- AI Agent Development (Primary Focus) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between group hover:shadow-[0px_12px_32px_rgba(0,30,64,0.06)] transition-all duration-300 border border-outline-variant/10">
+<div>
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-4xl text-primary bg-primary-fixed p-4 rounded-xl" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="px-4 py-1 bg-primary-container text-white text-[10px] font-bold rounded-full uppercase tracking-tighter">프리미엄 모듈</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-3">AI 에이전트 개발</h3>
+<p class="text-on-surface-variant leading-relaxed max-w-lg">
+                        특정 관할 구역의 명령에 따라 학습된 맞춤형 자율 컴플라이언스 에이전트입니다. 이 에이전트들은 실시간으로 거래를 모니터링하여 즉각적인 위험 완화 및 자동화된 보고를 제공합니다.
+                    </p>
+<ul class="mt-6 space-y-3">
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check_circle">check_circle</span> 
+                            실시간 관할 구역 스캐닝
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check_circle">check_circle</span> 
+                            LLM 기반 법률 종합 분석
+                        </li>
+</ul>
+</div>
+<div class="mt-10">
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-3 rounded-lg font-bold w-full md:w-auto hover:scale-95 duration-150 transition-transform">에이전트 구독하기</button>
+</div>
+</div>
+<!-- Consulting -->
+<div class="md:col-span-2 bg-primary text-white rounded-xl p-8 flex flex-col justify-between shadow-xl">
+<div>
+<span class="material-symbols-outlined text-3xl mb-6 text-primary-fixed" data-icon="handshake">handshake</span>
+<h3 class="text-xl font-bold mb-3">컨설팅</h3>
+<p class="text-primary-fixed/80 text-sm leading-relaxed">
+                        국가 간 핀테크 규제를 전문으로 하는 디지털 법무관의 직접적인 전략 자문입니다.
+                    </p>
+</div>
+<div class="mt-8">
+<button class="w-full bg-white text-primary py-3 rounded-lg font-bold hover:bg-primary-fixed transition-colors">지금 구매</button>
+</div>
+</div>
+<!-- Documentation Service -->
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10">
+<div>
+<span class="material-symbols-outlined text-3xl mb-6 text-primary" data-icon="policy">policy</span>
+<h3 class="text-xl font-bold text-primary mb-3">문서화 서비스</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        규제 기관 제출을 위한 정책 프레임워크, 감사 추적 및 컴플라이언스 서류의 자동 생성 서비스입니다.
+                    </p>
+</div>
+<div class="mt-8">
+<button class="w-full bg-surface-container-highest text-on-secondary-fixed-variant py-3 rounded-lg font-bold hover:bg-outline-variant transition-colors">구독하기</button>
+</div>
+</div>
+<!-- Role Substitute -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10 shadow-sm">
+<div>
+<span class="material-symbols-outlined text-3xl mb-6 text-primary" data-icon="badge">badge</span>
+<h3 class="text-xl font-bold text-primary mb-3">직무 대행</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        감사 또는 확장 단계에서 필수적인 컴플라이언스 담당자 역할을 수행하는 임시 디지털 대리인입니다.
+                    </p>
+</div>
+<div class="mt-8">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-3 rounded-lg font-bold hover:scale-95 transition-transform duration-150">지금 구매</button>
+</div>
+</div>
+<!-- App Development -->
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10">
+<div>
+<span class="material-symbols-outlined text-3xl mb-6 text-primary" data-icon="developer_mode">developer_mode</span>
+<h3 class="text-xl font-bold text-primary mb-3">앱 개발</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        맞춤형 내부 대시보드 및 감사 포털을 포함한 규제 인터페이스의 풀스택 엔지니어링 서비스입니다.
+                    </p>
+</div>
+<div class="mt-8">
+<button class="w-full bg-surface-container-highest text-on-secondary-fixed-variant py-3 rounded-lg font-bold hover:bg-outline-variant transition-colors">지금 구매</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Informational Section (Asymmetric) -->
+<section class="bg-surface-container-lowest rounded-2xl p-12 flex flex-col md:flex-row gap-12 items-center border border-outline-variant/5">
+<div class="md:w-1/3">
+<div class="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-white mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="terminal">terminal</span>
+</div>
+<h2 class="text-2xl font-bold text-primary mb-4 leading-tight">디지털 법무관 파운데이션</h2>
+<p class="text-on-surface-variant text-sm leading-loose">
+                Aegis 프레임워크를 기반으로 구축된 당사의 서비스는 최신 탈중앙화 법률 및 전산 규제를 활용합니다. 단순한 서비스를 넘어 알고리즘적 확실성을 제공합니다.
+            </p>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="p-6 bg-surface rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="encrypted">encrypted</span>
+<div>
+<h4 class="font-bold text-primary text-sm mb-1 uppercase tracking-tighter">영지식 감사</h4>
+<p class="text-xs text-on-surface-variant">민감한 내부 데이터를 노출하지 않고 컴플라이언스를 검증합니다.</p>
+</div>
+</div>
+<div class="p-6 bg-surface rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="cloud_done">cloud_done</span>
+<div>
+<h4 class="font-bold text-primary text-sm mb-1 uppercase tracking-tighter">즉각적인 검증</h4>
+<p class="text-xs text-on-surface-variant">기관의 신뢰 유지를 위한 자동화된 "검증됨" 상태 제공.</p>
+</div>
+</div>
+<div class="p-6 bg-surface rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="language">language</span>
+<div>
+<h4 class="font-bold text-primary text-sm mb-1 uppercase tracking-tighter">글로벌 범위</h4>
+<p class="text-xs text-on-surface-variant">180개 이상의 글로벌 관할 구역에서 15ms 지연 시간으로 지원.</p>
+</div>
+</div>
+<div class="p-6 bg-surface rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="hub">hub</span>
+<div>
+<h4 class="font-bold text-primary text-sm mb-1 uppercase tracking-tighter">모듈형 API</h4>
+<p class="text-xs text-on-surface-variant">기존 스택에 Aegis 모듈을 원활하게 통합할 수 있습니다.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 md:hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-lg border-t border-[#c3c6d1]/15">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">아카데미</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#001e40] text-white rounded-xl p-2 scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">서비스</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">대시보드</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">문서</span>
+</div>
+</nav>
+<footer class="bg-surface-container-low border-t border-outline-variant/10 py-12 px-6 mt-12 mb-20 md:mb-0">
+<div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img alt="Processware Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                기관 규제 준수 및 디지털 법무관 시스템을 위한 궁극의 레이어입니다. v2.4.0
+            </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold text-primary uppercase tracking-widest">프로토콜</h4>
+<ul class="text-xs text-on-surface-variant space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">파운데이션 레이어</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">감사 노드 맵</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">스테이킹 인터페이스</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold text-primary uppercase tracking-widest">리소스</h4>
+<ul class="text-xs text-on-surface-variant space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">백서</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API 참조</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">커뮤니티 포럼</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold text-primary uppercase tracking-widest">문의하기</h4>
+<ul class="text-xs text-on-surface-variant space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">지원 데스크</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">미디어 문의</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">컴플라이언스 핫라인</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1400px] mx-auto mt-12 pt-8 border-t border-outline-variant/10 flex justify-between items-center text-[10px] text-on-surface-variant/60 uppercase font-bold tracking-widest">
+<span>© 2024 Aegis Protocol. 모든 권리 보유.</span>
+<span>디지털 법무관 위원회(Digital Jurist Council) 규제 준수</span>
+</div>
+</footer>
+</body></html>

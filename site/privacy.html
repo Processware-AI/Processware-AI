@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - The Digital Jurist</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "secondary-container": "#d5e0f7",
+          "secondary-fixed": "#d8e3fa",
+          "primary-container": "#003366",
+          "on-primary": "#ffffff",
+          "surface-variant": "#e2e2e7",
+          "outline-variant": "#c3c6d1",
+          "surface-dim": "#dad9de",
+          "surface": "#f9f9fe",
+          "surface-container-low": "#f4f3f8",
+          "error": "#ba1a1a",
+          "on-primary-container": "#799dd6",
+          "primary-fixed-dim": "#a7c8ff",
+          "surface-container-lowest": "#ffffff",
+          "surface-container": "#eeedf2",
+          "surface-tint": "#3a5f94",
+          "on-background": "#1a1c1f",
+          "on-surface-variant": "#43474f",
+          "inverse-primary": "#a7c8ff",
+          "on-surface": "#1a1c1f",
+          "surface-container-high": "#e8e8ed",
+          "outline": "#737780",
+          "error-container": "#ffdad6",
+          "primary-fixed": "#d5e3ff",
+          "primary": "#001e40",
+          "surface-container-highest": "#e2e2e7",
+          "on-error": "#ffffff",
+          "background": "#f9f9fe"
+        },
+        fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+      }
+    }
+  }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  </style>
+</head>
+<body class="bg-background text-on-background">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+      <a href="index.html" class="flex items-center h-10">
+        <img alt="The Digital Jurist Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <div class="relative group">
+          <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+          <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="automotive.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all rounded-t-xl">Automotive SW</a>
+            <a href="medical.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all">Medical SaMD</a>
+            <a href="general.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all rounded-b-xl">General SW</a>
+          </div>
+        </div>
+        <a href="academy.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Academy</a>
+        <a href="services.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Services</a>
+        <a href="projects.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Projects</a>
+        <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+        <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+        <button id="mobile-menu-btn" class="md:hidden text-on-surface"><span class="material-symbols-outlined text-2xl">menu</span></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+      <a href="automotive.html" class="block py-2 text-sm font-medium">Automotive SW</a>
+      <a href="medical.html" class="block py-2 text-sm font-medium">Medical SaMD</a>
+      <a href="general.html" class="block py-2 text-sm font-medium">General SW</a>
+      <a href="academy.html" class="block py-2 text-sm font-medium">Academy</a>
+      <a href="services.html" class="block py-2 text-sm font-medium">Services</a>
+      <a href="projects.html" class="block py-2 text-sm font-medium">Projects</a>
+      <a href="about.html" class="block py-2 text-sm font-medium">About</a>
+      <a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-gradient-to-br from-primary via-primary-container to-primary">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-on-primary-container text-sm font-semibold tracking-wider uppercase mb-4">Privacy Policy</p>
+      <h1 class="text-4xl md:text-5xl font-black text-on-primary leading-tight mb-6">개인정보 처리방침</h1>
+      <p class="text-lg text-primary-fixed-dim font-medium max-w-2xl mx-auto">The Digital Jurist는 이용자의 개인정보를 소중히 보호합니다</p>
+    </div>
+  </section>
+
+  <!-- Privacy Content -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-outline-variant/10">
+
+        <p class="text-sm text-on-surface-variant mb-10 leading-relaxed">주식회사 디지털쥬리스트(이하 "회사")는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립 및 공개합니다. 본 방침은 2024년 1월 1일부터 시행됩니다.</p>
+
+        <!-- Section 1 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-on-primary font-bold text-sm">1</span>
+            </div>
+            <h2 class="text-xl font-bold text-primary">개인정보의 처리 목적</h2>
+          </div>
+          <div class="pl-11">
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-3">회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+            <ul class="space-y-2 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 서비스 제공 및 계약의 이행: 컨설팅 서비스 제공, 맞춤형 솔루션 제안</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 회원 관리: 회원제 서비스 이용에 따른 본인확인, 불만처리 등 민원처리</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 마케팅 및 광고 활용: 신규 서비스 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-on-primary font-bold text-sm">2</span>
+            </div>
+            <h2 class="text-xl font-bold text-primary">수집하는 개인정보 항목</h2>
+          </div>
+          <div class="pl-11">
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-3">회사는 서비스 제공을 위해 다음과 같은 개인정보를 수집합니다.</p>
+            <div class="bg-surface-container-low rounded-xl p-5 space-y-3">
+              <div>
+                <p class="text-sm font-semibold text-primary mb-1">필수 수집 항목</p>
+                <p class="text-sm text-on-surface-variant">회사명, 담당자명, 이메일 주소, 문의 내용</p>
+              </div>
+              <div class="border-t border-outline-variant/20 pt-3">
+                <p class="text-sm font-semibold text-primary mb-1">선택 수집 항목</p>
+                <p class="text-sm text-on-surface-variant">전화번호, 직책, 부서명</p>
+              </div>
+              <div class="border-t border-outline-variant/20 pt-3">
+                <p class="text-sm font-semibold text-primary mb-1">자동 수집 항목</p>
+                <p class="text-sm text-on-surface-variant">IP 주소, 쿠키, 방문 일시, 서비스 이용 기록, 브라우저 정보</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-on-primary font-bold text-sm">3</span>
+            </div>
+            <h2 class="text-xl font-bold text-primary">개인정보의 수집 및 이용목적</h2>
+          </div>
+          <div class="pl-11">
+            <ul class="space-y-2 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 문의 접수 및 상담 서비스 제공</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 무료 갭 분석 서비스 신청 및 결과 전달</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 컨설팅 계약 체결 및 서비스 이행</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 서비스 개선을 위한 통계 분석</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 신규 서비스 및 업데이트 안내</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-on-primary font-bold text-sm">4</span>
+            </div>
+            <h2 class="text-xl font-bold text-primary">개인정보의 보유 및 이용기간</h2>
+          </div>
+          <div class="pl-11">
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-3">회사는 법령에 따른 개인정보 보유 및 이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유 및 이용기간 내에서 개인정보를 처리 및 보유합니다.</p>
+            <div class="bg-surface-container-low rounded-xl p-5 space-y-3">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary-container text-lg mt-0.5">schedule</span>
+                <div>
+                  <p class="text-sm font-semibold text-primary">서비스 이용 관련 정보</p>
+                  <p class="text-sm text-on-surface-variant">계약 종료 후 3년</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 border-t border-outline-variant/20 pt-3">
+                <span class="material-symbols-outlined text-primary-container text-lg mt-0.5">schedule</span>
+                <div>
+                  <p class="text-sm font-semibold text-primary">전자상거래 관련 기록</p>
+                  <p class="text-sm text-on-surface-variant">5년 (전자상거래 등에서의 소비자보호에 관한 법률)</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 border-t border-outline-variant/20 pt-3">
+                <span class="material-symbols-outlined text-primary-container text-lg mt-0.5">schedule</span>
+                <div>
+                  <p class="text-sm font-semibold text-primary">접속 기록</p>
+                  <p class="text-sm text-on-surface-variant">3개월 (통신비밀보호법)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-on-primary font-bold text-sm">5</span>
+            </div>
+            <h2 class="text-xl font-bold text-primary">개인정보의 파기절차 및 방법</h2>
+          </div>
+          <div class="pl-11">
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-3">회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</p>
+            <ul class="space-y-2 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> <strong class="text-on-surface">파기절차:</strong> 이용자가 입력한 정보는 목적 달성 후 별도의 DB에 옮겨져 내부 방침 및 기타 관련 법령에 따라 일정기간 저장된 후 혹은 즉시 파기됩니다.</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> <strong class="text-on-surface">파기방법:</strong> 전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다. 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-on-primary font-bold text-sm">6</span>
+            </div>
+            <h2 class="text-xl font-bold text-primary">개인정보 제3자 제공</h2>
+          </div>
+          <div class="pl-11">
+            <p class="text-sm text-on-surface-variant leading-relaxed">회사는 정보주체의 개인정보를 제1조에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다. 현재 회사는 이용자의 개인정보를 제3자에게 제공하고 있지 않습니다.</p>
+          </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-on-primary font-bold text-sm">7</span>
+            </div>
+            <h2 class="text-xl font-bold text-primary">이용자의 권리</h2>
+          </div>
+          <div class="pl-11">
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-3">이용자는 개인정보주체로서 다음과 같은 권리를 행사할 수 있습니다.</p>
+            <ul class="space-y-2 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 개인정보 열람 요구</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 오류 등이 있을 경우 정정 요구</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 삭제 요구</li>
+              <li class="flex items-start gap-2"><span class="text-primary-container font-bold">-</span> 처리정지 요구</li>
+            </ul>
+            <p class="text-sm text-on-surface-variant leading-relaxed mt-3">위 권리 행사는 회사에 대해 「개인정보 보호법」 시행령 제41조 제1항에 따라 서면, 전자우편 등을 통하여 하실 수 있으며, 회사는 이에 대해 지체 없이 조치하겠습니다.</p>
+          </div>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-on-primary font-bold text-sm">8</span>
+            </div>
+            <h2 class="text-xl font-bold text-primary">개인정보보호책임자</h2>
+          </div>
+          <div class="pl-11">
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-4">회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보보호책임자를 지정하고 있습니다.</p>
+            <div class="bg-surface-container-low rounded-xl p-5 space-y-2">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary-container text-lg">badge</span>
+                <p class="text-sm text-on-surface"><strong>성명:</strong> 이수진</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary-container text-lg">work</span>
+                <p class="text-sm text-on-surface"><strong>직책:</strong> Head of Compliance</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary-container text-lg">mail</span>
+                <p class="text-sm text-on-surface"><strong>이메일:</strong> privacy@digitaljurist.co.kr</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary-container text-lg">call</span>
+                <p class="text-sm text-on-surface"><strong>전화:</strong> 02-1234-5679</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-outline-variant/20">
+          <p class="text-xs text-outline text-center">본 개인정보 처리방침은 2024년 1월 1일부터 시행됩니다.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="col-span-1 md:col-span-2">
+        <a href="index.html" class="flex items-center h-8 mb-4"><img alt="The Digital Jurist Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+        <p class="text-[#43474f] text-sm leading-relaxed max-w-sm">&copy; 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.<br/>AI를 통해 세상의 모든 복잡한 규제를 투명하고 명확하게 만듭니다.</p>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5>
+        <ul class="space-y-2 text-sm text-[#43474f]">
+          <li><a href="automotive.html" class="hover:text-[#003366]">Automotive</a></li>
+          <li><a href="medical.html" class="hover:text-[#003366]">Medical SaMD</a></li>
+          <li><a href="general.html" class="hover:text-[#003366]">General SW</a></li>
+          <li><a href="academy.html" class="hover:text-[#003366]">Academy</a></li>
+          <li><a href="services.html" class="hover:text-[#003366]">Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4 text-[#001e40]">Company</h5>
+        <ul class="space-y-2 text-sm text-[#43474f]">
+          <li><a href="about.html" class="hover:text-[#003366]">About</a></li>
+          <li><a href="contact.html" class="hover:text-[#003366]">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-[#003366]">Privacy Policy</a></li>
+          <li><a href="projects.html" class="hover:text-[#003366]">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+  </script>
+
+</body>
+</html>

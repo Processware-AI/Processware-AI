@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#d5e0f7",
+                    "secondary-fixed": "#d8e3fa",
+                    "primary-container": "#003366",
+                    "on-tertiary-fixed": "#341100",
+                    "inverse-surface": "#2f3034",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e2e2e7",
+                    "outline-variant": "#c3c6d1",
+                    "surface-dim": "#dad9de",
+                    "surface": "#f9f9fe",
+                    "surface-container-low": "#f4f3f8",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#799dd6",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eeedf2",
+                    "surface-tint": "#3a5f94",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "on-background": "#1a1c1f",
+                    "tertiary-fixed": "#ffdbca",
+                    "on-surface-variant": "#43474f",
+                    "inverse-primary": "#a7c8ff",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#545f72",
+                    "inverse-on-surface": "#f1f0f5",
+                    "on-surface": "#1a1c1f",
+                    "surface-container-high": "#e8e8ed",
+                    "surface-bright": "#f9f9fe",
+                    "tertiary": "#381300",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#723610",
+                    "background": "#f9f9fe",
+                    "on-tertiary-container": "#d8885c",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#737780",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#d5e3ff",
+                    "secondary-fixed-dim": "#bcc7dd",
+                    "on-secondary-container": "#586377",
+                    "on-primary-fixed": "#001b3c",
+                    "tertiary-container": "#592300",
+                    "primary": "#001e40",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "surface-container-highest": "#e2e2e7",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#111c2c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .ai-pulse {
+            width: 8px;
+            height: 8px;
+            background-color: #a7c8ff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(167, 200, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(167, 200, 255, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(167, 200, 255, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(167, 200, 255, 0); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+    <a href="index.html" class="flex items-center h-10">
+      <img alt="The Digital Jurist Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <div class="relative group">
+        <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <a href="automotive.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all rounded-t-xl">Automotive SW</a>
+          <a href="medical.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all">Medical SaMD</a>
+          <a href="general.html" class="block px-4 py-3 text-sm text-on-surface hover:bg-surface-container-low hover:text-primary transition-all rounded-b-xl">General SW</a>
+        </div>
+      </div>
+      <a href="academy.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Academy</a>
+      <a href="services.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Services</a>
+      <a href="projects.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Projects</a>
+      <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+      <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+      <button id="mobile-menu-btn" class="md:hidden text-on-surface">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+    <a href="automotive.html" class="block py-2 text-sm font-medium text-on-surface">Automotive SW</a>
+    <a href="medical.html" class="block py-2 text-sm font-medium text-on-surface">Medical SaMD</a>
+    <a href="general.html" class="block py-2 text-sm font-medium text-on-surface">General SW</a>
+    <a href="academy.html" class="block py-2 text-sm font-medium text-on-surface">Academy</a>
+    <a href="services.html" class="block py-2 text-sm font-medium text-on-surface">Services</a>
+    <a href="projects.html" class="block py-2 text-sm font-medium text-on-surface">Projects</a>
+    <a href="about.html" class="block py-2 text-sm font-medium text-on-surface">About</a>
+    <a href="contact.html" class="block py-2 text-sm font-medium text-on-surface">Contact</a>
+  </div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[707px] flex flex-col justify-center px-6 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-10" data-alt="Modern software development office with large windows, blurred developers working at desks with multiple screens, cool blue professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAa62Cwi0j45jk5GGhY3fU9C1gGJpYcSxpHg0kfnN57oNydBQ8dZ3YQT9dhJ7-whuyD_Nx38IMQZV4bhmQYbvzeUtN9FdNno8TjHF1Epgk4lVs_HkFbUGxPRmmyCGUtaZpHPG-Vk4bS27YV7aYY0ZLw1nF0vmFnfcVH-iK5ivjvglb9mNUIPdwLVEO38uKjmwvV8Mgy_BZ0oEyiDUCAoA9WVj2UZxy8aoPwZmA_BignW-AVgBOZpgYVvRJ4LhexQ03MOLaI8ymBIBa"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface-container-low"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto">
+<div class="max-w-xl">
+<div class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-bold tracking-tight mb-6">
+<div class="ai-pulse"></div>
+                    COMPLIANCE AI AGENT
+                </div>
+<h1 class="text-4xl md:text-6xl font-extrabold text-primary leading-[1.1] tracking-tighter mb-6">
+                    CMMI 인증, 받기만 하고<br/>쓰지 못하고 있다면.
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-medium max-w-lg mb-8">
+                    프로세스가 진짜 작동하게 만드는 AI Agent. 실질적인 SW 개발 역량 내재화의 새로운 표준.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 px-8 rounded-lg font-bold text-lg shadow-lg active:scale-95 transition-transform text-center">
+                        무료 갭 분석 시작하기
+                    </a>
+</div>
+<p class="text-xs text-on-surface-variant opacity-70 mt-4">CMMI V2.0 &amp; PMO 표준 가이드라인 준수</p>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="bg-surface-container-low py-20 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="text-3xl font-extrabold text-primary tracking-tight mb-4">현장의 고충, 숫자로 증명됩니다.</h2>
+<div class="h-1 w-12 bg-primary-container rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Problem 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-b-2 border-outline-variant/15">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="assignment_late">assignment_late</span>
+<span class="text-3xl font-black text-primary/10">01</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">사문화된 CMMI 인증</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            인증 심사 때만 반짝 준비하는 프로세스. <span class="text-error font-bold">인증 획득 기업의 72%</span>가 실무 미적용을 호소합니다.
+                        </p>
+<div class="mt-4 pt-4 border-t border-outline-variant/15">
+<span class="text-2xl font-black text-primary">72%</span>
+<span class="text-xs text-on-surface-variant block">실무 미적용 호소</span>
+</div>
+</div>
+<!-- Problem 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-b-2 border-outline-variant/15">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="description">description</span>
+<span class="text-3xl font-black text-primary/10">02</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">공공 PMO 문서 지옥</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            개발 시간보다 긴 문서 작성 시간. <span class="text-error font-bold">매달 평균 45시간</span>이 단순 보고서 작성에 낭비됩니다.
+                        </p>
+<div class="mt-4 pt-4 border-t border-outline-variant/15">
+<span class="text-2xl font-black text-primary">45h/월</span>
+<span class="text-xs text-on-surface-variant block">보고서 작성 낭비 시간</span>
+</div>
+</div>
+<!-- Problem 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-b-2 border-outline-variant/15">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="storage">storage</span>
+<span class="text-3xl font-black text-primary/10">03</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">파편화된 데이터 사일로</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            Jira, Git, 메신저에 흩어진 데이터. <span class="text-error font-bold">정보 탐색 비용만 주당 8시간</span> 이상 소요됩니다.
+                        </p>
+<div class="mt-4 pt-4 border-t border-outline-variant/15">
+<span class="text-2xl font-black text-primary">8h/주</span>
+<span class="text-xs text-on-surface-variant block">정보 탐색 비용</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section: AI Agents -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<span class="text-primary-container font-black tracking-widest text-xs uppercase">The Solution</span>
+<h2 class="text-3xl md:text-4xl font-extrabold text-primary mt-4 tracking-tighter">실질적인 해결책, 3가지 AI 에이전트</h2>
+<p class="text-on-surface-variant mt-4">Regulatory Precision through Digital Jurist AI.</p>
+</div>
+<div class="space-y-12">
+<!-- Agent 1 -->
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2 order-2 md:order-1">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-3 bg-primary-fixed rounded-xl text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-2xl" data-icon="smart_toy">smart_toy</span>
+</div>
+<h3 class="text-2xl font-bold text-primary">CMMI Operation Agent</h3>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed mb-6">
+                            실시간 개발 로그를 분석하여 CMMI 실무 지침(Practice Area) 준수 여부를 상시 모니터링합니다.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                실무 가이드라인 자동 매핑
+                            </li>
+<li class="flex items-center gap-2 text-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                프로세스 위반 즉시 알림
+                            </li>
+</ul>
+</div>
+<div class="md:w-1/2 order-1 md:order-2 rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-[300px] object-cover" data-alt="Digital dashboard showing complex data visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqBRTIWrKaYSjcO4iOAmsaYnrckF-FR_3n6lIQnaQO7nCetCG-d5tQ5vLFBwLpg5y3K1ZliW2hWseShCyNYh5deRXl7EPogoF1WNgiTs95K_JzOev3bk2aRW38nsV8IDs7WLapNe9o79jGhHDRryIyoELfVdQS0h5IyWPj6DveiSvlwKkffuDsrbi4jZyNmP5VUQiiZCKcUnx3YkEY6evrBtddPtkVOPlKE2-Bzrl8Tk4HlqG9tgK-utkMHT1Ku9DSRj4qefdITX7D"/>
+</div>
+</div>
+<!-- Agent 2 -->
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2 rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-[300px] object-cover" data-alt="Minimalist top view of business documents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxxrwt1-YhUWXsyxBC3f5KSt5ALrO8P71B9ZG83slt9GoCkZC1Cb4DMPTVaiqCFtCZMJroEkDXJ9P0DyA9-1v6rQ9K97uEY7H4ca7BNiyKOs2Y_B82lrdwZDLlP7FeNuC8WlQH0TyUAru3f1Y2ld8aRmovLDoKCNVeO7Ai-Z1FpwKh9JW64fkGBpb3t_pt1mUY7RHLIlp6KfFWg-339DOKaN0CzLvHlPTsKlh1KuiPoqrj0Ub8CSAoqaZAEnezZ-tfzKKoNr2I1ao8"/>
+</div>
+<div class="md:w-1/2">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-3 bg-primary-fixed rounded-xl text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-2xl" data-icon="history_edu">history_edu</span>
+</div>
+<h3 class="text-2xl font-bold text-primary">PMO Doc Generation</h3>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed mb-6">
+                            주간 보고, 월간 보고, 산출물 검토 의견서 등 복잡한 공공 PMO 서식을 AI가 자동 생성합니다.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                표준 서식 100% 대응
+                            </li>
+<li class="flex items-center gap-2 text-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                데이터 기반 자동 요약
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Agent 3 -->
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2 order-2 md:order-1">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-3 bg-primary-fixed rounded-xl text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-2xl" data-icon="query_stats">query_stats</span>
+</div>
+<h3 class="text-2xl font-bold text-primary">Integrated Dashboard</h3>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed mb-6">
+                            모든 정량적 지표를 한곳에. 의사결정권자를 위한 실시간 리스크 가시성을 확보합니다.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                다차원 리스크 분석 리포트
+                            </li>
+<li class="flex items-center gap-2 text-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                실시간 성과 지표(KPI) 트래킹
+                            </li>
+</ul>
+</div>
+<div class="md:w-1/2 order-1 md:order-2 rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-[300px] object-cover" data-alt="Abstract digital network visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKUbqGVHBoUa1uQNPqcsmvjMVyKGp0u_TWmbRyjr1gjtSPLZ3tFK_1DxCb-2Teed8EJ0Il940lmr4AScUYDQqZlHmIJTFktjAyf53llyzmjVe3qhSLRtj2YXbYnxZcbZEkfBhyi_lexI-Nmjbh2PG3MzrSY_v8weUqs6gDq1S_N3M8dNEZOBVseK3VMxfcFuDM174xeI4iaXge2x9Yn8pOoYgU-tFLky0CJtzwQrK8SPPndJDxs3B65bx5eWAgGklbUCn2mLWrP6W9"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-surface-container-high py-20 px-6">
+<div class="max-w-7xl mx-auto space-y-10">
+<h2 class="text-2xl font-bold text-primary text-center">도입 기업의 목소리</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glass-card p-6 rounded-2xl shadow-sm">
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed mb-6">
+                            "심사 때만 급하게 문서를 꾸미던 관행에서 벗어나게 되었습니다. 이제는 AI가 상시 모니터링해주니 개발자들도 훨씬 편해졌어요."
+                        </p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<div>
+<p class="text-sm font-bold text-on-surface">김OO 본부장</p>
+<p class="text-xs text-on-surface-variant">국내 대형 SI 기업 품질관리팀</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl shadow-sm">
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary text-xs" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed mb-6">
+                            "클라우드 전환 프로젝트의 복잡한 PMO 보고서 작성이 획기적으로 줄었습니다. 본질적인 관리에 집중할 수 있게 되었습니다."
+                        </p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<div>
+<p class="text-sm font-bold text-on-surface">이OO 리드</p>
+<p class="text-xs text-on-surface-variant">글로벌 클라우드 서비스 PMO</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-6 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-container opacity-90"></div>
+<div class="max-w-3xl mx-auto text-center space-y-8 relative z-10">
+<h2 class="text-3xl font-bold text-on-primary tracking-tight">당신의 프로세스,<br/>지금 진단받으세요.</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-3 text-left bg-white/10 p-4 rounded-xl">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="analytics">analytics</span>
+<p class="text-sm text-on-primary opacity-90">CMMI V2.0 기준 갭 분석 리포트 무료 제공</p>
+</div>
+<div class="flex items-start gap-3 text-left bg-white/10 p-4 rounded-xl">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="description">description</span>
+<p class="text-sm text-on-primary opacity-90">산업별 PMO 표준 산출물 템플릿 패키지</p>
+</div>
+</div>
+<a href="contact.html" class="inline-block w-full bg-white text-primary py-4 rounded-lg font-black text-lg shadow-xl active:scale-95 transition-all">
+                    일반 SW 도메인 무료 갭 분석 신청하기
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="col-span-1 md:col-span-2">
+      <a href="index.html" class="flex items-center h-8 mb-4">
+        <img alt="The Digital Jurist Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/>
+      </a>
+      <p class="text-[#43474f] text-sm leading-relaxed max-w-sm">
+        © 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.<br/>
+        AI를 통해 세상의 모든 복잡한 규제를 투명하고 명확하게 만듭니다.
+      </p>
+    </div>
+    <div>
+      <h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5>
+      <ul class="space-y-2 text-sm text-[#43474f]">
+        <li><a href="automotive.html" class="hover:text-[#003366] transition-colors">Automotive</a></li>
+        <li><a href="medical.html" class="hover:text-[#003366] transition-colors">Medical SaMD</a></li>
+        <li><a href="general.html" class="hover:text-[#003366] transition-colors">General SW</a></li>
+        <li><a href="academy.html" class="hover:text-[#003366] transition-colors">Academy</a></li>
+        <li><a href="services.html" class="hover:text-[#003366] transition-colors">Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold mb-4 text-[#001e40]">Company</h5>
+      <ul class="space-y-2 text-sm text-[#43474f]">
+        <li><a href="about.html" class="hover:text-[#003366] transition-colors">About</a></li>
+        <li><a href="contact.html" class="hover:text-[#003366] transition-colors">Contact</a></li>
+        <li><a href="privacy.html" class="hover:text-[#003366] transition-colors">Privacy Policy</a></li>
+        <li><a href="projects.html" class="hover:text-[#003366] transition-colors">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</body></html>

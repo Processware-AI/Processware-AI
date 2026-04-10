@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title innertext="Processware - 프로젝트 허브">Aegis Protocol - 프로젝트 허브</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#545f72",
+                        "surface-container-low": "#f4f3f8",
+                        "surface": "#f9f9fe",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "outline": "#737780",
+                        "on-primary-fixed": "#001b3c",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9fe",
+                        "surface-bright": "#f9f9fe",
+                        "primary-fixed": "#d5e3ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#381300",
+                        "on-secondary-container": "#586377",
+                        "on-tertiary-fixed": "#341100",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "outline-variant": "#c3c6d1",
+                        "surface-tint": "#3a5f94",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d5e0f7",
+                        "inverse-primary": "#a7c8ff",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#592300",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#d8885c",
+                        "surface-container-high": "#e8e8ed",
+                        "on-tertiary-fixed-variant": "#723610",
+                        "primary": "#001e40",
+                        "inverse-on-surface": "#f1f0f5",
+                        "surface-dim": "#dad9de",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "inverse-surface": "#2f3034",
+                        "on-primary-container": "#799dd6",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1f",
+                        "surface-container": "#eeedf2",
+                        "on-secondary-fixed": "#111c2c",
+                        "primary-container": "#003366",
+                        "on-background": "#1a1c1f",
+                        "surface-variant": "#e2e2e7",
+                        "secondary-fixed": "#d8e3fa",
+                        "on-surface-variant": "#43474f",
+                        "surface-container-highest": "#e2e2e7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #c3c6d1; border-radius: 10px; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-[#f9f9fe] dark:bg-slate-950 flex justify-between items-center w-full px-6 py-4 max-w-full sticky top-0 z-50">
+<div class="flex items-center h-10"><img alt="Processware Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/></div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#001e40] border-b-2 border-[#001e40] dark:text-blue-400 dark:border-blue-400 font-['Inter'] font-bold text-lg tracking-tight pb-1" href="#">대시보드</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] font-bold text-lg tracking-tight hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-2 rounded-lg" href="#">아카데미</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] font-bold text-lg tracking-tight hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-2 rounded-lg" href="#">서비스</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] font-bold text-lg tracking-tight hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-2 rounded-lg" href="#">재단</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/15">
+<img alt="User Profile" data-alt="professional portrait of a man in dark business attire against a neutral architectural background, sharp focus, clean lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSJOqgCdJOUcMXr6IaSCn67cQZoVgGQEJAkqtcqNS5p0stsX-neP41sW7BEmZ3J0O2OoDLt4yzXyfnTo4NPK5DIQ-WkvScj6T5FJTIbZbKzl279zkpZ9waje1LoR0PtBuDP8PU0UlA4_YrxrjMQ7lgCig6dghuZw1NPmQAaJyorh-sUNow7j59StPdDPY8oex0Fjn-xiM2cM7656o8vJMaytDR5czn_XpeZ4kcRnI4dggfA-q20EJ9XB9dK_ALErK6D9Hkew_T1CCV"/>
+</div>
+</div>
+</header>
+<!-- NavigationDrawer (Sidebar - Desktop) -->
+<aside class="fixed left-0 top-0 h-full w-64 z-40 flex flex-col bg-[#f4f3f8] dark:bg-slate-900 shadow-[0px_12px_32px_rgba(0,30,64,0.06)] hidden lg:flex pt-20 border-r border-outline-variant/10">
+<div class="px-6 py-6 mb-4">
+<div class="flex items-center h-12 w-full"><img alt="Processware Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/></div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 bg-white dark:bg-slate-800 text-[#001e40] dark:text-blue-300 font-semibold rounded-lg transition-all ease-in-out duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-sm font-medium">대시보드</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#e8e8ed] dark:hover:bg-slate-700 rounded-lg transition-all ease-in-out duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-['Inter'] text-sm font-medium">아카데미</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#e8e8ed] dark:hover:bg-slate-700 rounded-lg transition-all ease-in-out duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+<span class="font-['Inter'] text-sm font-medium">서비스</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#e8e8ed] dark:hover:bg-slate-700 rounded-lg transition-all ease-in-out duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-['Inter'] text-sm font-medium">재단 정보</span>
+</a>
+</nav>
+<div class="p-6 mt-auto">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+<p class="text-[11px] text-on-surface-variant font-bold mb-2 uppercase">네트워크 상태</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse"></div>
+<span class="text-xs font-medium">프로토콜 안정적</span>
+</div>
+</div>
+<p class="mt-4 text-[10px] text-slate-400 font-medium">v2.4.0 • 시스템 활성</p>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 min-h-screen px-4 md:px-8 py-8 pb-24 md:pb-8">
+<header class="mb-10">
+<h1 class="text-3xl font-extrabold text-on-background tracking-tight mb-2">프로젝트 허브 대시보드</h1>
+<p class="text-on-surface-variant body-lg max-w-2xl">Aegis Protocol 티어 1 자산의 통합 규제 모니터링 및 프로젝트 생애주기 관리 서비스입니다.</p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<!-- Timeline Section - Large Feature -->
+<section class="md:col-span-8 bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h2 class="text-xl font-bold text-primary tracking-tight">프로젝트 Aegis - 티어 1 감사</h2>
+<p class="text-sm text-on-surface-variant">실시간 생애주기 모니터링</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-on-primary-fixed-variant bg-primary-fixed px-3 py-1 rounded-full uppercase tracking-wider">우선순위: 높음</span>
+</div>
+</div>
+<!-- Gantt-Style Timeline -->
+<div class="space-y-6 overflow-x-auto pb-4">
+<div class="min-w-[600px]">
+<!-- Timeline Header -->
+<div class="grid grid-cols-6 border-b border-outline-variant/15 pb-2 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">
+<div>01단계</div>
+<div>02단계</div>
+<div>03단계</div>
+<div>04단계</div>
+<div>05단계</div>
+<div>06단계</div>
+</div>
+<!-- Timeline Rows -->
+<div class="mt-6 space-y-8">
+<div class="relative h-4 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 h-full w-[45%] bg-gradient-to-r from-primary to-primary-container rounded-full shadow-[0px_4px_12px_rgba(0,30,64,0.15)]"></div>
+<div class="absolute left-[5%] top-1/2 -translate-y-1/2 text-[9px] font-bold text-white px-2 uppercase">초기 접수</div>
+</div>
+<div class="relative h-4 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="absolute left-[30%] top-0 h-full w-[35%] bg-primary-fixed-dim rounded-full"></div>
+<div class="absolute left-[35%] top-1/2 -translate-y-1/2 text-[9px] font-bold text-on-primary-fixed px-2 uppercase">자산 검증</div>
+</div>
+<div class="relative h-4 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="absolute left-[55%] top-0 h-full w-[20%] bg-surface-variant rounded-full"></div>
+<div class="absolute left-[58%] top-1/2 -translate-y-1/2 text-[9px] font-bold text-on-surface-variant px-2 uppercase">리스크 분석</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Calendar Widget - Sidebar Style -->
+<section class="md:col-span-4 bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-primary">마감 기한 일정</h3>
+<button class="text-on-primary-container"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 gap-2 mb-4">
+<span class="text-[10px] font-bold text-on-surface-variant text-center">일</span>
+<span class="text-[10px] font-bold text-on-surface-variant text-center">월</span>
+<span class="text-[10px] font-bold text-on-surface-variant text-center">화</span>
+<span class="text-[10px] font-bold text-on-surface-variant text-center">수</span>
+<span class="text-[10px] font-bold text-on-surface-variant text-center">목</span>
+<span class="text-[10px] font-bold text-on-surface-variant text-center">금</span>
+<span class="text-[10px] font-bold text-on-surface-variant text-center">토</span>
+<div class="h-8 flex items-center justify-center text-xs text-on-surface-variant/40">28</div>
+<div class="h-8 flex items-center justify-center text-xs text-on-surface-variant/40">29</div>
+<div class="h-8 flex items-center justify-center text-xs text-on-surface-variant/40">30</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold">1</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold">2</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold relative">
+                    3
+                    <div class="absolute bottom-1 w-1 h-1 bg-error rounded-full"></div>
+</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold">4</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold bg-primary text-white rounded-lg">5</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold">6</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold relative">
+                    7
+                    <div class="absolute bottom-1 w-1 h-1 bg-primary-fixed-dim rounded-full"></div>
+</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold">8</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold">9</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold">10</div>
+<div class="h-8 flex items-center justify-center text-xs font-semibold">11</div>
+</div>
+<div class="space-y-3 mt-6 border-t border-outline-variant/15 pt-4">
+<div class="flex items-start gap-3">
+<div class="w-1 h-8 bg-error rounded-full"></div>
+<div>
+<p class="text-xs font-bold text-on-surface">FATF-12 신고 마감</p>
+<p class="text-[10px] text-on-surface-variant">2일 전</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-1 h-8 bg-primary-fixed-dim rounded-full"></div>
+<div>
+<p class="text-xs font-bold text-on-surface">스마트 계약 검토</p>
+<p class="text-[10px] text-on-surface-variant">진행 중</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Active Projects - Asymmetric Wide -->
+<section class="md:col-span-12 lg:col-span-9 space-y-4">
+<div class="flex items-end justify-between mb-2">
+<h2 class="text-xl font-bold text-primary tracking-tight">활성 규제 포트폴리오</h2>
+<a class="text-sm font-semibold text-on-primary-fixed-variant border-b border-on-primary-fixed-variant" href="#">글로벌 원장 보기</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Project Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm group hover:bg-white transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container">account_balance</span>
+<span class="text-[10px] font-extrabold text-on-surface-variant/60 uppercase">P-882</span>
+</div>
+<h4 class="font-bold text-on-surface mb-1">글로벌 스테이블코인 감사</h4>
+<p class="text-xs text-on-surface-variant mb-6 line-clamp-2">고유동성 법정화폐 담보 자산에 대한 분기별 준수 여부 검증입니다.</p>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-bold">
+<span>진행률</span>
+<span>78%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm group hover:bg-white transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container">shield_with_heart</span>
+<span class="text-[10px] font-extrabold text-on-surface-variant/60 uppercase">P-912</span>
+</div>
+<h4 class="font-bold text-on-surface mb-1">KYC/AML V3 통합</h4>
+<p class="text-xs text-on-surface-variant mb-6 line-clamp-2">EU 지침 14.b 표준을 충족하기 위한 핵심 식별 프로토콜 업데이트입니다.</p>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-bold">
+<span>진행률</span>
+<span>34%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full" style="width: 34%"></div>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm group hover:bg-white transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container">data_exploration</span>
+<span class="text-[10px] font-extrabold text-on-surface-variant/60 uppercase">P-044</span>
+</div>
+<h4 class="font-bold text-on-surface mb-1">L2 유동성 모니터링</h4>
+<p class="text-xs text-on-surface-variant mb-6 line-clamp-2">Optimistic 롤업 전반의 비정상 거래 패턴에 대한 자동 온체인 감시입니다.</p>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-bold">
+<span>진행률</span>
+<span>92%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-primary-container h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats/Insight Panel - Asymmetric Narrow -->
+<section class="md:col-span-12 lg:col-span-3">
+<div class="bg-primary-container text-white rounded-xl p-6 relative overflow-hidden h-full min-h-[300px]">
+<!-- Decorative Graphic -->
+<div class="absolute -right-10 -bottom-10 opacity-10 scale-150 rotate-12">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="relative z-10 flex flex-col h-full">
+<h3 class="text-lg font-bold mb-4">컴플라이언스 건강 지수</h3>
+<div class="flex items-center gap-4 mb-6">
+<span class="text-5xl font-black tracking-tighter">9.8</span>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container">등급</span>
+<span class="text-xs text-primary-fixed font-semibold">모범적</span>
+</div>
+</div>
+<div class="mt-auto space-y-4">
+<div class="flex items-center justify-between text-xs font-medium">
+<span class="opacity-80">네트워크 지연</span>
+<span>14ms</span>
+</div>
+<div class="flex items-center justify-between text-xs font-medium">
+<span class="opacity-80">프로토콜 편차</span>
+<span>0.002%</span>
+</div>
+<div class="bg-white/10 backdrop-blur-md rounded-lg p-3 mt-4">
+<div class="flex items-center gap-2 mb-1">
+<div class="w-2 h-2 rounded-full bg-primary-fixed-dim"></div>
+<span class="text-[10px] font-bold uppercase">법무 의견</span>
+</div>
+<p class="text-[11px] leading-relaxed opacity-90">모든 티어 1 자산은 현재 표준 Aegis Protocol 규정을 100% 준수하고 있습니다.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Feature - AI Insight Section -->
+<section class="md:col-span-12 mt-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+<div class="md:col-span-1 overflow-hidden rounded-xl shadow-lg h-64 md:h-auto border border-outline-variant/10">
+<img alt="Cybersecurity Visualization" class="w-full h-full object-cover" data-alt="abstract digital visualization of data streams and glowing blue network nodes in a dark futuristic environment, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAweomn5peIZ3ivMZs7pRCQfX4hcsB-RMVwQHC8UewGUxZkyMAwB0mh9sONXqa_a_aesvJeryHlgM0hZFBDn7fGCFNGsS8R_bGOtT0zNfx6w73q7Uy0ivh8TBgWfPgRiJdGTuv10oWg2xVXi93bp5YwBI7i72MKBRXF7h_9_CIAtHreg0X_BZo5trHOsW0C0BfmcCfFsrRLrwta43bb-kZJiaawbhtRWMv-_XbLdt7Hu5fwa2WtYxb0_uMgH4I7MV4BaCWINfuet-vz"/>
+</div>
+<div class="md:col-span-2 bg-[#f4f3f8] dark:bg-slate-900/50 p-8 rounded-xl flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-3 h-3 bg-primary-fixed-dim rounded-full shadow-[0px_0px_8px_rgba(167,200,255,0.8)] animate-pulse"></div>
+<h3 class="text-sm font-extrabold uppercase tracking-[0.2em] text-primary">법무 지능 보고서</h3>
+</div>
+<h2 class="text-2xl font-bold text-on-background mb-4">심층 스캐닝 04단계 즉시 실행</h2>
+<p class="body-lg text-on-surface-variant mb-6 leading-relaxed">디지털 법무 시스템이 APAC 지역의 잠재적인 규제 변화를 감지했습니다. 최적의 컴플라이언스 태세를 유지하기 위해 프로젝트 Aegis 티어 1 파라미터가 24시간 이내에 자동으로 조정됩니다.</p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">모든 포트폴리오 업데이트</button>
+<button class="bg-white dark:bg-slate-800 text-on-surface-variant px-6 py-2.5 rounded-lg font-bold text-sm transition-all hover:bg-slate-50 active:scale-95">알림 닫기</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Create New Project FAB -->
+<button class="fixed bottom-24 md:bottom-8 right-6 md:right-8 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-container text-white shadow-2xl flex items-center justify-center group transition-all duration-300 hover:scale-110 active:scale-95 z-50">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">add</span>
+<span class="absolute right-full mr-4 bg-primary text-white text-xs font-bold py-2 px-4 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap">새 프로젝트 생성</span>
+</button>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 md:hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-lg border-t border-[#c3c6d1]/15">
+<a class="flex flex-col items-center justify-center bg-[#001e40] text-white rounded-xl p-2 scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">대시보드</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 scale-90 duration-200 hover:text-[#001e40] dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">아카데미</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 scale-90 duration-200 hover:text-[#001e40] dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">서비스</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 scale-90 duration-200 hover:text-[#001e40] dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold">문서</span>
+</a>
+</nav>
+</body></html>

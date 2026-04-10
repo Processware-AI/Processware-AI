@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>컨설팅 서비스 - The Digital Jurist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://js.tosspayments.com/v2/standard"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      "secondary-container": "#d5e0f7", "primary-container": "#003366", "on-primary": "#ffffff",
+      "surface-variant": "#e2e2e7", "outline-variant": "#c3c6d1", "surface": "#f9f9fe",
+      "surface-container-low": "#f4f3f8", "error": "#ba1a1a", "on-primary-container": "#799dd6",
+      "primary-fixed-dim": "#a7c8ff", "surface-container-lowest": "#ffffff",
+      "surface-container": "#eeedf2", "surface-tint": "#3a5f94", "on-background": "#1a1c1f",
+      "on-surface-variant": "#43474f", "on-surface": "#1a1c1f",
+      "surface-container-high": "#e8e8ed", "outline": "#737780", "primary-fixed": "#d5e3ff",
+      "primary": "#001e40", "surface-container-highest": "#e2e2e7", "background": "#f9f9fe"
+    },
+    fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+  }}
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-surface">
+
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+    <a href="index.html" class="flex items-center h-10"><img alt="The Digital Jurist" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+    <nav class="hidden md:flex items-center gap-8">
+      <div class="relative group">
+        <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <a href="automotive.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-t-xl">Automotive SW</a>
+          <a href="medical.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary">Medical SaMD</a>
+          <a href="general.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-b-xl">General SW</a>
+        </div>
+      </div>
+      <a href="academy.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Academy</a>
+      <a href="services.html" class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5">Services</a>
+      <a href="projects.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Projects</a>
+      <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+      <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+      <button id="mobile-menu-btn" class="md:hidden"><span class="material-symbols-outlined text-2xl">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+    <a href="automotive.html" class="block py-2 text-sm font-medium">Automotive SW</a><a href="medical.html" class="block py-2 text-sm font-medium">Medical SaMD</a><a href="general.html" class="block py-2 text-sm font-medium">General SW</a>
+    <a href="academy.html" class="block py-2 text-sm font-medium">Academy</a><a href="services.html" class="block py-2 text-sm font-medium text-primary font-bold">Services</a><a href="projects.html" class="block py-2 text-sm font-medium">Projects</a>
+    <a href="about.html" class="block py-2 text-sm font-medium">About</a><a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+  </div>
+</header>
+
+<main class="pt-20">
+  <!-- Breadcrumb -->
+  <div class="bg-surface-container-low border-b border-outline-variant/20">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <nav class="flex items-center gap-2 text-sm text-on-surface-variant">
+        <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+        <span class="material-symbols-outlined text-base">chevron_right</span>
+        <span class="text-primary font-medium">컨설팅 서비스</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative py-20 bg-gradient-to-br from-primary via-primary-container to-primary overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary-fixed-dim rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-4xl">psychology</span>
+        </div>
+        <div>
+          <span class="text-on-primary/60 text-sm font-medium">Professional Consulting</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-on-primary">컨설팅 서비스</h1>
+        </div>
+      </div>
+      <p class="text-xl text-on-primary/80 max-w-3xl">ISO, ASPICE, IEC 등 국제표준 인증 전문 컨설팅. 갭 분석부터 심사 대비까지 원스톱 서비스를 제공합니다.</p>
+    </div>
+  </section>
+
+  <!-- Service Scope -->
+  <section class="py-20 bg-background">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">서비스 범위</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">analytics</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2">Gap Analysis</h3>
+          <p class="text-sm text-on-surface-variant">현재 프로세스와 목표 표준 간의 차이를 정밀 분석하여 명확한 개선 포인트를 도출합니다.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">route</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2">이행 로드맵 수립</h3>
+          <p class="text-sm text-on-surface-variant">단계별 실행 계획과 마일스톤을 설정하여 체계적인 인증 준비를 지원합니다.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">school</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2">심사 대비 교육</h3>
+          <p class="text-sm text-on-surface-variant">실전 심사 시뮬레이션과 인터뷰 대비 교육으로 성공적인 인증 심사를 보장합니다.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">support_agent</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2">On-site 전문가 지원</h3>
+          <p class="text-sm text-on-surface-variant">전담 컨설턴트가 현장에 상주하며 실시간 기술 지도와 문제 해결을 제공합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">진행 프로세스</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">1</div>
+          <h3 class="font-bold text-primary mb-2">현황 분석</h3>
+          <p class="text-sm text-on-surface-variant">현재 프로세스 수준 진단 및 갭 분석 수행</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">2</div>
+          <h3 class="font-bold text-primary mb-2">로드맵 설계</h3>
+          <p class="text-sm text-on-surface-variant">맞춤형 이행 로드맵 및 실행 계획 수립</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">3</div>
+          <h3 class="font-bold text-primary mb-2">이행 지원</h3>
+          <p class="text-sm text-on-surface-variant">단계별 프로세스 개선 및 산출물 작성 지원</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">4</div>
+          <h3 class="font-bold text-primary mb-2">심사 대비</h3>
+          <p class="text-sm text-on-surface-variant">모의 심사 및 최종 점검으로 인증 심사 준비</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deliverables -->
+  <section class="py-20 bg-background">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">포함 산출물</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">Gap Analysis Report</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">이행 로드맵 문서</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">프로세스 개선 가이드</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">심사 대비 체크리스트</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">교육 자료 및 템플릿</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">최종 평가 보고서</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-surface-container-low">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-4 text-center">서비스 요금</h2>
+      <p class="text-on-surface-variant text-center mb-12">프로젝트에 맞는 요금제를 선택하세요</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- One-time -->
+        <div class="bg-white rounded-2xl border border-outline-variant/20 shadow-lg p-8 flex flex-col">
+          <h3 class="text-lg font-bold text-primary mb-2">일회성 구매</h3>
+          <p class="text-sm text-on-surface-variant mb-6">프로젝트 단위로 컨설팅 서비스를 이용합니다</p>
+          <div class="mb-8">
+            <span class="text-4xl font-extrabold text-primary">&#8361;15,000,000</span>
+            <span class="text-sm text-outline ml-1">/ 프로젝트</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>갭 분석 리포트</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>이행 로드맵 수립</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>심사 대비 코칭 (1회)</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>전담 컨설턴트 배정</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>전체 산출물 제공</li>
+          </ul>
+          <button onclick="requestPayment('onetime')" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl active:scale-[0.98] transition-all">구매하기</button>
+        </div>
+        <!-- Subscription -->
+        <div class="bg-white rounded-2xl border-2 border-primary shadow-xl p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-on-primary text-xs font-bold rounded-full">추천</div>
+          <h3 class="text-lg font-bold text-primary mb-2">월간 구독</h3>
+          <p class="text-sm text-on-surface-variant mb-6">지속적인 컨설팅 지원을 받습니다</p>
+          <div class="mb-8">
+            <span class="text-4xl font-extrabold text-primary">&#8361;2,500,000</span>
+            <span class="text-sm text-outline ml-1">/ 월</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>상시 갭 분석 및 모니터링</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>로드맵 지속 업데이트</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>월간 심사 대비 코칭</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>전담 컨설턴트 상시 배정</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>우선 지원 및 핫라인</li>
+          </ul>
+          <button onclick="requestPayment('subscription')" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl active:scale-[0.98] transition-all">구독하기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-background">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">자주 묻는 질문</h2>
+      <div class="space-y-4">
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">컨설팅 기간은 얼마나 걸리나요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">프로젝트 규모와 현재 성숙도 수준에 따라 다르지만, 일반적으로 ASPICE 레벨 2 달성 기준 4~8개월, ISO 26262 인증 기준 6~12개월이 소요됩니다. 초기 갭 분석 후 보다 정확한 일정을 안내드립니다.</div>
+        </details>
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">일회성 구매와 월간 구독의 차이는 무엇인가요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">일회성 구매는 단일 프로젝트/인증 목표를 위한 집중 컨설팅이며, 월간 구독은 지속적인 프로세스 개선과 상시 전문가 지원을 제공합니다. 구독 시 우선 지원 핫라인과 월간 리뷰 미팅이 추가됩니다.</div>
+        </details>
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">어떤 표준/규격을 지원하나요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">Automotive SPICE, ISO 26262, ISO 21434, UNECE WP.29, IEC 62304, IEC 82304, ISO 13485, ISO 9001, CMMI 등 주요 국제표준을 모두 지원합니다.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-br from-primary via-primary-container to-primary">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-on-primary mb-6">프로젝트에 대해 상담받으세요</h2>
+      <p class="text-on-primary/80 text-lg mb-10">전문 컨설턴트가 귀사의 현황을 분석하고 최적의 인증 전략을 제안합니다.</p>
+      <a href="contact.html" class="inline-block bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl active:scale-[0.98] transition-all">무료 상담 신청</a>
+    </div>
+  </section>
+</main>
+
+<footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="col-span-1 md:col-span-2">
+      <a href="index.html" class="flex items-center h-8 mb-4"><img alt="Logo" class="h-full w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+      <p class="text-[#43474f] text-sm">&copy; 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.</p>
+    </div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="automotive.html" class="hover:text-[#003366]">Automotive</a></li><li><a href="medical.html" class="hover:text-[#003366]">Medical SaMD</a></li><li><a href="general.html" class="hover:text-[#003366]">General SW</a></li><li><a href="academy.html" class="hover:text-[#003366]">Academy</a></li><li><a href="services.html" class="hover:text-[#003366]">Services</a></li></ul></div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Company</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="about.html" class="hover:text-[#003366]">About</a></li><li><a href="contact.html" class="hover:text-[#003366]">Contact</a></li><li><a href="privacy.html" class="hover:text-[#003366]">Privacy Policy</a></li><li><a href="projects.html" class="hover:text-[#003366]">Projects</a></li></ul></div>
+  </div>
+</footer>
+<script>document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});</script>
+
+<script>
+async function requestPayment(type) {
+  const tossPayments = TossPayments('test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq');
+  const payment = tossPayments.payment({customerKey: 'ANONYMOUS'});
+  const amount = type === 'onetime' ? 15000000 : 2500000;
+  const orderName = type === 'onetime' ? '컨설팅 서비스 (일회성)' : '컨설팅 서비스 (월간 구독)';
+  await payment.requestPayment({
+    method: 'CARD',
+    amount: { currency: 'KRW', value: amount },
+    orderId: 'svc-consulting-' + type + '-' + Date.now(),
+    orderName: orderName,
+    successUrl: window.location.origin + '/site/service-payment-success.html',
+    failUrl: window.location.origin + '/site/service-payment-fail.html',
+  });
+}
+</script>
+</body></html>

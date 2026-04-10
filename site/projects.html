@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>프로젝트 현황 - The Digital Jurist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      "secondary-container": "#d5e0f7", "primary-container": "#003366", "on-primary": "#ffffff",
+      "surface-variant": "#e2e2e7", "outline-variant": "#c3c6d1", "surface": "#f9f9fe",
+      "surface-container-low": "#f4f3f8", "error": "#ba1a1a", "on-primary-container": "#799dd6",
+      "primary-fixed-dim": "#a7c8ff", "surface-container-lowest": "#ffffff",
+      "surface-container": "#eeedf2", "surface-tint": "#3a5f94", "on-background": "#1a1c1f",
+      "on-surface-variant": "#43474f", "on-surface": "#1a1c1f",
+      "surface-container-high": "#e8e8ed", "outline": "#737780", "primary-fixed": "#d5e3ff",
+      "primary": "#001e40", "surface-container-highest": "#e2e2e7", "background": "#f9f9fe",
+      "error-container": "#ffdad6", "on-error-container": "#93000a"
+    },
+    fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+  }}
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-surface">
+
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+    <a href="index.html" class="flex items-center h-10"><img alt="The Digital Jurist" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+    <nav class="hidden md:flex items-center gap-8">
+      <div class="relative group">
+        <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <a href="automotive.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-t-xl">Automotive SW</a>
+          <a href="medical.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary">Medical SaMD</a>
+          <a href="general.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-b-xl">General SW</a>
+        </div>
+      </div>
+      <a href="academy.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Academy</a>
+      <a href="services.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Services</a>
+      <a href="projects.html" class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5">Projects</a>
+      <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+      <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+      <button id="mobile-menu-btn" class="md:hidden"><span class="material-symbols-outlined text-2xl">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+    <a href="automotive.html" class="block py-2 text-sm font-medium">Automotive SW</a><a href="medical.html" class="block py-2 text-sm font-medium">Medical SaMD</a><a href="general.html" class="block py-2 text-sm font-medium">General SW</a>
+    <a href="academy.html" class="block py-2 text-sm font-medium">Academy</a><a href="services.html" class="block py-2 text-sm font-medium">Services</a><a href="projects.html" class="block py-2 text-sm font-medium text-primary font-bold">Projects</a>
+    <a href="about.html" class="block py-2 text-sm font-medium">About</a><a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+  </div>
+</header>
+
+<main class="pt-20">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-primary via-primary-container to-primary py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-on-primary mb-4">프로젝트 현황</h1>
+      <p class="text-on-primary/80 text-lg max-w-2xl mx-auto">진행 중인 프로젝트와 일정을 한눈에 확인하세요</p>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="bg-white border-b border-outline-variant/20">
+    <div class="max-w-7xl mx-auto px-6 py-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center p-4 rounded-xl bg-surface-container-low">
+          <div class="text-3xl font-extrabold text-primary">8</div>
+          <div class="text-sm text-on-surface-variant mt-1">전체 프로젝트</div>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-blue-50">
+          <div class="text-3xl font-extrabold text-blue-600">5</div>
+          <div class="text-sm text-on-surface-variant mt-1">진행 중</div>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-green-50">
+          <div class="text-3xl font-extrabold text-green-600">2</div>
+          <div class="text-sm text-on-surface-variant mt-1">완료</div>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-amber-50">
+          <div class="text-3xl font-extrabold text-amber-600">1</div>
+          <div class="text-sm text-on-surface-variant mt-1">대기</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Tabs & Project Cards -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button onclick="filterProjects('all')" class="filter-tab active px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-primary text-on-primary" data-filter="all">전체</button>
+        <button onclick="filterProjects('진행 중')" class="filter-tab px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-surface-container-high text-on-surface-variant hover:bg-blue-100" data-filter="진행 중">진행 중</button>
+        <button onclick="filterProjects('완료')" class="filter-tab px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-surface-container-high text-on-surface-variant hover:bg-green-100" data-filter="완료">완료</button>
+        <button onclick="filterProjects('대기')" class="filter-tab px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-surface-container-high text-on-surface-variant hover:bg-amber-100" data-filter="대기">대기</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1 -->
+        <a href="project-detail-1.html" class="project-card group block bg-white rounded-2xl border border-outline-variant/20 p-6 hover:shadow-xl hover:border-primary/20 transition-all duration-300" data-status="진행 중">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">진행 중</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-primary-fixed text-primary">Automotive</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-primary-container transition-colors">ASPICE CL3 인증 지원</h3>
+          <p class="text-sm text-on-surface-variant mb-4">A자동차 부품사</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs text-on-surface-variant mb-1.5">
+              <span>진행률</span><span class="font-semibold text-blue-600">75%</span>
+            </div>
+            <div class="w-full bg-surface-container-high rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full transition-all" style="width:75%"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span>2024.03 - 2024.09</div>
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>김철수</div>
+          </div>
+          <div class="flex justify-end mt-3"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span></div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="project-detail-2.html" class="project-card group block bg-white rounded-2xl border border-outline-variant/20 p-6 hover:shadow-xl hover:border-primary/20 transition-all duration-300" data-status="진행 중">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">진행 중</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-primary-fixed text-primary">Automotive</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-primary-container transition-colors">ISO 26262 기능안전 구축</h3>
+          <p class="text-sm text-on-surface-variant mb-4">B전장사</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs text-on-surface-variant mb-1.5">
+              <span>진행률</span><span class="font-semibold text-blue-600">45%</span>
+            </div>
+            <div class="w-full bg-surface-container-high rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full transition-all" style="width:45%"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span>2024.05 - 2024.12</div>
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>이영희</div>
+          </div>
+          <div class="flex justify-end mt-3"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span></div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="project-detail-3.html" class="project-card group block bg-white rounded-2xl border border-outline-variant/20 p-6 hover:shadow-xl hover:border-primary/20 transition-all duration-300" data-status="진행 중">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">진행 중</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">Medical</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-primary-container transition-colors">IEC 62304 인증 컨설팅</h3>
+          <p class="text-sm text-on-surface-variant mb-4">C의료기기</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs text-on-surface-variant mb-1.5">
+              <span>진행률</span><span class="font-semibold text-blue-600">60%</span>
+            </div>
+            <div class="w-full bg-surface-container-high rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full transition-all" style="width:60%"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span>2024.04 - 2024.10</div>
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>박지민</div>
+          </div>
+          <div class="flex justify-end mt-3"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span></div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="project-detail-4.html" class="project-card group block bg-white rounded-2xl border border-outline-variant/20 p-6 hover:shadow-xl hover:border-primary/20 transition-all duration-300" data-status="진행 중">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">진행 중</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">Medical</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-primary-container transition-colors">SaMD 사이버보안 체계</h3>
+          <p class="text-sm text-on-surface-variant mb-4">D헬스케어</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs text-on-surface-variant mb-1.5">
+              <span>진행률</span><span class="font-semibold text-blue-600">30%</span>
+            </div>
+            <div class="w-full bg-surface-container-high rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full transition-all" style="width:30%"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span>2024.06 - 2025.01</div>
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>정민수</div>
+          </div>
+          <div class="flex justify-end mt-3"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span></div>
+        </a>
+
+        <!-- Project 5 -->
+        <a href="project-detail-5.html" class="project-card group block bg-white rounded-2xl border border-outline-variant/20 p-6 hover:shadow-xl hover:border-primary/20 transition-all duration-300" data-status="진행 중">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">진행 중</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-700">General SW</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-primary-container transition-colors">CMMI V2.0 레벨3 인증</h3>
+          <p class="text-sm text-on-surface-variant mb-4">E정보기술</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs text-on-surface-variant mb-1.5">
+              <span>진행률</span><span class="font-semibold text-blue-600">55%</span>
+            </div>
+            <div class="w-full bg-surface-container-high rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full transition-all" style="width:55%"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span>2024.02 - 2024.08</div>
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>최수진</div>
+          </div>
+          <div class="flex justify-end mt-3"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span></div>
+        </a>
+
+        <!-- Project 6 -->
+        <a href="project-detail-6.html" class="project-card group block bg-white rounded-2xl border border-outline-variant/20 p-6 hover:shadow-xl hover:border-primary/20 transition-all duration-300" data-status="완료">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">완료</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-violet-100 text-violet-700">AI/ML</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-primary-container transition-colors">AI Agent 규제분석 개발</h3>
+          <p class="text-sm text-on-surface-variant mb-4">F인공지능</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs text-on-surface-variant mb-1.5">
+              <span>진행률</span><span class="font-semibold text-green-600">100%</span>
+            </div>
+            <div class="w-full bg-surface-container-high rounded-full h-2">
+              <div class="bg-green-500 h-2 rounded-full transition-all" style="width:100%"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span>2024.01 - 2024.06</div>
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>한동석</div>
+          </div>
+          <div class="flex justify-end mt-3"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span></div>
+        </a>
+
+        <!-- Project 7 -->
+        <a href="project-detail-7.html" class="project-card group block bg-white rounded-2xl border border-outline-variant/20 p-6 hover:shadow-xl hover:border-primary/20 transition-all duration-300" data-status="완료">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">완료</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-primary-fixed text-primary">Automotive</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-primary-container transition-colors">자동차 SW 품질 시스템</h3>
+          <p class="text-sm text-on-surface-variant mb-4">G모빌리티</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs text-on-surface-variant mb-1.5">
+              <span>진행률</span><span class="font-semibold text-green-600">100%</span>
+            </div>
+            <div class="w-full bg-surface-container-high rounded-full h-2">
+              <div class="bg-green-500 h-2 rounded-full transition-all" style="width:100%"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span>2023.09 - 2024.03</div>
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>김철수</div>
+          </div>
+          <div class="flex justify-end mt-3"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span></div>
+        </a>
+
+        <!-- Project 8 -->
+        <a href="project-detail-8.html" class="project-card group block bg-white rounded-2xl border border-outline-variant/20 p-6 hover:shadow-xl hover:border-primary/20 transition-all duration-300" data-status="대기">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-700">대기</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-700">General SW</span>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2 group-hover:text-primary-container transition-colors">PMO 문서자동화 구축</h3>
+          <p class="text-sm text-on-surface-variant mb-4">H공공기관</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs text-on-surface-variant mb-1.5">
+              <span>진행률</span><span class="font-semibold text-amber-600">0%</span>
+            </div>
+            <div class="w-full bg-surface-container-high rounded-full h-2">
+              <div class="bg-amber-400 h-2 rounded-full transition-all" style="width:0%"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span>2024.09 - 2025.03</div>
+            <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>이영희</div>
+          </div>
+          <div class="flex justify-end mt-3"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section class="py-12 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-8 text-center">프로젝트 일정</h2>
+
+      <!-- Calendar Widget -->
+      <div class="bg-white rounded-2xl border border-outline-variant/20 shadow-sm overflow-hidden">
+        <!-- Calendar Header -->
+        <div class="flex items-center justify-between px-6 py-4 bg-primary text-on-primary">
+          <button id="prev-month" class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <h3 id="calendar-title" class="text-xl font-bold"></h3>
+          <button id="next-month" class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+
+        <!-- Day Headers -->
+        <div class="grid grid-cols-7 bg-surface-container-high">
+          <div class="py-3 text-center text-xs font-semibold text-red-500">일</div>
+          <div class="py-3 text-center text-xs font-semibold text-on-surface-variant">월</div>
+          <div class="py-3 text-center text-xs font-semibold text-on-surface-variant">화</div>
+          <div class="py-3 text-center text-xs font-semibold text-on-surface-variant">수</div>
+          <div class="py-3 text-center text-xs font-semibold text-on-surface-variant">목</div>
+          <div class="py-3 text-center text-xs font-semibold text-on-surface-variant">금</div>
+          <div class="py-3 text-center text-xs font-semibold text-blue-500">토</div>
+        </div>
+
+        <!-- Calendar Grid -->
+        <div id="calendar-grid" class="grid grid-cols-7"></div>
+
+        <!-- Event Panel -->
+        <div id="event-panel" class="hidden border-t border-outline-variant/20 p-6">
+          <h4 id="event-panel-title" class="text-lg font-bold text-primary mb-4"></h4>
+          <div id="event-panel-list"></div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="flex flex-wrap justify-center gap-6 mt-6">
+        <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-blue-500"></span><span class="text-sm text-on-surface-variant">Automotive</span></div>
+        <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-green-500"></span><span class="text-sm text-on-surface-variant">Medical</span></div>
+        <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-purple-500"></span><span class="text-sm text-on-surface-variant">General</span></div>
+        <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-orange-500"></span><span class="text-sm text-on-surface-variant">All</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="col-span-1 md:col-span-2">
+      <a href="index.html" class="flex items-center h-8 mb-4"><img alt="Logo" class="h-full w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+      <p class="text-[#43474f] text-sm">&copy; 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.</p>
+    </div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="automotive.html" class="hover:text-[#003366]">Automotive</a></li><li><a href="medical.html" class="hover:text-[#003366]">Medical SaMD</a></li><li><a href="general.html" class="hover:text-[#003366]">General SW</a></li><li><a href="academy.html" class="hover:text-[#003366]">Academy</a></li><li><a href="services.html" class="hover:text-[#003366]">Services</a></li></ul></div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Company</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="about.html" class="hover:text-[#003366]">About</a></li><li><a href="contact.html" class="hover:text-[#003366]">Contact</a></li><li><a href="privacy.html" class="hover:text-[#003366]">Privacy Policy</a></li><li><a href="projects.html" class="hover:text-[#003366]">Projects</a></li></ul></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});
+
+// Filter Projects
+function filterProjects(status) {
+  var cards = document.querySelectorAll('.project-card');
+  var tabs = document.querySelectorAll('.filter-tab');
+  tabs.forEach(function(tab) {
+    tab.classList.remove('bg-primary', 'text-on-primary');
+    tab.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+  });
+  var activeTab = document.querySelector('[data-filter="' + status + '"]');
+  activeTab.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+  activeTab.classList.add('bg-primary', 'text-on-primary');
+  cards.forEach(function(card) {
+    if (status === 'all' || card.dataset.status === status) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// Calendar
+var calendarEvents = {
+  '2026-4-3': [{ title: 'ASPICE CL3 중간 심사', domain: 'Automotive', color: 'blue' }],
+  '2026-4-7': [{ title: 'ISO 26262 킥오프 미팅', domain: 'Automotive', color: 'blue' }],
+  '2026-4-10': [{ title: 'IEC 62304 문서 리뷰', domain: 'Medical', color: 'green' }],
+  '2026-4-14': [{ title: 'SaMD 보안 위협 분석', domain: 'Medical', color: 'green' }],
+  '2026-4-15': [{ title: 'CMMI V2.0 프로세스 교육', domain: 'General', color: 'purple' }],
+  '2026-4-18': [{ title: 'ASPICE CL3 산출물 검토', domain: 'Automotive', color: 'blue' }],
+  '2026-4-21': [{ title: 'PMO 자동화 요구사항 정의', domain: 'General', color: 'purple' }],
+  '2026-4-24': [{ title: 'IEC 62304 모의 심사', domain: 'Medical', color: 'green' }],
+  '2026-4-28': [{ title: '월간 프로젝트 리뷰', domain: 'All', color: 'orange' }],
+  '2026-4-30': [{ title: 'ASPICE CL3 최종 심사 준비', domain: 'Automotive', color: 'blue' }]
+};
+
+var currentYear = 2026;
+var currentMonth = 3; // 0-indexed, so 3 = April
+var selectedDay = null;
+
+function renderCalendar() {
+  var grid = document.getElementById('calendar-grid');
+  var title = document.getElementById('calendar-title');
+  var monthNames = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+  title.textContent = currentYear + '년 ' + monthNames[currentMonth];
+
+  var firstDay = new Date(currentYear, currentMonth, 1).getDay();
+  var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+  var today = new Date();
+  var todayStr = today.getFullYear() + '-' + (today.getMonth()) + '-' + today.getDate();
+
+  var html = '';
+  // Empty cells before first day
+  for (var i = 0; i < firstDay; i++) {
+    html += '<div class="min-h-[60px] md:min-h-[80px] border-b border-r border-outline-variant/10"></div>';
+  }
+  for (var d = 1; d <= daysInMonth; d++) {
+    var key = currentYear + '-' + (currentMonth + 1) + '-' + d;
+    var events = calendarEvents[key] || [];
+    var isToday = (currentYear === today.getFullYear() && currentMonth === today.getMonth() && d === today.getDate());
+    var dayOfWeek = (firstDay + d - 1) % 7;
+    var textColor = dayOfWeek === 0 ? 'text-red-500' : (dayOfWeek === 6 ? 'text-blue-500' : 'text-on-surface');
+
+    html += '<div class="min-h-[60px] md:min-h-[80px] border-b border-r border-outline-variant/10 p-1.5 md:p-2 cursor-pointer hover:bg-primary-fixed/30 transition-colors' + (isToday ? ' bg-blue-50' : '') + '" onclick="showEvents(' + d + ')">';
+    html += '<div class="text-sm font-semibold ' + textColor + (isToday ? ' bg-primary text-on-primary w-7 h-7 rounded-full flex items-center justify-center' : '') + '">' + d + '</div>';
+    if (events.length > 0) {
+      html += '<div class="flex gap-1 mt-1 flex-wrap">';
+      events.forEach(function(ev) {
+        html += '<span class="w-2 h-2 rounded-full bg-' + ev.color + '-500"></span>';
+      });
+      html += '</div>';
+      html += '<div class="hidden md:block mt-1">';
+      events.forEach(function(ev) {
+        html += '<div class="text-[10px] leading-tight text-on-surface-variant truncate">' + ev.title + '</div>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+  }
+  // Fill remaining cells
+  var totalCells = firstDay + daysInMonth;
+  var remaining = (7 - (totalCells % 7)) % 7;
+  for (var j = 0; j < remaining; j++) {
+    html += '<div class="min-h-[60px] md:min-h-[80px] border-b border-r border-outline-variant/10"></div>';
+  }
+  grid.innerHTML = html;
+}
+
+function showEvents(day) {
+  var panel = document.getElementById('event-panel');
+  var panelTitle = document.getElementById('event-panel-title');
+  var panelList = document.getElementById('event-panel-list');
+  var key = currentYear + '-' + (currentMonth + 1) + '-' + day;
+  var events = calendarEvents[key] || [];
+  var monthNames = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+  panelTitle.textContent = currentYear + '년 ' + monthNames[currentMonth] + ' ' + day + '일 일정';
+
+  if (events.length === 0) {
+    panelList.innerHTML = '<p class="text-on-surface-variant text-sm">이 날짜에 예정된 일정이 없습니다.</p>';
+  } else {
+    var html = '';
+    events.forEach(function(ev) {
+      html += '<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low mb-2">';
+      html += '<span class="w-3 h-3 rounded-full bg-' + ev.color + '-500 flex-shrink-0"></span>';
+      html += '<div><div class="font-semibold text-sm text-on-surface">' + ev.title + '</div>';
+      html += '<div class="text-xs text-on-surface-variant">' + ev.domain + '</div></div></div>';
+    });
+    panelList.innerHTML = html;
+  }
+  panel.classList.remove('hidden');
+}
+
+document.getElementById('prev-month').addEventListener('click', function() {
+  currentMonth--;
+  if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+  renderCalendar();
+  document.getElementById('event-panel').classList.add('hidden');
+});
+document.getElementById('next-month').addEventListener('click', function() {
+  currentMonth++;
+  if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+  renderCalendar();
+  document.getElementById('event-panel').classList.add('hidden');
+});
+
+renderCalendar();
+</script>
+
+</body></html>

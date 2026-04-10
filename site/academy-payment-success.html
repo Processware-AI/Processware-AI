@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>결제 완료 - The Digital Jurist Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      "secondary-container": "#d5e0f7", "primary-container": "#003366", "on-primary": "#ffffff",
+      "surface-variant": "#e2e2e7", "outline-variant": "#c3c6d1", "surface": "#f9f9fe",
+      "surface-container-low": "#f4f3f8", "error": "#ba1a1a", "on-primary-container": "#799dd6",
+      "primary-fixed-dim": "#a7c8ff", "surface-container-lowest": "#ffffff",
+      "surface-container": "#eeedf2", "surface-tint": "#3a5f94", "on-background": "#1a1c1f",
+      "on-surface-variant": "#43474f", "on-surface": "#1a1c1f",
+      "surface-container-high": "#e8e8ed", "outline": "#737780", "primary-fixed": "#d5e3ff",
+      "primary": "#001e40", "surface-container-highest": "#e2e2e7", "background": "#f9f9fe"
+    },
+    fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+  }}
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-surface">
+
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+    <a href="index.html" class="flex items-center h-10"><img alt="The Digital Jurist" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+    <nav class="hidden md:flex items-center gap-8">
+      <div class="relative group">
+        <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <a href="automotive.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-t-xl">Automotive SW</a>
+          <a href="medical.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary">Medical SaMD</a>
+          <a href="general.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-b-xl">General SW</a>
+        </div>
+      </div>
+      <a href="academy.html" class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5">Academy</a>
+      <a href="services.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Services</a>
+      <a href="projects.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Projects</a>
+      <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+      <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+      <button id="mobile-menu-btn" class="md:hidden"><span class="material-symbols-outlined text-2xl">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+    <a href="automotive.html" class="block py-2 text-sm font-medium">Automotive SW</a>
+    <a href="medical.html" class="block py-2 text-sm font-medium">Medical SaMD</a>
+    <a href="general.html" class="block py-2 text-sm font-medium">General SW</a>
+    <a href="academy.html" class="block py-2 text-sm font-medium text-primary font-bold">Academy</a>
+    <a href="services.html" class="block py-2 text-sm font-medium">Services</a>
+    <a href="projects.html" class="block py-2 text-sm font-medium">Projects</a>
+    <a href="about.html" class="block py-2 text-sm font-medium">About</a>
+    <a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+  </div>
+</header>
+
+<main class="pt-20 min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-surface-container-low">
+  <div class="max-w-lg mx-auto px-6 py-20 text-center">
+    <div class="w-24 h-24 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-8">
+      <span class="material-symbols-outlined text-emerald-600 text-5xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
+    </div>
+    <h1 class="text-3xl font-extrabold text-primary mb-4">결제가 완료되었습니다!</h1>
+    <p class="text-on-surface-variant mb-8 leading-relaxed">수강 신청이 성공적으로 처리되었습니다.<br>등록하신 이메일로 수강 안내를 발송해 드리겠습니다.</p>
+
+    <div id="order-details" class="bg-white rounded-xl border border-outline-variant/20 p-6 mb-8 text-left">
+      <h3 class="font-bold text-primary mb-4">주문 정보</h3>
+      <div class="space-y-3">
+        <div class="flex justify-between text-sm">
+          <span class="text-on-surface-variant">주문번호</span>
+          <span id="orderId" class="font-medium text-on-surface">-</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-on-surface-variant">과정명</span>
+          <span id="orderName" class="font-medium text-on-surface">-</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-on-surface-variant">결제 금액</span>
+          <span id="amount" class="font-bold text-primary">-</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-on-surface-variant">결제키</span>
+          <span id="paymentKey" class="font-medium text-on-surface text-xs break-all">-</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex gap-4 justify-center">
+      <a href="academy.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl active:scale-[0.98] transition-all">Academy로 돌아가기</a>
+      <a href="index.html" class="bg-surface-container-high text-on-surface-variant px-8 py-3 rounded-xl font-semibold hover:bg-surface-container-highest transition-colors">홈으로 이동</a>
+    </div>
+  </div>
+</main>
+
+<footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="col-span-1 md:col-span-2">
+      <a href="index.html" class="flex items-center h-8 mb-4"><img alt="Logo" class="h-full w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+      <p class="text-[#43474f] text-sm leading-relaxed max-w-sm">&copy; 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.</p>
+    </div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="automotive.html" class="hover:text-[#003366]">Automotive</a></li><li><a href="medical.html" class="hover:text-[#003366]">Medical SaMD</a></li><li><a href="general.html" class="hover:text-[#003366]">General SW</a></li><li><a href="academy.html" class="hover:text-[#003366]">Academy</a></li><li><a href="services.html" class="hover:text-[#003366]">Services</a></li></ul></div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Company</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="about.html" class="hover:text-[#003366]">About</a></li><li><a href="contact.html" class="hover:text-[#003366]">Contact</a></li><li><a href="privacy.html" class="hover:text-[#003366]">Privacy Policy</a></li><li><a href="projects.html" class="hover:text-[#003366]">Projects</a></li></ul></div>
+  </div>
+</footer>
+<script>document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});</script>
+
+<script>
+// Parse URL parameters from Toss Payments redirect
+const urlParams = new URLSearchParams(window.location.search);
+const orderId = urlParams.get('orderId');
+const orderName = urlParams.get('orderName');
+const amount = urlParams.get('amount');
+const paymentKey = urlParams.get('paymentKey');
+
+if (orderId) document.getElementById('orderId').textContent = orderId;
+if (orderName) document.getElementById('orderName').textContent = decodeURIComponent(orderName);
+if (amount) document.getElementById('amount').textContent = '₩' + Number(amount).toLocaleString();
+if (paymentKey) document.getElementById('paymentKey').textContent = paymentKey;
+</script>
+</body></html>

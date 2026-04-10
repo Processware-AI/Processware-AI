@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>안전 결제 | Aegis Protocol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#545f72",
+                        "surface-container-low": "#f4f3f8",
+                        "surface": "#f9f9fe",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "outline": "#737780",
+                        "on-primary-fixed": "#001b3c",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9fe",
+                        "surface-bright": "#f9f9fe",
+                        "primary-fixed": "#d5e3ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#381300",
+                        "on-secondary-container": "#586377",
+                        "on-tertiary-fixed": "#341100",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "outline-variant": "#c3c6d1",
+                        "surface-tint": "#3a5f94",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d5e0f7",
+                        "inverse-primary": "#a7c8ff",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#592300",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#d8885c",
+                        "surface-container-high": "#e8e8ed",
+                        "on-tertiary-fixed-variant": "#723610",
+                        "primary": "#001e40",
+                        "inverse-on-surface": "#f1f0f5",
+                        "surface-dim": "#dad9de",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "inverse-surface": "#2f3034",
+                        "on-primary-container": "#799dd6",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1f",
+                        "surface-container": "#eeedf2",
+                        "on-secondary-fixed": "#111c2c",
+                        "primary-container": "#003366",
+                        "on-background": "#1a1c1f",
+                        "surface-variant": "#e2e2e7",
+                        "secondary-fixed": "#d8e3fa",
+                        "on-surface-variant": "#43474f",
+                        "surface-container-highest": "#e2e2e7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9fe; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopAppBar (Transactional: Back Action Only) -->
+<header class="flex justify-between items-center w-full px-6 py-4 max-w-full bg-[#f9f9fe] sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-bold text-lg tracking-tight text-[#001e40]">안전 결제</h1>
+</div>
+<div class="h-10"><img alt="Processware Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/></div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-12 lg:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Payment Column -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Transaction Header -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse shadow-[0_0_8px_rgba(167,200,255,0.8)]"></div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">암호화된 세션 활성화됨</span>
+</div>
+<h2 class="text-3xl font-extrabold tracking-tight text-primary">결제 수단 선택</h2>
+<p class="text-on-surface-variant body-lg leading-relaxed">ASPICE 구독 설정을 완료하기 위한 결제 수단을 선택해 주세요.</p>
+</div>
+<!-- Toss Payments UI Simulation -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_12px_32px_rgba(0,30,64,0.04)] outline-variant/15 outline outline-1">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="font-bold text-primary">토스페이먼츠</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest bg-surface-container text-on-surface-variant px-2 py-1 rounded">개발자 샌드박스</span>
+</div>
+<div class="grid grid-cols-3 gap-4 mb-8">
+<!-- Card Option -->
+<label class="relative flex flex-col items-center justify-center p-4 border-2 border-primary rounded-xl cursor-pointer bg-primary-fixed/20">
+<input checked="" class="hidden" name="payment_type" type="radio"/>
+<span class="material-symbols-outlined text-primary mb-2">credit_card</span>
+<span class="text-sm font-bold text-primary">카드</span>
+</label>
+<!-- Transfer Option -->
+<label class="relative flex flex-col items-center justify-center p-4 border-2 border-transparent hover:border-outline-variant/30 rounded-xl cursor-pointer bg-surface-container-low transition-all">
+<input class="hidden" name="payment_type" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant mb-2">account_balance</span>
+<span class="text-sm font-medium text-on-surface-variant">계좌이체</span>
+</label>
+<!-- Virtual Account Option -->
+<label class="relative flex flex-col items-center justify-center p-4 border-2 border-transparent hover:border-outline-variant/30 rounded-xl cursor-pointer bg-surface-container-low transition-all">
+<input class="hidden" name="payment_type" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant mb-2">vpn_key</span>
+<span class="text-sm font-medium text-on-surface-variant">가상계좌</span>
+</label>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">카드 번호</label>
+<input class="w-full bg-surface-container-lowest border-b-2 border-outline-variant px-0 py-3 focus:border-surface-tint focus:ring-0 transition-colors placeholder:text-outline-variant" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">유효 기간</label>
+<input class="w-full bg-surface-container-lowest border-b-2 border-outline-variant px-0 py-3 focus:border-surface-tint focus:ring-0 transition-colors placeholder:text-outline-variant" placeholder="MM / YY" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">CVC</label>
+<input class="w-full bg-surface-container-lowest border-b-2 border-outline-variant px-0 py-3 focus:border-surface-tint focus:ring-0 transition-colors placeholder:text-outline-variant" placeholder="123" type="text"/>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/15">
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+<span class="underline">서비스 이용약관</span>에 동의하며 Aegis Protocol이 토스페이먼츠를 통해 본 거래를 안전하게 처리하는 것에 동의합니다.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Safe Aesthetic Note -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<p class="text-sm text-on-surface-variant">본 거래는 은행 수준의 256비트 SSL 암호화로 보호되며 Aegis Digital Jurist AI에 의해 모니터링됩니다.</p>
+</div>
+</div>
+<!-- Summary Column -->
+<div class="lg:col-span-5 space-y-8 sticky top-28">
+<div class="glass-panel rounded-2xl p-8 shadow-[0px_12px_32px_rgba(0,30,64,0.06)] border border-white">
+<h3 class="text-xl font-bold text-primary mb-6">주문 요약</h3>
+<div class="flex gap-4 mb-8">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Tech infrastructure" class="w-full h-full object-cover" data-alt="Close up of a sleek server room rack with glowing blue and white led indicators in a high tech facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiSWtheVkuqE5d17L1an9sV7H6hBsuNxUyILX0At8-H_0FeaLAg7M6mXBMV0UnN7BodaiMuqne8YIeHPJzVKVti89fy9QRr5581FNLFknkvOEFqLORtr710NUMmRclBjXw5Ki0fKtZXhbJJRscs8x6PCIQb-WTCDiw1Pl4jAfbey41RpLq70MRaRBdDJqeWbTDU-0BeUIsGAWhuVuvOxH-N_cn15UIL9WVM9k-DjeFeDczQ47IPq2GZ9YzXPZy7EVSefj9WGVxrzfJ"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-widest mb-1">프로페셔널 티어</span>
+<h4 class="font-bold text-on-surface">ASPICE 컨설팅 구독</h4>
+<p class="text-sm text-on-surface-variant">월 단위 결제 • 언제든 취소 가능</p>
+</div>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-on-surface">
+<span class="text-on-surface-variant">소계</span>
+<span class="font-medium">$1,250.00</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-on-surface-variant">부가세 (10%)</span>
+<span class="font-medium">$125.00</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-on-surface-variant">AI 모니터링 수수료</span>
+<span class="text-primary font-medium">포함됨</span>
+</div>
+<div class="h-px bg-outline-variant/15 my-4"></div>
+<div class="flex justify-between items-end">
+<span class="text-lg font-bold text-primary">총 결제 금액</span>
+<div class="text-right">
+<span class="text-3xl font-black text-primary">$1,375.00</span>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">USD</p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 rounded-lg bg-gradient-to-r from-primary to-primary-container text-white font-bold text-lg shadow-[0_4px_12px_rgba(0,30,64,0.2)] hover:opacity-95 transition-all transform active:scale-95 mb-4">
+                        지금 결제하기
+                    </button>
+<p class="text-center text-xs text-on-surface-variant">
+                        결제 처리는 <span class="font-bold">Aegis SecurePay</span>를 통해 진행됩니다.
+                    </p>
+</div>
+<!-- Supplemental Image Card -->
+<div class="rounded-2xl overflow-hidden relative group">
+<img alt="Financial analysis" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Premium financial dashboard interface displayed on a high-resolution tablet with clean typography and deep blue data visualizations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoR4c973XK8kG2Pbw7UXt681B0K0RDau-Zm5olB8qAfDKss3xsDLPGOm2N8OUcKK2n1NUR-P4sv2qX-pNHMZDSGgyqYH8eKsWl5eLuaxBpoDTYK_SoY0m61qMOQ0q9dPlri6VG8GvF0SFQdXTM_PNrDyl1tf-lypG_pnmIsxMMuGHHPGdC2xJHFOhWw_6I0yrwxgK83Fwtra-RhhMqlP0rPQ7PbwG3_WyNHqiqL9tenBsFaqok-JPLPGUz3CBlMAz8Xxd7Tri8w6N5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+<div class="text-white">
+<p class="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Aegis Intelligence</p>
+<h5 class="text-sm font-bold">규제 모니터링 포함됨</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 py-12 bg-surface-container-low">
+<div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<div class="h-8 mb-2"><img alt="Processware Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/></div>
+<p class="text-xs text-on-surface-variant">규제 준수를 위한 정밀 엔지니어링.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest" href="#">개인정보 처리방침</a>
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest" href="#">준수 표준</a>
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest" href="#">지원 센터</a>
+</div>
+</div>
+</footer>
+</body></html>

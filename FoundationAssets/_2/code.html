@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#545f72",
+                        "surface-container-low": "#f4f3f8",
+                        "surface": "#f9f9fe",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "outline": "#737780",
+                        "on-primary-fixed": "#001b3c",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9fe",
+                        "surface-bright": "#f9f9fe",
+                        "primary-fixed": "#d5e3ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#381300",
+                        "on-secondary-container": "#586377",
+                        "on-tertiary-fixed": "#341100",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "outline-variant": "#c3c6d1",
+                        "surface-tint": "#3a5f94",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d5e0f7",
+                        "inverse-primary": "#a7c8ff",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#592300",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#d8885c",
+                        "surface-container-high": "#e8e8ed",
+                        "on-tertiary-fixed-variant": "#723610",
+                        "primary": "#001e40",
+                        "inverse-on-surface": "#f1f0f5",
+                        "surface-dim": "#dad9de",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "inverse-surface": "#2f3034",
+                        "on-primary-container": "#799dd6",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1f",
+                        "surface-container": "#eeedf2",
+                        "on-secondary-fixed": "#111c2c",
+                        "primary-container": "#003366",
+                        "on-background": "#1a1c1f",
+                        "surface-variant": "#e2e2e7",
+                        "secondary-fixed": "#d8e3fa",
+                        "on-surface-variant": "#43474f",
+                        "surface-container-highest": "#e2e2e7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9fe; }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .ai-pulse {
+            width: 8px;
+            height: 8px;
+            background-color: #a7c8ff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(167, 200, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(167, 200, 255, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(167, 200, 255, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(167, 200, 255, 0); }
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-[#f9f9fe] dark:bg-slate-950 flex justify-between items-center w-full px-6 py-4 max-w-full fixed top-0 z-50">
+<div class="flex items-center"><img alt="Processware Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/></div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Inter'] text-sm font-medium text-slate-500 hover:bg-slate-100 transition-colors px-3 py-1 rounded" href="#">아카데미</a>
+<a class="font-['Inter'] text-sm font-medium text-slate-500 hover:bg-slate-100 transition-colors px-3 py-1 rounded" href="#">서비스</a>
+<a class="font-['Inter'] text-sm font-medium text-slate-500 hover:bg-slate-100 transition-colors px-3 py-1 rounded" href="#">대시보드</a>
+<a class="font-['Inter'] text-sm font-medium text-[#001e40] border-b-2 border-[#001e40] px-3 py-1" href="#">재단</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="ai-pulse"></div>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full bg-surface-container-high" data-alt="minimalist profile avatar silhouette on a soft grey circular background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0sW0rhoE6A9qgR9Q1O_M-j3j7buZMOnCgkO96O7lvWfYCCClv7x1Cks7JGi5mW66VKxZ1rltppd9UpLG8AGawr6LGNC97mMYkxScu-tciXTY07_oQFnsCtTjcifViXLFf98byk-bkTg0tWGjzQgqT7itijCntzcp4_KLxsvrQ1vFXIy8wPQxRLGDQVX2KKwoLFsSAUQ7Vz-3VCL0TmDjQQlntV1xDiW0vNJtjCZS4eHCEANXh8f2N6nfbHVWF0ysbwY_cmnUvSljg"/>
+</div>
+</header>
+<!-- Side Navigation (Web) -->
+<aside class="fixed left-0 top-0 h-full w-64 z-40 flex flex-col bg-[#f4f3f8] dark:bg-slate-900 shadow-[0px_12px_32px_rgba(0,30,64,0.06)] rounded-r-lg pt-24 hidden md:flex">
+<div class="px-6 mb-8">
+<div class="flex flex-col gap-2">
+<img alt="Processware Logo" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhl6JFd8pwmRRoAU7sExRat1320S1IeLZRY9-efULuLrm6Z5MiYAvvLo-tblZcLO40QB-mxiIGq7q1ciHq0OyTISNg3DDYlssPqUYheqx45ElkcR9EzXj9JwTFQD1UFwsYHb5g-RAcMWeC-Q61QUwNIQWjvfVMJ258UIFuG1fCeEIEr_X0Abrz7GKrIFk87meg1fhn-ANrLKuxda-ELxdCn5cQo8XhyMZ5oUvrwm5lUir7c2XRLZRul8KllNEZ7oiQrBlizFn0pCC8"/>
+<p class="text-[10px] text-slate-500 font-medium px-1 uppercase tracking-wider">규제 모니터링 활성화됨</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-[#e8e8ed] transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-['Inter'] text-sm font-medium">아카데미</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-[#e8e8ed] transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+<span class="font-['Inter'] text-sm font-medium">서비스</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-[#e8e8ed] transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-sm font-medium">대시보드</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-[#001e40] font-semibold rounded-lg shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-['Inter'] text-sm font-medium">재단</span>
+</a>
+</nav>
+<div class="p-6 text-[10px] text-slate-400 font-medium">
+            v2.4.0
+        </div>
+</aside>
+<!-- Main Content -->
+<main class="md:ml-64 pt-24 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<span class="text-on-primary-fixed-variant text-sm font-bold tracking-[0.2em] uppercase mb-4 block">우리의 신념 (Our Ethos)</span>
+<h2 class="text-5xl md:text-7xl font-black text-primary leading-[1.1] mb-8 tracking-tighter">규제 신뢰의 아키텍처.</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl leading-relaxed text-lg">
+                    Aegis Protocol은 법학적 전문성과 컴퓨팅 우수성의 접점에서 운영됩니다. 우리는 단순한 컴플라이언스 자동화를 넘어, 모든 트랜잭션에 디지털 정의의 철학을 인코딩합니다.
+                </p>
+</div>
+<div class="lg:col-span-5">
+<div class="bg-surface-container-low p-2 rounded-xl">
+<img alt="Foundation Visual" class="w-full aspect-[4/3] object-cover rounded-lg" data-alt="abstract architectural glass structure with blue and silver reflections creating a sense of depth and corporate precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZiyUDvZ8UuMM5Z9bL1G20kDdLkca7ToDspMLt6qBbZRMYBUUrja_Ta6Q_gDYMoYIjlCYOo_eS0ZZPxPFI6S00NXkZmhA7bwwXt-qfA-j7c7uDYj5IMHp4ou8HQk2ixeJM0TMyGpXmFxw16pA5VU2mMCChwjyXzjhGHwAvEwcr63GNKZNuTqev8JPCiSpQtDmkJReCBN6GH31CVeumGlH8zHRHvO23BTW7pMJBnyzjpTQcKbZpQXgEeecU4WyWy-nkSfPiatqbD-1G"/>
+</div>
+</div>
+</section>
+<!-- About Us & Mission (Asymmetric Layout) -->
+<section class="mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-4">
+<div class="sticky top-32">
+<h3 class="text-2xl font-bold text-primary mb-6">회사 소개 (About Us)</h3>
+<div class="h-1 w-12 bg-primary mb-8"></div>
+<p class="text-on-surface-variant text-sm leading-loose">
+                            디지털 경제에는 더욱 정교한 법적 감독 계층이 필요하다는 원칙 위에 설립된 Aegis Protocol은 기관 수준의 컴플라이언스를 위한 기술적 기반을 제공합니다.
+                        </p>
+</div>
+</div>
+<div class="lg:col-span-8 space-y-16">
+<div class="bg-surface-container-lowest p-10 rounded-xl">
+<h4 class="text-xl font-bold mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="rocket_launch">rocket_launch</span>
+                            미션 (Mission)
+                        </h4>
+<p class="text-on-surface-variant leading-relaxed text-lg italic border-l-4 border-outline-variant pl-6">
+                            "투명성을 보장하고 마찰을 줄이며 글로벌 디지털 시장의 무결성을 유지하는 자율형 AI 시스템을 통해 기관 수준의 규제 모니터링을 대중화하는 것."
+                        </p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl">
+<h4 class="text-xl font-bold mb-6 flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+                            조정의 깊이 (Tonal Depth)
+                        </h4>
+<p class="text-on-surface-variant leading-relaxed mb-4">
+                            우리의 방법론은 다층적인 분석을 활용합니다. 우리는 데이터를 분리하여 보지 않습니다. 역사, 맥락, 의도의 렌즈를 통해 데이터를 바라봅니다. 이러한 "조정의 깊이"를 통해 우리의 프로토콜은 단순한 이상 징후와 혁신을 구분할 수 있습니다.
+                        </p>
+<div class="grid grid-cols-3 gap-4 mt-8">
+<div class="h-20 bg-primary rounded-lg flex items-end p-3"><span class="text-white text-[10px] font-bold uppercase tracking-widest">Obsidian</span></div>
+<div class="h-20 bg-surface-container-highest rounded-lg flex items-end p-3"><span class="text-primary text-[10px] font-bold uppercase tracking-widest">Mist</span></div>
+<div class="h-20 bg-primary-fixed rounded-lg flex items-end p-3"><span class="text-primary text-[10px] font-bold uppercase tracking-widest">Azure</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Us Section (Bento Grid) -->
+<section class="mb-32">
+<h3 class="text-3xl font-bold text-primary mb-12">문의 인프라 (Contact Infrastructure)</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Inquiry Form -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+<h4 class="text-xl font-bold mb-8">직접 문의</h4>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative">
+<label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 block">조직명</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-surface-tint transition-colors py-3 text-on-surface" placeholder="Global Entity Ltd." type="text"/>
+</div>
+<div class="relative">
+<label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 block">프로토콜 이메일</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-surface-tint transition-colors py-3 text-on-surface" placeholder="official@entity.jurist" type="email"/>
+</div>
+</div>
+<div class="relative">
+<label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 block">규제 범위</label>
+<textarea class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-surface-tint transition-colors py-3 text-on-surface" placeholder="모니터링 요구 사항을 설명해 주세요..." rows="4"></textarea>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-lg font-bold text-sm tracking-widest uppercase hover:shadow-lg transition-all flex items-center gap-3">
+                            프로토콜 개시
+                            <span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</form>
+</div>
+<!-- Office Location -->
+<div class="bg-primary text-white p-8 md:p-12 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed-dim" data-icon="location_on">location_on</span>
+<h4 class="text-xl font-bold mb-4 text-white">중앙 허브</h4>
+<p class="text-primary-fixed-dim text-sm leading-relaxed mb-8">
+                            Jurist Tower, Floor 44<br/>
+                            Regulatory District, Suite 101<br/>
+                            London, EC2V 6AA<br/>
+                            United Kingdom
+                        </p>
+</div>
+<div class="mt-4 overflow-hidden rounded-lg">
+<img alt="Office Location Map" class="w-full h-32 object-cover opacity-80" data-alt="stylized blueprint map of London financial district in deep blue and white hues" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCGZtx57BjMC1zjXfwf4MIb-qiTjx88tP3RjPtixlRchZSLE-mkjZjThWeGMvwdu4m0Jc6_XIU1f5FPyy6ZSTIYjGVv5oZMTtAufZ3PfaQ48pHVWG406e2Bspu1JXAVXyud1udJ1ExATGkf2tvBjm9_kOJXJ1Wlcuq0kbWW4ucNeXHBGnlGM0f4BvgPRhbhhA5iViSeBtMfQHsRM4lT8EcVmtDubVF38tS7ivWMXdHQ7wMMR2r3hQWpsQ2B4jnz4t9QjZVHFYfjVDr"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy Policy (Standard Regulatory Text) -->
+<section class="max-w-4xl mx-auto mb-32">
+<div class="bg-white p-12 md:p-20 border-t-8 border-primary rounded-xl">
+<h3 class="text-3xl font-black text-primary mb-12 tracking-tighter">개인정보 보호 및 데이터 주권 정책</h3>
+<div class="space-y-10 text-on-surface-variant font-['Inter'] leading-relaxed">
+<div>
+<h5 class="text-primary font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+                            1.0 핵심 철학
+                        </h5>
+<p class="text-sm">
+                            Aegis Protocol은 "최소 권한 발견" 원칙을 준수합니다. 우리는 규제 모니터링을 수행하는 데 필요한 메타데이터만 수집합니다. 모든 식별 가능한 엔티티 데이터는 프로토콜 수집 전 엣지에서 해시 및 솔트 처리됩니다.
+                        </p>
+</div>
+<div>
+<h5 class="text-primary font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="gavel">gavel</span>
+                            2.0 규제 준수
+                        </h5>
+<p class="text-sm">
+                            우리의 데이터 처리 절차는 GDPR 제25조(설계에 의한 개인정보 보호), CCPA 및 MiCA 프레임워크를 준수합니다. 우리는 모든 제3자 대시보드 감사를 위해 엄격한 "영지식(Zero-Knowledge)" 증명 시스템을 유지합니다.
+                        </p>
+</div>
+<div>
+<h5 class="text-primary font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="history">history</span>
+                            3.0 데이터 보관 및 주기
+                        </h5>
+<p class="text-sm">
+                            로그는 활성 조사가 플래그 지정되지 않는 한 정확히 7번의 규제 주기(약 255일) 동안 보관됩니다. 주기가 완료되면 데이터는 암호화 삭제를 사용하여 영구적으로 삭제됩니다.
+                        </p>
+</div>
+<div class="pt-8 border-t border-outline-variant/15 flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
+<span>최종 업데이트: 2023년 10월</span>
+<span>문서 ID: AEGIS-P-2023-REV4</span>
+</div>
+</div>
+</div>
+<!-- Added translated footer-like section as per request -->
+<div class="mt-12 text-center">
+<a class="text-primary font-bold hover:underline" href="#">회사 소개 및 고객 지원</a>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<footer class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 md:hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-lg pt-2">
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">아카데미</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">서비스</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">대시보드</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#001e40] text-white rounded-xl p-3 scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-bold mt-1">문서</span>
+</a>
+</footer>
+</body></html>

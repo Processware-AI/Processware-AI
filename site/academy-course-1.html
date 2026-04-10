@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ASPICE 4.0 완벽 가이드 - The Digital Jurist Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      "secondary-container": "#d5e0f7", "primary-container": "#003366", "on-primary": "#ffffff",
+      "surface-variant": "#e2e2e7", "outline-variant": "#c3c6d1", "surface": "#f9f9fe",
+      "surface-container-low": "#f4f3f8", "error": "#ba1a1a", "on-primary-container": "#799dd6",
+      "primary-fixed-dim": "#a7c8ff", "surface-container-lowest": "#ffffff",
+      "surface-container": "#eeedf2", "surface-tint": "#3a5f94", "on-background": "#1a1c1f",
+      "on-surface-variant": "#43474f", "on-surface": "#1a1c1f",
+      "surface-container-high": "#e8e8ed", "outline": "#737780", "primary-fixed": "#d5e3ff",
+      "primary": "#001e40", "surface-container-highest": "#e2e2e7", "background": "#f9f9fe"
+    },
+    fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+  }}
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+<script src="https://js.tosspayments.com/v2/standard"></script>
+</head>
+<body class="bg-background text-on-surface">
+
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+    <a href="index.html" class="flex items-center h-10"><img alt="The Digital Jurist" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+    <nav class="hidden md:flex items-center gap-8">
+      <div class="relative group">
+        <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <a href="automotive.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-t-xl">Automotive SW</a>
+          <a href="medical.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary">Medical SaMD</a>
+          <a href="general.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-b-xl">General SW</a>
+        </div>
+      </div>
+      <a href="academy.html" class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5">Academy</a>
+      <a href="services.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Services</a>
+      <a href="projects.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Projects</a>
+      <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+      <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+      <button id="mobile-menu-btn" class="md:hidden"><span class="material-symbols-outlined text-2xl">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+    <a href="automotive.html" class="block py-2 text-sm font-medium">Automotive SW</a>
+    <a href="medical.html" class="block py-2 text-sm font-medium">Medical SaMD</a>
+    <a href="general.html" class="block py-2 text-sm font-medium">General SW</a>
+    <a href="academy.html" class="block py-2 text-sm font-medium text-primary font-bold">Academy</a>
+    <a href="services.html" class="block py-2 text-sm font-medium">Services</a>
+    <a href="projects.html" class="block py-2 text-sm font-medium">Projects</a>
+    <a href="about.html" class="block py-2 text-sm font-medium">About</a>
+    <a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+  </div>
+</header>
+
+<main class="pt-20">
+  <!-- Breadcrumb -->
+  <div class="bg-surface-container-low border-b border-outline-variant/15">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <nav class="flex items-center gap-2 text-sm text-on-surface-variant">
+        <a href="academy.html" class="hover:text-primary transition-colors">Academy</a>
+        <span class="material-symbols-outlined text-base">chevron_right</span>
+        <span class="text-primary font-medium">ASPICE 4.0 완벽 가이드</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Course Hero -->
+  <section class="bg-gradient-to-br from-primary via-primary-container to-[#004d99] py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <span class="inline-block px-3 py-1 bg-blue-400/20 text-blue-200 rounded-full text-xs font-semibold mb-4">Automotive</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">ASPICE 4.0 완벽 가이드</h1>
+      <p class="text-lg text-primary-fixed-dim max-w-2xl leading-relaxed mb-6">최신 ASPICE 4.0 표준의 모든 변경사항을 심층 분석하고, 프로세스 참조 모델(PRM)과 프로세스 평가 모델(PAM) 실전 적용 역량을 배양하는 고급 과정입니다.</p>
+      <div class="flex items-center gap-4 text-white/80 text-sm">
+        <div class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+          <span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+          <span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+          <span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+          <span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1">star_half</span>
+          <span class="ml-1">4.8 (127 reviews)</span>
+        </div>
+        <span>|</span>
+        <span>수강생 892명</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 bg-background">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Left Column -->
+        <div class="flex-1 min-w-0">
+          <!-- Course Overview -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-4">과정 개요</h2>
+            <p class="text-on-surface-variant leading-relaxed mb-4">본 과정은 Automotive SPICE 4.0의 새로운 프레임워크를 완벽히 이해하고 실무에 적용할 수 있는 역량을 갖추도록 설계되었습니다. ASPICE 3.1에서 4.0으로의 전환에 따른 핵심 변경사항을 분석하고, 새로운 프로세스 참조 모델과 평가 모델을 실전 사례와 함께 학습합니다.</p>
+            <p class="text-on-surface-variant leading-relaxed">글로벌 OEM과 Tier 1 공급업체에서의 실제 심사 경험을 바탕으로 한 실무 중심 교육으로, 수강 후 즉시 현업에 적용 가능한 역량을 확보합니다.</p>
+          </div>
+
+          <!-- Curriculum -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-6">커리큘럼</h2>
+            <div class="space-y-4">
+              <!-- Module 1 -->
+              <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group" open>
+                <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-surface-container-low transition-colors">
+                  <div class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">1</span>
+                    <div>
+                      <h3 class="font-semibold text-on-surface">ASPICE 4.0 개요 및 변경사항</h3>
+                      <span class="text-xs text-outline">8시간 | 4개 강의</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 border-t border-outline-variant/10">
+                  <ul class="space-y-3 mt-4">
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> ASPICE 프레임워크 발전 역사 및 4.0 배경</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 3.1 vs 4.0 주요 변경사항 비교 분석</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 새로운 프로세스 구조와 용어 체계 이해</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 전환 로드맵 및 타임라인 분석</li>
+                  </ul>
+                </div>
+              </details>
+
+              <!-- Module 2 -->
+              <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+                <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-surface-container-low transition-colors">
+                  <div class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">2</span>
+                    <div>
+                      <h3 class="font-semibold text-on-surface">프로세스 참조 모델(PRM) 심화</h3>
+                      <span class="text-xs text-outline">10시간 | 5개 강의</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 border-t border-outline-variant/10">
+                  <ul class="space-y-3 mt-4">
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> PRM 4.0 구조 및 프로세스 그룹 분석</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 시스템 엔지니어링 프로세스 심화</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 소프트웨어 엔지니어링 프로세스 심화</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 지원 및 관리 프로세스 그룹</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 프로세스 간 상호작용 및 의존성 매핑</li>
+                  </ul>
+                </div>
+              </details>
+
+              <!-- Module 3 -->
+              <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+                <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-surface-container-low transition-colors">
+                  <div class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">3</span>
+                    <div>
+                      <h3 class="font-semibold text-on-surface">프로세스 평가 모델(PAM) 실전</h3>
+                      <span class="text-xs text-outline">8시간 | 4개 강의</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 border-t border-outline-variant/10">
+                  <ul class="space-y-3 mt-4">
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> PAM 4.0 평가 지표 및 성취 기준</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 능력 수준(Capability Level) 달성 전략</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 증거 수집 및 문서화 기법</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 평가 결과 해석 및 개선 계획 수립</li>
+                  </ul>
+                </div>
+              </details>
+
+              <!-- Module 4 -->
+              <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+                <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-surface-container-low transition-colors">
+                  <div class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">4</span>
+                    <div>
+                      <h3 class="font-semibold text-on-surface">기업 적용 케이스 스터디</h3>
+                      <span class="text-xs text-outline">8시간 | 4개 강의</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 border-t border-outline-variant/10">
+                  <ul class="space-y-3 mt-4">
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 글로벌 OEM ASPICE 적용 사례 분석</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> Tier 1 공급업체 프로세스 구축 사례</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 국내 자동차 산업 ASPICE 도입 현황</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 실패 사례와 교훈 분석</li>
+                  </ul>
+                </div>
+              </details>
+
+              <!-- Module 5 -->
+              <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+                <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-surface-container-low transition-colors">
+                  <div class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">5</span>
+                    <div>
+                      <h3 class="font-semibold text-on-surface">모의 심사 실습</h3>
+                      <span class="text-xs text-outline">6시간 | 3개 강의</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 border-t border-outline-variant/10">
+                  <ul class="space-y-3 mt-4">
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 모의 심사 시나리오 설계 및 준비</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 역할극 기반 모의 심사 실전 연습</li>
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-base mt-0.5">play_circle</span> 심사 결과 피드백 및 개선 보고서 작성</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- Instructor -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-6">강사 소개</h2>
+            <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-6">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-white text-3xl">person</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-on-surface mb-1">김준혁 수석 컨설턴트</h3>
+                <p class="text-sm text-primary font-medium mb-3">ASPICE Principal Assessor | 15년 경력</p>
+                <p class="text-sm text-on-surface-variant leading-relaxed">intacs 공인 Principal Assessor로서 글로벌 OEM 및 Tier 1 공급업체 대상 100회 이상의 ASPICE 심사를 수행했습니다. 현대자동차, BMW, Continental 등 주요 기업의 프로세스 개선 프로젝트를 이끌었습니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews -->
+          <div>
+            <h2 class="text-2xl font-bold text-primary mb-6">수강 후기</h2>
+            <div class="space-y-4">
+              <div class="bg-white rounded-xl border border-outline-variant/20 p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="flex text-yellow-400">
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                  </div>
+                  <span class="text-sm font-semibold">이** / 자동차 SW 개발팀장</span>
+                </div>
+                <p class="text-sm text-on-surface-variant">"ASPICE 3.1에서 4.0 전환을 준비하면서 수강했는데, 실무에 바로 적용할 수 있는 구체적인 가이드를 얻었습니다. 특히 모의 심사 실습이 매우 유익했습니다."</p>
+              </div>
+              <div class="bg-white rounded-xl border border-outline-variant/20 p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="flex text-yellow-400">
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                  </div>
+                  <span class="text-sm font-semibold">박** / 품질 보증 매니저</span>
+                </div>
+                <p class="text-sm text-on-surface-variant">"강사님의 실제 심사 경험에서 나온 인사이트가 정말 값진 교육이었습니다. 케이스 스터디를 통해 우리 조직의 문제점도 파악할 수 있었습니다."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Sticky Sidebar -->
+        <div class="lg:w-96 flex-shrink-0">
+          <div class="lg:sticky lg:top-28">
+            <div class="bg-white rounded-2xl shadow-xl border border-outline-variant/20 overflow-hidden">
+              <div class="bg-gradient-to-r from-primary to-primary-container p-6 text-center">
+                <span class="text-4xl font-extrabold text-white">₩890,000</span>
+                <p class="text-primary-fixed-dim text-sm mt-1">VAT 포함</p>
+              </div>
+              <div class="p-6 space-y-4">
+                <div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+                  <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-base">schedule</span> 수업 시간</span>
+                  <span class="text-sm font-semibold">40시간</span>
+                </div>
+                <div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+                  <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-base">signal_cellular_alt</span> 난이도</span>
+                  <span class="text-sm font-semibold">고급</span>
+                </div>
+                <div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+                  <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-base">devices</span> 수업 형태</span>
+                  <span class="text-sm font-semibold">온라인+오프라인</span>
+                </div>
+                <div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+                  <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-base">workspace_premium</span> 수료증</span>
+                  <span class="text-sm font-semibold">수료증 발급</span>
+                </div>
+                <div class="flex items-center justify-between py-3">
+                  <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-base">group</span> 수강생</span>
+                  <span class="text-sm font-semibold">892명</span>
+                </div>
+                <button onclick="requestPayment()" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl active:scale-[0.98] transition-all mt-4">결제하기</button>
+                <p class="text-xs text-center text-outline mt-2">Toss Payments 안전결제</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="col-span-1 md:col-span-2">
+      <a href="index.html" class="flex items-center h-8 mb-4"><img alt="Logo" class="h-full w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+      <p class="text-[#43474f] text-sm leading-relaxed max-w-sm">&copy; 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.</p>
+    </div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="automotive.html" class="hover:text-[#003366]">Automotive</a></li><li><a href="medical.html" class="hover:text-[#003366]">Medical SaMD</a></li><li><a href="general.html" class="hover:text-[#003366]">General SW</a></li><li><a href="academy.html" class="hover:text-[#003366]">Academy</a></li><li><a href="services.html" class="hover:text-[#003366]">Services</a></li></ul></div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Company</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="about.html" class="hover:text-[#003366]">About</a></li><li><a href="contact.html" class="hover:text-[#003366]">Contact</a></li><li><a href="privacy.html" class="hover:text-[#003366]">Privacy Policy</a></li><li><a href="projects.html" class="hover:text-[#003366]">Projects</a></li></ul></div>
+  </div>
+</footer>
+<script>document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});</script>
+
+<script>
+async function requestPayment() {
+  const tossPayments = TossPayments('test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq');
+  const payment = tossPayments.payment({customerKey: 'ANONYMOUS'});
+  await payment.requestPayment({
+    method: 'CARD',
+    amount: { currency: 'KRW', value: 890000 },
+    orderId: 'academy-aspice-' + Date.now(),
+    orderName: 'ASPICE 4.0 완벽 가이드',
+    successUrl: window.location.origin + '/site/academy-payment-success.html',
+    failUrl: window.location.origin + '/site/academy-payment-fail.html',
+  });
+}
+</script>
+</body></html>

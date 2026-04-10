@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Agent 개발 - The Digital Jurist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://js.tosspayments.com/v2/standard"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      "secondary-container": "#d5e0f7", "primary-container": "#003366", "on-primary": "#ffffff",
+      "surface-variant": "#e2e2e7", "outline-variant": "#c3c6d1", "surface": "#f9f9fe",
+      "surface-container-low": "#f4f3f8", "error": "#ba1a1a", "on-primary-container": "#799dd6",
+      "primary-fixed-dim": "#a7c8ff", "surface-container-lowest": "#ffffff",
+      "surface-container": "#eeedf2", "surface-tint": "#3a5f94", "on-background": "#1a1c1f",
+      "on-surface-variant": "#43474f", "on-surface": "#1a1c1f",
+      "surface-container-high": "#e8e8ed", "outline": "#737780", "primary-fixed": "#d5e3ff",
+      "primary": "#001e40", "surface-container-highest": "#e2e2e7", "background": "#f9f9fe"
+    },
+    fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+  }}
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-surface">
+
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,30,64,0.06)]">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+    <a href="index.html" class="flex items-center h-10"><img alt="The Digital Jurist" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+    <nav class="hidden md:flex items-center gap-8">
+      <div class="relative group">
+        <button class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1">Solutions <span class="material-symbols-outlined text-base">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <a href="automotive.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-t-xl">Automotive SW</a>
+          <a href="medical.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary">Medical SaMD</a>
+          <a href="general.html" class="block px-4 py-3 text-sm hover:bg-surface-container-low hover:text-primary rounded-b-xl">General SW</a>
+        </div>
+      </div>
+      <a href="academy.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Academy</a>
+      <a href="services.html" class="text-sm font-semibold text-primary border-b-2 border-primary pb-0.5">Services</a>
+      <a href="projects.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Projects</a>
+      <a href="about.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">About</a>
+      <a href="contact.html" class="text-sm font-semibold text-on-surface hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm active:scale-95 transition-all">Get Free Audit</a>
+      <button id="mobile-menu-btn" class="md:hidden"><span class="material-symbols-outlined text-2xl">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20 px-6 py-4">
+    <a href="automotive.html" class="block py-2 text-sm font-medium">Automotive SW</a><a href="medical.html" class="block py-2 text-sm font-medium">Medical SaMD</a><a href="general.html" class="block py-2 text-sm font-medium">General SW</a>
+    <a href="academy.html" class="block py-2 text-sm font-medium">Academy</a><a href="services.html" class="block py-2 text-sm font-medium text-primary font-bold">Services</a><a href="projects.html" class="block py-2 text-sm font-medium">Projects</a>
+    <a href="about.html" class="block py-2 text-sm font-medium">About</a><a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+  </div>
+</header>
+
+<main class="pt-20">
+  <!-- Breadcrumb -->
+  <div class="bg-surface-container-low border-b border-outline-variant/20">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <nav class="flex items-center gap-2 text-sm text-on-surface-variant">
+        <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+        <span class="material-symbols-outlined text-base">chevron_right</span>
+        <span class="text-primary font-medium">AI Agent 개발</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative py-20 bg-gradient-to-br from-primary via-primary-container to-primary overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary-fixed-dim rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-4xl">smart_toy</span>
+        </div>
+        <div>
+          <span class="text-on-primary/60 text-sm font-medium">AI Agent Development</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-on-primary">AI Agent 개발</h1>
+        </div>
+      </div>
+      <p class="text-xl text-on-primary/80 max-w-3xl">도메인 특화 AI 에이전트 맞춤 개발. 규제 컴플라이언스 영역에 최적화된 지능형 에이전트로 업무 혁신을 실현합니다.</p>
+    </div>
+  </section>
+
+  <!-- Service Scope -->
+  <section class="py-20 bg-background">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">서비스 범위</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">policy</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2">규제 분석 AI Agent</h3>
+          <p class="text-sm text-on-surface-variant">규제 문서를 자동 분석하고 요구사항을 추출하여 적용 가능한 인사이트를 제공합니다.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">auto_fix_high</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2">문서 자동 생성 AI</h3>
+          <p class="text-sm text-on-surface-variant">프로젝트 데이터를 기반으로 규격에 부합하는 기술 문서를 자동 생성합니다.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">quiz</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2">모의 심사 시뮬레이터</h3>
+          <p class="text-sm text-on-surface-variant">AI 기반 모의 심사를 통해 취약점을 사전에 발견하고 대비 전략을 수립합니다.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">insights</span>
+          </div>
+          <h3 class="font-bold text-primary mb-2">통합 인텔리전스 대시보드</h3>
+          <p class="text-sm text-on-surface-variant">모든 AI 에이전트의 분석 결과를 통합하여 의사결정을 지원하는 대시보드입니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Capabilities -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-4 text-center">AI 역량 및 기대 효과</h2>
+      <p class="text-on-surface-variant text-center mb-12 max-w-2xl mx-auto">도메인 전문 지식과 최신 AI 기술의 결합으로 획기적인 업무 혁신을 실현합니다</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+              <span class="material-symbols-outlined text-emerald-600">speed</span>
+            </div>
+            <h3 class="font-bold text-primary">업무 효율 극대화</h3>
+          </div>
+          <p class="text-sm text-on-surface-variant mb-4">반복적인 규제 분석, 문서 작성, 검토 업무를 AI가 자동화하여 업무 시간을 최대 70% 절감합니다.</p>
+          <div class="flex items-center gap-2">
+            <span class="text-3xl font-extrabold text-emerald-600">70%</span>
+            <span class="text-sm text-on-surface-variant">업무 시간 절감</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+              <span class="material-symbols-outlined text-blue-600">precision_manufacturing</span>
+            </div>
+            <h3 class="font-bold text-primary">정확도 향상</h3>
+          </div>
+          <p class="text-sm text-on-surface-variant mb-4">도메인 특화 학습을 통해 규제 요구사항 해석과 문서 품질에서 전문가 수준의 정확도를 달성합니다.</p>
+          <div class="flex items-center gap-2">
+            <span class="text-3xl font-extrabold text-blue-600">95%+</span>
+            <span class="text-sm text-on-surface-variant">분석 정확도</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
+              <span class="material-symbols-outlined text-purple-600">trending_up</span>
+            </div>
+            <h3 class="font-bold text-primary">ROI 극대화</h3>
+          </div>
+          <p class="text-sm text-on-surface-variant mb-4">초기 투자 대비 지속적인 비용 절감과 품질 향상으로 12개월 내 투자 회수가 가능합니다.</p>
+          <div class="flex items-center gap-2">
+            <span class="text-3xl font-extrabold text-purple-600">12개월</span>
+            <span class="text-sm text-on-surface-variant">이내 ROI 달성</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-20 bg-background">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">진행 프로세스</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">1</div>
+          <h3 class="font-bold text-primary mb-2">도메인 분석</h3>
+          <p class="text-sm text-on-surface-variant">대상 규제 도메인과 업무 프로세스를 심층 분석하여 AI 적용 범위를 정의합니다.</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">2</div>
+          <h3 class="font-bold text-primary mb-2">AI 모델 설계</h3>
+          <p class="text-sm text-on-surface-variant">최적의 AI 아키텍처와 모델을 설계하고 학습 전략을 수립합니다.</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="relative text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">3</div>
+          <h3 class="font-bold text-primary mb-2">학습/튜닝</h3>
+          <p class="text-sm text-on-surface-variant">도메인 데이터로 모델을 학습시키고 정밀 튜닝하여 최적 성능을 달성합니다.</p>
+          <div class="hidden md:block absolute top-6 left-[60%] w-[80%] h-0.5 bg-outline-variant/30"></div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto mb-4 font-bold text-lg">4</div>
+          <h3 class="font-bold text-primary mb-2">통합/배포</h3>
+          <p class="text-sm text-on-surface-variant">기존 시스템에 통합하고 안정적으로 배포하여 운영을 시작합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deliverables -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">포함 산출물</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">AI 모델 설계 문서</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">학습 데이터셋 및 파이프라인</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">AI Agent 시스템 (배포 완료)</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">성능 평가 보고서</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">API 문서 및 통합 가이드</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/20 p-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">description</span>
+          <span class="text-sm font-medium">운영 매뉴얼 및 교육 자료</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-background">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-4 text-center">서비스 요금</h2>
+      <p class="text-on-surface-variant text-center mb-12">프로젝트에 맞는 요금제를 선택하세요</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl border border-outline-variant/20 shadow-lg p-8 flex flex-col">
+          <h3 class="text-lg font-bold text-primary mb-2">일회성 구매</h3>
+          <p class="text-sm text-on-surface-variant mb-6">AI Agent 맞춤 개발 프로젝트</p>
+          <div class="mb-8">
+            <span class="text-4xl font-extrabold text-primary">&#8361;50,000,000</span>
+            <span class="text-sm text-outline ml-1">/ 프로젝트</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>도메인 분석 및 모델 설계</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>AI Agent 개발 및 학습</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>시스템 통합 및 배포</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>3개월 안정화 지원</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>전체 산출물 및 소유권 이전</li>
+          </ul>
+          <button onclick="requestPayment('onetime')" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl active:scale-[0.98] transition-all">구매하기</button>
+        </div>
+        <div class="bg-white rounded-2xl border-2 border-primary shadow-xl p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-on-primary text-xs font-bold rounded-full">추천</div>
+          <h3 class="text-lg font-bold text-primary mb-2">월간 구독</h3>
+          <p class="text-sm text-on-surface-variant mb-6">지속적인 AI 모델 개선 및 운영</p>
+          <div class="mb-8">
+            <span class="text-4xl font-extrabold text-primary">&#8361;8,000,000</span>
+            <span class="text-sm text-outline ml-1">/ 월</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>지속적 모델 학습/튜닝</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>새로운 규제 반영 업데이트</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>성능 모니터링 및 최적화</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>신규 기능 추가 개발</li>
+            <li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">check_circle</span>전담 AI 엔지니어 배정</li>
+          </ul>
+          <button onclick="requestPayment('subscription')" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl active:scale-[0.98] transition-all">구독하기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-primary mb-12 text-center">자주 묻는 질문</h2>
+      <div class="space-y-4">
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">AI Agent 개발에 어떤 기술을 사용하나요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">최신 LLM(Large Language Model), RAG(Retrieval-Augmented Generation), Fine-tuning 기술을 기반으로 개발합니다. OpenAI, Anthropic, 오픈소스 모델 등 프로젝트에 최적의 기술을 선정합니다.</div>
+        </details>
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">기존 시스템과 통합이 가능한가요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">네, REST API, Webhook 등 표준 인터페이스를 통해 기존 PLM, ALM, DMS 등 다양한 시스템과 원활하게 통합됩니다. 커스텀 커넥터 개발도 지원합니다.</div>
+        </details>
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">데이터 보안은 어떻게 보장되나요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">온프레미스 배포, 데이터 암호화, 접근 제어 등 엔터프라이즈급 보안을 적용합니다. 필요 시 고객 인프라 내에서만 운영되는 프라이빗 배포도 가능합니다.</div>
+        </details>
+        <details class="bg-white rounded-xl border border-outline-variant/20 overflow-hidden group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-primary hover:bg-surface-container-low transition-colors">개발 기간은 얼마나 걸리나요?<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">단일 AI Agent 기준 3~6개월, 통합 시스템 기준 6~12개월이 소요됩니다. PoC(Proof of Concept)를 통해 4~6주 내에 핵심 기능을 먼저 검증할 수 있습니다.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-br from-primary via-primary-container to-primary">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-on-primary mb-6">AI로 규제 대응을 혁신하세요</h2>
+      <p class="text-on-primary/80 text-lg mb-10">도메인 전문가와 AI 엔지니어가 함께 귀사만의 AI Agent를 설계합니다.</p>
+      <a href="contact.html" class="inline-block bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl active:scale-[0.98] transition-all">무료 상담 신청</a>
+    </div>
+  </section>
+</main>
+
+<footer class="w-full py-12 border-t border-[#c3c6d1]/15 bg-[#f4f3f8]">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="col-span-1 md:col-span-2">
+      <a href="index.html" class="flex items-center h-8 mb-4"><img alt="Logo" class="h-full w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhquffqj3xbc3VoXyxTXlTsn3hyiKNNGxcAyMrpsMWkH4SFXtqTpOw02xunBXGpZkwyqxButNJfpAZDrX2B0mhVyo44ssF_lju6J2lilKvmyL0OoEmgbtmE9xdddw9jMrPRDgxuVpiEJ7PwyhT7789LshV9NgrZ4YLOtjGWa5Pa8ZXjAiV0A_wmMm4gmSsN6m6ya9Rtah5KeV9alX_73uZZ2mKgmkwTaWvKUbwhOnrFseWh0bAMFH5LTGHB8fJCoo2ndK42oCAlMQ"/></a>
+      <p class="text-[#43474f] text-sm">&copy; 2024 The Digital Jurist. Regulatory Precision &amp; Tonal Depth.</p>
+    </div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Solutions</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="automotive.html" class="hover:text-[#003366]">Automotive</a></li><li><a href="medical.html" class="hover:text-[#003366]">Medical SaMD</a></li><li><a href="general.html" class="hover:text-[#003366]">General SW</a></li><li><a href="academy.html" class="hover:text-[#003366]">Academy</a></li><li><a href="services.html" class="hover:text-[#003366]">Services</a></li></ul></div>
+    <div><h5 class="font-bold mb-4 text-[#001e40]">Company</h5><ul class="space-y-2 text-sm text-[#43474f]"><li><a href="about.html" class="hover:text-[#003366]">About</a></li><li><a href="contact.html" class="hover:text-[#003366]">Contact</a></li><li><a href="privacy.html" class="hover:text-[#003366]">Privacy Policy</a></li><li><a href="projects.html" class="hover:text-[#003366]">Projects</a></li></ul></div>
+  </div>
+</footer>
+<script>document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});</script>
+
+<script>
+async function requestPayment(type) {
+  const tossPayments = TossPayments('test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq');
+  const payment = tossPayments.payment({customerKey: 'ANONYMOUS'});
+  const amount = type === 'onetime' ? 50000000 : 8000000;
+  const orderName = type === 'onetime' ? 'AI Agent 개발 (일회성)' : 'AI Agent 개발 (월간 구독)';
+  await payment.requestPayment({
+    method: 'CARD',
+    amount: { currency: 'KRW', value: amount },
+    orderId: 'svc-aiagent-' + type + '-' + Date.now(),
+    orderName: orderName,
+    successUrl: window.location.origin + '/site/service-payment-success.html',
+    failUrl: window.location.origin + '/site/service-payment-fail.html',
+  });
+}
+</script>
+</body></html>
